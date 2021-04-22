@@ -2,28 +2,22 @@
 
 ## Learning Goals
 
-- Trace through a recursive function call and understand time and space comlexities
-
-## Introduction
-
-Recursion solves plenty of computational problems. However, recursive functions may be interesting to read because they call itself.
-
-Should we ever come across recursive functions.
+- Define base case
+- List the parts of a recursive function
+- Define stack
+- Practice reading recursive function calls
 
 ## Vocabulary and Synonyms
 
-| Vocab                        | Definition                                                                            | Synonyms | How to Use in a Sentence                                                                                                    |
-| ---------------------------- | ------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Recursion (computer science) | A programming technique where a function calls itself                                 | -        | "One way to calculate a fibonacci number is with recursion, where a function `fibonacci` calls itself until it's finished." |
-| Base Case                    | A condition which will end the recursion. This is case where the solution is concrete | -        | ""                                                                                                                          |
+| Vocab                        | Definition                                                                                                                                                            | How to Use in a Sentence                                                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Recursion (computer science) | A programming technique where a function calls itself                                                                                                                 | "One way to compute the nth fibonacci number is with recursion, where a function `fibonacci` calls itself until it's finished."                        |
+| Base Case                    | A condition which will end the recursion. This is case where the solution is concrete                                                                                 | "The base case for computing the nth fibonacci number is when `n` is 1 or 2, as the first two numbers of the fibonacci sequence are always 1 and 1." " |
+| Recursive Case               | A situation in a recursive function that will call the function itself                                                                                                | "When computing the nth fibonacci number, if `n` is greater than 2, the `fibonacci` function will call itself."                                        |
+| Stack (data structure)       | A data structure that operates as "Last-In-First-Out," where new data is pushed onto the top, and data is popped off from the top                                     |
+| System stack                 | A part of memory dedicated to storing the method calls and local variables of a running program. The system stack is responsible for keeping track of function calls. |
 
-| Base Case | A condition which will end the recursion. This is the case where the solution is straightforward to solve. |
-| Recursive Case | The part of a recursive method which makes a recursive call. |
-| Tail Recursion | A tail recursive function is a recursive function where the function calls itself at the end ("tail") of the function in which no computation is done after the return of recursive call. |
-Infinite Recursion
-| Stack Overflow Error | An error caused when the system stack memory is exhausted, usually from infinite recursion. |
-
-##
+## Recursion
 
 In programming, a recursive function is a function that calls itself.
 
@@ -177,7 +171,7 @@ Executing both of these functions results in a `RecursionError`!
 
 ## Stacks and Function Calls
 
-A running program has a dedication section of memory called **the system stack**.
+A running program has a dedicated section of memory called **the system stack**.
 
 The system stack is where method calls and local variables are stored. It's responsible for keeping track of function calls.
 
@@ -217,38 +211,38 @@ mystery(5)
 
 We can begin to illustrate the _system stack_. Because the system stack keeps track of function calls, we add in the function call `mystery(5)` onto the stack.
 
-![Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack.](../assets/recursion_reading-recursion_mystery(5).png)  
+![Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack.](<../assets/recursion_reading-recursion_mystery(5).png>)  
 _Fig. Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack._
 
 When `mystery(5)` executes, the base case is not met. It will call `mystery(4)`.
 
 The function call `mystery(4)` is added to the _top_ of the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(4).png)  
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(4).png>)  
 _Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"_
 
 Here, `num` is `4`, and the base case is still not met. This will call `mystery(3)`
 
 We add `mystery(3)` to the top of the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(3).png)  
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(3).png>)  
 _Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"_
 
 This calls `mystery(2)`. Calling `mystery(2)` gets pushed onto the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(2).png)  
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(2).png>)  
 _Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
 
 The base case is still not met. The function calls `mystery(1)`, which gets pushed onto the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(1).png)  
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(1).png>)  
 _Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
 
 At this point, `num` is `1`, which is our base case! The base case provides a solution and `return`s `1`.
 
 As the function finishes and `return`s, it's time on the system stack is over. The system stack pops off the top function call after executing `return 1`.
 
-![Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"](../assets/recursion_reading-recursion_mystery(1)-return.png)  
+![Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"](<../assets/recursion_reading-recursion_mystery(1)-return.png>)  
 _Fig. Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"_
 
 The system stack returns to `mystery(2)`.
