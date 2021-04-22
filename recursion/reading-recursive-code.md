@@ -265,3 +265,24 @@ _Fig. Diagram showing a stack of "mystery()" function calls inside the system st
 As a final result, we see that `mystery(5)` returns `120`!
 
 Illustrating the stack like this can help us visualize recursive calls.
+
+## Check for Understanding
+
+<!-- Question Takeaway -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: Do3G8s
+* title: Reading Recursive Code
+##### !question
+
+What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
+
+##### !end-question
+##### !placeholder
+
+My biggest takeaway from this lesson is...
+
+##### !end-placeholder
+### !end-challenge
+<!-- prettier-ignore-end -->
