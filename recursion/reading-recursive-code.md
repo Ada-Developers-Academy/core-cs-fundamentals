@@ -1,10 +1,14 @@
-#
+# Reading Recursive Code
 
 ## Learning Goals
 
 - Trace through a recursive function call and understand time and space comlexities
 
 ## Introduction
+
+Recursion solves plenty of computational problems. However, recursive functions may be interesting to read because they call itself.
+
+Should we ever come across recursive functions.
 
 ## Vocabulary and Synonyms
 
@@ -19,104 +23,254 @@
 Infinite Recursion
 | Stack Overflow Error | An error caused when the system stack memory is exhausted, usually from infinite recursion. |
 
-## Parts of a Recursive Function
+##
 
-A Recursive algorithm has two parts:
+In programming, a recursive function is a function that calls itself.
 
-1. If the problem is easy, solve it immediately.
-1. If the problem can't be solved immediately, divide it into smaller problems, then: Solve the smaller problems by applying this procedure to each of them.
+We can imagine a recursive function named `get_next_item`. When we call `get_next_item`, it will invoke itself, `get_next_item`. Of course, when _this_ function calls begins execution, it will also invoke itself.
 
-We call a problem that can be solved immediately a _base case_ and a problem that divides the problem into a smaller problem a _recursive case_.
+Iteration and recursion are both programming techniques used to repeat logic and behavior. Often, the same problems that iteration solves can be solved with recursion!
 
-So a recursive algorithm is really made up of:
+When would we solve a problem with recursion? Once we're used to thinking about recursion, recursive algorithms may be more readable and understood compared to iterative solutions.
 
-- At least one base case.
-- At least one recursive case.
+## Anatomy of a Recursive Function
 
-Most recursive methods will follow the following pattern:
+Functions that call itself, like the imaginary `get_next_item` function, will recurse an infinite number of times.
 
-- If [some condition]
-  - Solve using the base case
-- Else
-  - Solve by recursively calling the same function with smaller input
+However, if a function calls itself an infinite number of times, when will we actually get an answer and solve our problem? Recursive functions are more helpful when they actually _do_ stop!
 
-### Example: Power
+In order to properly handle recursive functions, let's dissect the anatomy of one. Dissecting the anatomy of a recursive function will help us read and debug them.
 
-Examine the following method:
+### Base Cases are Stopping Conditions
 
-```ruby
-def pow(base, exponent)
-  return 1 if exponent == 0
+Recursive algorithms will usually take in at least one argument. A recursive algorithm handles different situations based on what that argument is. The algorithm should handle:
 
-  return base * pow(base, exponent - 1)
-end
+- At least one _recursive case_
+- At least one _base case_
+
+| Part           | Definition                                                            |
+| -------------- | --------------------------------------------------------------------- |
+| Recursive Case | A case or situation that depends on the solution of other cases       |
+| Base Case      | A case or situation where there is a solution without using recursion |
+
+The responsibility of the _recursive case_ is to divide the problem into a smaller problem.
+
+The responsibility of the _base case_ is to give a solid, immediate solution to the problem.
+
+We can imagine that a recursive function will handle recursive cases by calling itself, until it reaches a base case. Most recursive functions will follow this pattern:
+
+1. If some condition is met
+   - Solve using the base case
+1. Else
+   - Solve by recursively calling the same function with different input
+
+The "different input" in the recursive call should be working towards bringing the problem to the base case.
+
+## Example: Exponentiation
+
+Read through this recursive function, `pow`, whose responsibility is to calculate [exponentiation](https://en.wikipedia.org/wiki/Exponentiation), otherwise known as `num`<sup>`exponent`</sup>. It takes in two arguments:
+
+1. `num`, which is the base number
+1. `exponent`, which is the exponent
+
+For example, 3<sup>5</sup>, where `3` is `num` and `5` is `exponent`, is expressed and calculated like this:
+
+```
+3 * 3 * 3 * 3 * 3
 ```
 
-The method above calculates one number `base` taken to a given power `exponent`. The method starts with a condition to end the recursion called a _base case_, `return 1 if exponent == 0`. If the base case is met the method returns 1. The next line takes one step toward solving the problem (calculating `base` to the given exponent) by multiplying `base` times a _smaller_ version of the original problem (taking `base` to a power which is one smaller). This is called a _recursive case_.
+And 3<sup>6</sup> is expressed as:
 
-### Without A Base Case
-
-If you have a recursive function without a recursive case... well you just have a function. However if a method has a recursive call without a base case like this:
-
-```ruby
-def infinite_recursion(n)
-  return n + infinite_recursion(n - 1)
-end
+```
+3 * 3 * 3 * 3 * 3 * 3
 ```
 
-The recursive calls will continue until the stack runs out of space resulting in what's called a _Stack Overflow Error_.
+```python
+def pow(num, exponent):
+    if exponent == 0:
+        return 1
 
-## Tracing Recursive Methods
-
-Consider the following recursive method.
-
-```ruby
-def mystery(num)
-  return 1 if num <= 1
-
-  return num * mystery(num - 1)
-end
+    return num * pow(num, exponent - 1)
 ```
 
-How could you determine the result of mystery(5)?
+#### Base Case
 
-You can trace through it by working through the problem just like Ruby executes it. You start by drawing a stack with `mystery(5)` on it.
+In exponentiation, any number raised to the power of zero equals one.
 
-![Mystery 5](<images/mystery(5).png>)
+```python
+if exponent == 0:
+    return 1
+```
 
-To solve that you need to find `mystery(4) because the base case is not true.
+This code snippet is the _base case_. Whenever `pow` is called **and** the argument `exponent` is `0`, then we return `1`. This base case gives us an immediate solution to the problem: `1`!
 
-So you add `mystery(4)` to the stack.
+#### Recursive Cases
 
-![Mystery 4](<images/mystery(4).png>)
+```python
+return num * pow(num, exponent - 1)
+```
 
-To solve that you need to find `mystery(3) because the base case is not true.
+This code snippet handles the recursive cases. Recursive cases _call itself while making the problem smaller_. Recursive cases should move the problem closer and closer to the base case.
 
-So you add `mystery(3)` to the stack.
+The problem gets smaller by calling `pow` with a smaller exponent. As the `exponent` shrinks, it will eventually equal `0`!
 
-![Mystery 3](<images/mystery(3).png>)
+### Running `pow`
 
-To solve that you need to find `mystery(2) because the base case is not true.
+How can we visualize the flow of code execution? Let's imagine the same `pow` function with several print statements, and then run it.
 
-So you add `mystery(2)` to the stack.
+```python
+def pow(num, exponent):
+    print("Calling pow! num:", num, "exponent:", exponent)
+    if exponent == 0:
+        return 1
 
-![Mystery 3](<images/mystery(2).png>)
+    return num * pow(num, exponent - 1)
 
-To solve that you need to find `mystery(1) because the base case is not true.
 
-So you add `mystery(1)` to the stack.
+print(3, "raised to the power of", 5, "is", pow(3, 5))
 
-![Mystery 3](<images/mystery(1).png>)
+print("-------------")
 
-**Ah Ha!** now the base-case is met and it will return 1
+print(3, "raised to the power of", 6, "is", pow(3, 6))
+```
 
-![Mystery return 1](<images/mystery(1)-return.png>)
+We should get the following output:
 
-`mystery(2)` takes that return value multiplies it by 2 and returns 2. That method then takes 2 and multiplies it by 3 and returns the product 6. mystery(4) then takes that and multiples it by 4 and returns the product of 24. The last `mystery(5)` takes 24 and multiplies it by 5 and returns the product 120.
+```
+Calling pow! num: 3 exponent: 5
+Calling pow! num: 3 exponent: 4
+Calling pow! num: 3 exponent: 3
+Calling pow! num: 3 exponent: 2
+Calling pow! num: 3 exponent: 1
+Calling pow! num: 3 exponent: 0
+3 raised to the power of 5 is 243
+-------------
+Calling pow! num: 3 exponent: 6
+Calling pow! num: 3 exponent: 5
+Calling pow! num: 3 exponent: 4
+Calling pow! num: 3 exponent: 3
+Calling pow! num: 3 exponent: 2
+Calling pow! num: 3 exponent: 1
+Calling pow! num: 3 exponent: 0
+3 raised to the power of 6 is 729
+```
 
-![mystery result](images/mystery-result.png)
+We can confirm that the `pow` function was called multiple times. Each time, the problem was made smaller, and `exponent` decremented by one. Eventually, when `exponent` was `0`, it met the conditions for the base case, and returned `1`.
 
-You can use this manner to trace through and work through a recursive method.
+## Infinite Recursion
+
+A function that calls itself without working towards a base case will repeat infinitely.
+
+```python
+def infinite_recursion(n):
+    return n + infinite_recursion(n)
+```
+
+A function without a base case will never have a stopping point! Consider this code which has no base case:
+
+```python
+def infinite_recursion(n):
+    return n + infinite_recursion(n - 1)
+```
+
+Executing both of these functions results in a `RecursionError`!
+
+## Stacks and Function Calls
+
+A running program has a dedication section of memory called **the system stack**.
+
+The system stack is where method calls and local variables are stored. It's responsible for keeping track of function calls.
+
+The "stack" in "system stack" implies that it uses the _stack_ data structure. The system stack keeps track of function calls using a stack data structure.
+
+### Intro to the Stack Data Structure
+
+How does a stack organize data? A stack organizes data like a stack of plates! When we add a plate to the stack of plates, we add it to the top. When we need a plate from the stack of plates, we remove it from the top.
+
+When a stack adds a new piece of data, it goes on top. When a stack removes one piece of data, it pops off the top item.
+
+### !callout-info
+
+## Stacks Are LIFO
+
+Stacks operate in a Last-In-First-Out (LIFO) manner. They remove things in the reverse order they were added.
+
+### !end-callout
+
+## Tracing Recursive Functions and Illustrating the Stack
+
+Let's read more recursive functions and apply our new knowledge about the _system stack_ in order to visualize it. Consider the following function.
+
+```python
+def mystery(num):
+    if num <= 1:
+        return 1
+
+    return num * mystery(num-1)
+```
+
+What happens when we invoke the function when `num` is `5`?
+
+```python
+mystery(5)
+```
+
+We can begin to illustrate the _system stack_. Because the system stack keeps track of function calls, we add in the function call `mystery(5)` onto the stack.
+
+![Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack.](../assets/recursion_reading-recursion_mystery(5).png)  
+_Fig. Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack._
+
+When `mystery(5)` executes, the base case is not met. It will call `mystery(4)`.
+
+The function call `mystery(4)` is added to the _top_ of the stack.
+
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(4).png)  
+_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"_
+
+Here, `num` is `4`, and the base case is still not met. This will call `mystery(3)`
+
+We add `mystery(3)` to the top of the stack.
+
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(3).png)  
+_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"_
+
+This calls `mystery(2)`. Calling `mystery(2)` gets pushed onto the stack.
+
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(2).png)  
+_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
+
+The base case is still not met. The function calls `mystery(1)`, which gets pushed onto the stack.
+
+![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](../assets/recursion_reading-recursion_mystery(1).png)  
+_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
+
+At this point, `num` is `1`, which is our base case! The base case provides a solution and `return`s `1`.
+
+As the function finishes and `return`s, it's time on the system stack is over. The system stack pops off the top function call after executing `return 1`.
+
+![Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"](../assets/recursion_reading-recursion_mystery(1)-return.png)  
+_Fig. Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"_
+
+The system stack returns to `mystery(2)`.
+
+`mystery(2)` takes that return value (`1`), and executes `num * mystery(num-1)`, and then **returns it**. In this case, where `num` is `2`, it **returns** `2 * 1`, or `2`.
+
+The function `mystery(2)` is popped off the system stack. The system stack returns to `mystery(3)` on the stack.
+
+We can summarize the remaining returns like so:
+
+| Frame Executed | `num` | `num * mystery(num-1)` | Return value |
+| -------------- | ----- | ---------------------- | ------------ |
+| `mystery(3)`   | `3`   | `2`                    | `6`          |
+| `mystery(4)`   | `4`   | `6`                    | `24`         |
+| `mystery(5)`   | `5`   | `24`                   | `120`        |
+
+![Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"](../assets/recursion_reading-recursion_mystery-result.png)  
+_Fig. Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"_
+
+As a final result, we see that `mystery(5)` returns `120`!
+
+Illustrating the stack like this can help us visualize recursive calls.
 
 ## Reading the `factorial` Function
 
