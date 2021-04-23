@@ -1,0 +1,33 @@
+---
+Standards:
+  -
+    Title: Recursion
+    Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
+    UID: 12fa464a36f8e5a187f5acfde99b7029
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 9314cec297d08f8e6944d4ffa8d8ebf7
+        Path: /recursion/recursion.instructor.md
+      -
+        Type: Lesson
+        UID: 741b7dd7a6160942b5f7fc2dff011f50
+        Path: /recursion/intro-to-recursion.md
+      -
+        Type: Lesson
+        UID: 4464e923942b9d0395ac38e687fbaeb3
+        Path: /recursion/reading-recursive-code.md
+      -
+        Type: Lesson
+        UID: 21bc10ab78c0a1e7822b8021150feebd
+        Path: /recursion/writing-recursive-code.md
+      -
+        Type: Lesson
+        UID: be58d3489bf4314f9ddf9703624e2842
+        Path: /recursion/problem-set-recursion-pt-1.md
+      -
+        Type: Lesson
+        UID: 4dc6f963f2f2d529d9b3dfe7b6dbc19f
+        Path: /recursion/problem-set-recursion-pt-2.md
