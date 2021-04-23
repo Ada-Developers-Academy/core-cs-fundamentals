@@ -23,9 +23,9 @@ In programming, a recursive function is a function that calls itself.
 
 We can imagine a recursive function named `get_next_item`. When we call `get_next_item`, it will invoke itself, `get_next_item`. Of course, when _this_ function calls begins execution, it will also invoke itself.
 
-Iteration and recursion are both programming techniques used to repeat logic and behavior. Often, the same problems that iteration solves can be solved with recursion!
+Both iteration and recursion are programming techniques used to repeat logic and behavior. There are often iterative and recursive solutions to the same problem!
 
-When would we solve a problem with recursion? Once we're used to thinking about recursion, recursive algorithms may be more readable and understood compared to iterative solutions.
+When would we choose to solve a problem with recursion? Once we're used to thinking about recursion, recursive algorithms may be more readable and understandable compared to iterative solutions.
 
 ## Anatomy of a Recursive Function
 
@@ -33,11 +33,11 @@ Functions that call itself, like the imaginary `get_next_item` function, will re
 
 However, if a function calls itself an infinite number of times, when will we actually get an answer and solve our problem? Recursive functions are more helpful when they actually _do_ stop!
 
-In order to properly handle recursive functions, let's dissect the anatomy of one. Dissecting the anatomy of a recursive function will help us read and debug them.
+In order to better read and debug recursive functions, let's dissect the anatomy of one.
 
 ### Base Cases are Stopping Conditions
 
-Recursive algorithms will usually take in at least one argument. A recursive algorithm handles different situations based on what that argument is. The algorithm should handle:
+Recursive algorithms will usually take in at least one argument. A recursive algorithm handles different situations based on the value of the argument. The algorithm should handle:
 
 - At least one _recursive case_
 - At least one _base case_
@@ -53,8 +53,8 @@ The responsibility of the _base case_ is to give a solid, immediate solution to 
 
 We can imagine that a recursive function will handle recursive cases by calling itself, until it reaches a base case. Most recursive functions will follow this pattern:
 
-1. If some condition is met
-   - Solve using the base case
+1. If some condition is met and we're handling the base case
+   - Solve using the base case's solution
 1. Else
    - Solve by recursively calling the same function with different input
 
@@ -255,9 +255,9 @@ We can summarize the remaining returns like so:
 
 | Frame Executed | `num` | `num * mystery(num-1)` | Return value |
 | -------------- | ----- | ---------------------- | ------------ |
-| `mystery(3)`   | `3`   | `2`                    | `6`          |
-| `mystery(4)`   | `4`   | `6`                    | `24`         |
-| `mystery(5)`   | `5`   | `24`                   | `120`        |
+| `mystery(3)`   | `3`   | `3 * 2`                | `6`          |
+| `mystery(4)`   | `4`   | `4 * 6`                | `24`         |
+| `mystery(5)`   | `5`   | `5 * 24`               | `120`        |
 
 ![Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"](../assets/recursion_reading-recursion_mystery-result.png)  
 _Fig. Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"_
