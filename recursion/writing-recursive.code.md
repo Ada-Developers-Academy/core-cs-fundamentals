@@ -1,238 +1,183 @@
-#
+# Writing Recursive Code
 
 ## Learning Goals
 
-- Author a recursive algorithm
+- Construct a recursive solution from a word problem
 
-## Introduction
+## Considerations for a Recursive Function
 
+When writing a recursive function, the following prompts will help construct different parts of a recursive function.
 
-## Vocabulary and Synonyms
+- What is the base case? What is the version of the problem where we know the answer without recursing?
+- How can we describe the repeated problem that gets divided into smaller versions of the problem?
+- What information does each smaller problem need?
+- What information do we want back from each problem?
+- How do we expect examples to behave?
 
-| Vocab | Definition | Synonyms | How to Use in a Sentence
-| --- | --- | --- | ---
+### Determine the Base Case
 
+The base case is the the version of the problem where we can determine the answer without recursing. Generally, the base case is used as the condition which ends the recursion.
 
-### Writing A Recursive Method
+We may be able to determine the base case from the given problem statement, or we may need to ask clarifying questions.
 
-When writing a recursive method, try the following:
+### Describe the Repeated Smaller Problem
 
-- Think about the recursive case: How are we going to break the problem into a smaller problem (by calling out method again) and get closer to the base case?
-- Think about how you can reduce the problem to one or more smaller sub-problems of the same form.
-- Think about what information you need to give to the sub-problems (the parameters).
-- Think about what information you want back from the sub-problems (the return type).
-- Write the method header.
-- Think about the base case: When is the answer so simple that we know the answer without recursing?
-- Write a method specification (like the static view of the problem) that explains exactly what it will do in terms of the parameters. Include any preconditions.
-- Write the code.
-- Test out your code with several different cases. Ensure all of them terminate with a base case and yield the right results.
+What is the problem that needs to be solved? What do "smaller" versions of the problem look like? The answers to these questions will help us determine when and how to make the recursive function call.
+
+We'll use this answer to help us visualize the solution, as we'll use the remaining prompts to determine details.
+
+### Determine the Information the Smaller Problem Needs
+
+Each version of the smaller problem needs input. What pieces of input are needed?
+
+The answer to this question will help us determine the _parameters_ of our recursive function.
+
+At this moment, we should also consider how the parameter moves towards the base case. Recall that if the parameters never move towards the base case, we'll end up with infinite recursion.
+
+### Determine the Information We Want Back
+
+Given the problem statement, what is the information that each problem should give back?
+
+The answer to this question will determine the _return_ value of our function.
+
+### Create Example Tables
+
+When we have a draft of our recursive function, we can create example tables to check our work.
+
+Here is a sample table with sample headers that we could use. Each row in the table should represent a function call that is on the system stack. The "function call" column in this table is meant to identify a function call on the system stack.
+
+| Function Call | Argument(s) | Return value |
+| ------------- | ----------- | ------------ |
 
 ## Walk-through: Summing Natural Numbers
 
-Consider this programming problem.
+In mathematics, _natural numbers_ are numbers used for counting and ordering. For this situation, we can define natural numbers as all positive integers starting at 1.
 
-```
-Devise an algorithm for a function that takes a natural number as input parameter and computes the sum of all natural number up to and including the input parameter.
+Let's consider this programming problem:
 
-E.g.
-natural_numbers_sum(3) should return 6 = 3 + 2 + 1
-natural_numbers_sum(4) should return 10 = 4 + 3 + 2 + 1
-```
+Create a function named `sum_natural_numbers` that is responsible for summing all natural numbers up to and including the input, `num`. We can assume that `num` is always a positive integer. This function should return the sum.
 
-Note:
+Examples:
 
-In mathematics, the natural numbers are those used for counting and ordering. Natural numbers start with 0 or 1. (aka positive integers).
+| `num` | Example           | Sum  |
+| ----- | ----------------- | ---- |
+| `3`   | 3 + 2 + 1         | `6`  |
+| `4`   | 4 + 3 + 2 + 1     | `10` |
+| `5`   | 5 + 4 + 3 + 2 + 1 | `15` |
+| `1`   | 1                 | `1`  |
 
-You could write an iterative solution like this:
+### Determine the Base Case
 
-```ruby
-def natural_numbers_sum(num)
-  sum = 0
-  while num > 0 # While num is greater than zero
-    sum += num  # Add the current num to sum
-    num -= 1    # decrement num
-  end
+The problem states that natural numbers begin at 1.
 
-  return sum
-end
-```
+We can determine the return value of `sum_natural_numbers(1)` without using recursion! This algorithm needs to stop when `num` is `1`.
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
+Therefore, our base case is when `num == 1`.
 
+### Describe the Repeated Smaller Problem
+
+The problem states that the function "computes the sum of all natural number up to and including `num`."
+
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
-- type: multiple-choice
-- id: f645e9bd-6140-4712-8666-3d942b313630
-- title: Base Case
-- points: 1
-- topics: recursion
-
+* type: paragraph
+* id: 7lIVkd
+* title: Writing Recursive Code
 ##### !question
 
-If you did this recursively, what could be the base case?
+Consider the `sum_natural_numbers` problem.
+
+What is one way we describe the repeated problem? What is the problem that gets divided into smaller versions of itself?
 
 ##### !end-question
-
-##### !options
-
-- Either num == 1 or num == 0. In that case return num.
-- num > 0
-- num % 2 == 0
-
-##### !end-options
-
-##### !answer
-
-- Either num == 1 or num == 0. In that case return num.
-
-##### !end-answer
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-
-##### !explanation
-
-Generally, we make the base-case the condition which should **end** the recursion. In this case the recursion should end when `num` is 1 or 0. It would continue as long as num > 0.
-
-##### !end-explanation
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-- type: multiple-choice
-- id: 4a1395c2-3b77-4983-83ed-a3a8c9510871
-- title: Recursive Case
-- points: 1
-- topics: recursion
-
-##### !question
-
-If you did this recursively, what do you do in the recursive case?
-
-##### !end-question
-
-##### !options
-
-- num > 3
-- return num + natural_numbers_sum(num - 1)
-- return num
-
-##### !end-options
-
-##### !answer
-
-- return num + natural_numbers_sum(num - 1)
-
-##### !end-answer
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-
-##### !explanation
-
-The recursive case is the section of code which would have the method call itself.
-
-##### !end-explanation
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-
-**Write the recursive solution**
-
-If you want the solution you can take a look [at our example](recursion.resource.md).
-
-
-## Debugging Infinite Recursion
-
-
-### !challenge
-
-- type: short-answer
-- id: 5d36668e-4b91-48f3-b9a4-8f00cda5b44d
-- title: What's wrong
-  <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
-  <!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
-
-##### !question
-
-What is wrong with this code:
-
-```ruby
-def fibonacci(num)
-  return fibonacci(num - 1) + fibonacci(num - 2)
-end
-```
-
-What could be wrong with the above code?
-
-##### !end-question
-
 ##### !placeholder
 
-What's wrong?
+The repeated problem for sum_natural_numbers is...
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-
 ##### !explanation
 
-This code produces a Stack Overflow Error because it performs **infinite recursion.** The method needs a base case like return 1 if num <= 1
+We might describe the repeated problem like so:
+
+The repeated problem is addition. We need to add the sum of all natural numbers calculated so far and a new number.
 
 ##### !end-explanation
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
+### Determine the Information the Smaller Problem Needs
+
+Each smaller version of the problem needs an input number, `num`.
+
+Each recursive call should bring the number closer to the base case, `1`. Because `1` is the smallest natural number, and all other integers are greater than `1`, we should start our recursion from a larger integer and decrement `num`.
+
+By decrementing, we can predict that `num` will eventually become `1` and end the recursion.
+
+### Determine the Information We Want Back
+
+The value we need to `return` from each call is the sum of all natural numbers up to and including `num`.
+
+### Create Example Tables
+
+The following table represents the system stack when calling `sum_natural_numbers(4)`. The top of the stack is the first row, `sum_natural_numbers(1)`. This function call is at the top of the stack because it is the base case, so it is the final function call. With stacks, the last item pushed in is the first item popped out (LIFO!).
+
+| Function Call            | `num` | Return value |
+| ------------------------ | ----- | ------------ |
+| `sum_natural_numbers(1)` | `1`   | `1`          |
+| `sum_natural_numbers(2)` | `2`   | `3`          |
+| `sum_natural_numbers(3)` | `3`   | `6`          |
+| `sum_natural_numbers(4)` | `4`   | `10`         |
+
+### Putting It Together
+
+Here is an example implementation of `sum_natural_numbers`:
+
+```python
+def sum_natural_numbers(num):
+    print("Calling sum_natural_numbers! num:", num)
+
+    # Base Case: When num is 1, the sum is 1
+    if num == 1:
+        return 1
+
+    # Return the sum of all natural numbers so far plus the
+    # current num.
+    # Decrementing num by 1 brings us closer to the base case.
+    return sum_natural_numbers(num-1) + num
+
+
+print("The sum of all natural numbers up to and including 4 is",
+      sum_natural_numbers(4))
+
+print("-------------")
+
+print("The sum of all natural numbers up to and including 5 is",
+      sum_natural_numbers(5))
+
+print("-------------")
+
+print("The sum of all natural numbers up to and including 1 is",
+      sum_natural_numbers(1))
+```
 
 ## Check for Understanding
 
-Given the following binary search method, convert it to recursion. You can use the starter code below.
+<!-- Question Takeaway -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: ukzYK2
+* title: Writing Recursive Code
+##### !question
 
-```ruby
-def binary_search(array, to_find)
-  high = array.length - 1
-  low = 0
-  while high >= low
-    mid = (high + low) / 2
-    if array[mid] == to_find
-      return mid
-    elsif array[mid] > to_find
-      high = mid - 1
-    else
-      low = mid + 1
-    end
-  end
+What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
 
-  return nil
-end
-```
+##### !end-question
+##### !placeholder
 
-```ruby
-def recursive_binary_search(array, to_find, low = 0, high = array.length - 1)
+My biggest takeaway from this lesson is...
 
-
-end
-```
-
-You can see a solution in our [recursion examples page](recursion.resource.md)
-
+##### !end-placeholder
+### !end-challenge
+<!-- prettier-ignore-end -->
