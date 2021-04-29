@@ -151,3 +151,140 @@ def is_palindrome(text):
 For an additional challenge, implement `is_palindrome` without creating new strings in the process of solving the problem.
 
 ### !end-callout
+
+<!-- Question 3 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: code-snippet
+* language: python3.6
+* id: lkW6SO
+* title: Recursion
+* points: 3
+### !question
+
+Write a recursive function named `digit_match`. It accepts two non-negative integers as parameters. It returns the number of digits that match in the two integers.
+
+Two digits match if they are equal _and_ have the same position relative to the end of the number (i.e. starting with the ones digit).
+
+In other words, the function should compare the last digits of each number, the second-to-last-digits-of-each number, the third-to-last digits of each number, and so fort, counting how many pairs match.
+
+Example:
+
+- First number: `1072503891`
+- Second number: `62530841`
+- Number of matches: `4`
+    - Matching pairs: 202, 5-5, 8-8, 1-1
+
+```
+1 0 7 2 5 0 3 8 9 1
+    | | | | | | | |
+    6 2 5 3 0 8 4 1
+```
+
+Here are the tests:
+
+```python
+def test_digit_match_large_inputs():
+    apples = 1072503891
+    oranges = 62530841
+
+    assert digit_match(apples, oranges) == 4
+
+
+def test_digit_match_no_matches():
+    apples = 0
+    oranges = 62530841
+
+    assert digit_match(apples, oranges) == 0
+
+
+def test_digit_match_clustered_matches():
+    apples = 841
+    oranges = 62530841
+
+    assert digit_match(apples, oranges) == 3
+
+
+def test_digit_match_single_digits():
+    apples = 0
+    oranges = 0
+
+    assert digit_match(apples, oranges) == 1
+
+
+def test_digit_match_small_inputs():
+    apples = 10
+    oranges = 20
+
+    assert digit_match(apples, oranges) == 1
+```
+
+### !end-question
+### !tests
+```python
+import unittest
+from main import *
+
+class TestChallenge(unittest.TestCase):
+    def test_digit_match_large_inputs(self):
+        apples = 1072503891
+        oranges = 62530841
+
+        self.assertEqual(digit_match(apples, oranges), 4)
+
+    def test_digit_match_no_matches(self):
+        apples = 0
+        oranges = 62530841
+
+        self.assertEqual(digit_match(apples, oranges), 0)
+
+    def test_digit_match_clustered_matches(self):
+        apples = 841
+        oranges = 62530841
+
+        self.assertEqual(digit_match(apples, oranges), 3)
+
+    def test_digit_match_single_digits(self):
+        apples = 0
+        oranges = 0
+
+        self.assertEqual(digit_match(apples, oranges), 1)
+
+    def test_digit_match_small_inputs(self):
+        apples = 10
+        oranges = 20
+
+        self.assertEqual(digit_match(apples, oranges), 1)
+
+```
+### !end-tests
+### !explanation
+
+An example of a working implementation:
+
+```python
+def digit_match(apples, oranges):
+    # Base cases:
+    # If apples and oranges get reduced
+    # to the same power at the same time,
+    # they are both "in the same position"
+    if apples == 0 and oranges == 0:
+        return 1
+    # If apples or oranges gets reduced
+    # to single digits before the other,
+    # then they are not "in the same position"
+    elif apples <= 1 or oranges <= 1:
+        return 0
+
+    # Each recursive call reduces the number by
+    # a power of ten
+    # If apples and oranges are the same number, add 1
+    if apples % 10 == oranges % 10:
+        return 1 + digit_match(apples // 10, oranges // 10)
+    else:
+        return digit_match(apples // 10, oranges // 10)
+```
+
+### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
