@@ -14,7 +14,7 @@ Standards:
       -
         Type: Lesson
         UID: 98bd2c57dd4d374c50f82260abf950bc
-        Path: /hash-tables/hash-tables.md
+        Path: /hash-tables/overview-of-hash-tables.md
       -
         Type: Lesson
         UID: 423176ceb4ba129653c93c83452643f4
