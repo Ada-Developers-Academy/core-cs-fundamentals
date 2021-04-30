@@ -1,0 +1,25 @@
+---
+Standards:
+  -
+    Title: Hash Tables
+    Description: "Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
+    UID: fac6e79e15b06e536f52e19c118bfff2
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 6eb75125c1055fad73ea77b1decf3b9b
+        Path: /hash-tables/hash-tables.instructor.md
+      -
+        Type: Lesson
+        UID: 98bd2c57dd4d374c50f82260abf950bc
+        Path: /hash-tables/hash-tables.md
+      -
+        Type: Lesson
+        UID: 423176ceb4ba129653c93c83452643f4
+        Path: /hash-tables/using-hash-tables.md
+      -
+        Type: Lesson
+        UID: 912e7b7efb8219dbd6639bdb575322bb
+        Path: /hash-tables/problem-set-hash-tables.md
