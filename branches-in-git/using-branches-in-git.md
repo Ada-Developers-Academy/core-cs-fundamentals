@@ -6,7 +6,7 @@
 
 ## Checking Your Current Branch
 
-Whenever we work on a Git project, we are always located inside of a branch. All commits made will belong to the branch we're located in.
+Whenever we work on a Git project, we are always located inside a branch. All commits made will belong to the branch we're located in.
 
 We can determine what branch we're located in using either:
 
@@ -53,11 +53,19 @@ The asterisk `*` indicates the current branch; in this example, we're currently 
 
 When we create a branch, we should first and foremost be aware of our _current_ location. What branch are we currently on? What is the most recent commit?
 
-When we create a branch, the new branch has the same commit history as the current Git location. If we want the Git branch
+When we create a branch, the new branch will have the same commit history as the current branch.
+
+After we've established that we want our new branch to branch off the current branch, we can create a new branch with:
+
+```bash
+$ git branch <new-branch-name>
+```
+
+Where `<new-branch-name>` is the name of the new branch.
 
 ## Switching Branches
 
-We can switch our current branch to a different existing branch with
+We can switch our current branch to a different existing branch with:
 
 ```bash
 $ git switch <destination-branch-name>
@@ -81,9 +89,9 @@ This command was the dominant way for switching branches for a long time, so it'
 
 ### Sometimes Switching Is "Unsafe"
 
-When we switch branches, Git will try to preserve the unstaged changes and the staged changes.
+When we switch branches, Git will attempt to preserve the unstaged changes and the staged changes.
 
-On ocassion, Git will recognize that there isn't a way to keep the unstaged and staged changes in tact in another branch. Git will ask us to change our situation if we still want to switch branches. We recommend any of the following:
+On occasion, Git will recognize that there isn't a way to keep the unstaged and staged changes intact in another branch. Git will ask us to change our situation if we still want to switch branches. We recommend any of the following:
 
 - Create a commit with the unstaged and/or staged changes. This way, these changes will stay on the current branch before switching.
 - Use Git's stash feature, which will save unstaged and staged changes in the _stash_, instead of a commit.
