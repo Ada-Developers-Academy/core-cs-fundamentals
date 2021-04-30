@@ -23,11 +23,11 @@ When we consider how hash tables are designed and implemented, we will:
 
 ## Vocabulary and Synonyms
 
-| Vocab         | Definition                                                                                          | Synonyms | How to Use in a Sentence                |
-| ------------- | --------------------------------------------------------------------------------------------------- | -------- | --------------------------------------- |
-| Hash Table    | A data structure that implements an associative array, which maps unique key identifiers to values. | Hash Map | "Hash tables have an O(1) lookup time." |
-| Hash Function | A function used by a hash table to map a key to an index.                                           |
-| Collision     | When multiple keys map to the same element in a hash table's internal array.                        |
+| Vocab         | Definition                                                                                          | Synonyms         | How to Use in a Sentence                                                                                                                                                                                      |
+| ------------- | --------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hash Table    | A data structure that implements an associative array, which maps unique key identifiers to values. | Hash Map         | "Hash tables have an O(1) lookup time."                                                                                                                                                                       |
+| Hash Function | A function used by a hash table to map a key to an index.                                           | Hashing function | "The hash function converts a key into an index in an associative array"                                                                                                                                      |
+| Collision     | When multiple keys map to the same element in a hash table's internal array.                        | -                | "The hash function wanted to insert a value into an index where a different value already existed, which is a collision. The hash table needs to handle this collision in order to keep both pieces of data." |
 
 # Hash Tables
 
