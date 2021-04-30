@@ -12,7 +12,7 @@ Using Git is inherently a collaborative thing, and this is a great opportunity t
 
 ## Preparation
 
-Clone this repo onto your own local machine.
+Clone this repo onto your own local machine to use during Parts 1-3.
 
 ## Part 1: Merge a Feature Branch into a Main Branch
 
@@ -22,25 +22,27 @@ The goal of this part is to witness one successful merge between two branches. I
 
 After cloning this project and `cd`ing into it, we should check that we're on the default `main` branch using `$ git status` or `$ git branch`.
 
-Now, let's add a commit to this `main` branch! Implement and then make a commit with the commit message, "."
+Now, let's add a commit to this `main` branch! Implement and then make a commit with the commit message, "TODO"
 
 ### Create a Feature Branch
 
-We've received the new project requirement that we must build a feature for .
+We've received the new project requirement that we must build a feature that TODO.
 
-Let's create a feature branch for this new feature named ``.
+- [ ] Let's create a feature branch for this new feature named `TODO`.
 
-Now, let's switch to that branch using `$ git switch`.
+- [ ] Now, let's switch to that branch using `$ git switch`.
 
-Confirm that the current branch has changed with `$ git status` or `$ git branch`.
+- [ ] Confirm that the current branch has changed with `$ git status` or `$ git branch`.
 
-Confirm that the commit history for this current branch includes all commits that are currently also on `main`, including the recent commit.
+- [ ] Confirm that the commit history for this current branch includes all commits that are currently also on `main`, including the recent commit.
 
-Implement the feature by adding this code.
+- [ ] Implement the TODO feature by adding this code:
 
-Run the tests of this project using `$ python3 -m pytest `. Then, confirm that our tests are running and passing.
+TODO
 
-Finally, make a commit that contains this work on the feature branch. This commit should have the commit message, "."
+- [ ] Run the tests of this project using `$ python3 -m pytest `. Then, confirm that our tests are running and passing.
+
+- [ ] Finally, make a commit that contains this work on the feature branch. This commit should have the commit message, "TODO"
 
 ### Merge the Feature Branch Into `main`
 
@@ -68,13 +70,13 @@ Now that our `main` branch has new code, we should do the work of manually check
 
 ## Part 2: Merging Multiple Times
 
-We've received another new project requirement! We need to build.
+We've received another new project requirement! We need to build TODO.
 
 ### Create a Feature Branch
 
-We're very ambitious and speedy, and we want to make our feature branch right now.
+We're ambitious and speedy, and we want to make our feature branch right now.
 
-- [ ] Make a new feature branch named `d` from `main`.
+- [ ] Make a new feature branch named `TODO` from `main`.
 
 ### Switch to `main`
 
@@ -88,21 +90,25 @@ Let's create that change!
 
 - [ ] Adjust TODO to add this test and this implementation code:
 
+TODO
+
 - [ ] Commit this change to the (current) `main` branch.
 
 We've accomplished our urgent issue on `main`!
 
 ### Switch to the Feature Branch
 
-Now, let's return back to our feature branch, TODO.
+Now, let's return to our feature branch, TODO.
 
 - [ ] Switch to our feature branch and confirm that you're on this branch.
 
 ### Build Up the Feature Branch
 
-Let's focus on building this feature now.
+Let's focus on building this TODO feature now.
 
 - [ ] Adjust TODO to add this test and this implementation code:
+
+TODO
 
 - [ ] Commit this change to the (current) TODO branch.
 
@@ -124,19 +130,23 @@ Let's continue development of our feature branch!
 
 - [ ] Adjust TODO to add this test and this implementation code:
 
+TODO
+
 Our feature is now complete!
 
 ### Merge the Feature Branch into `main`
 
 As usual, once we finish a feature branch, we'll want to merge it back into `main`.
 
-- [ ] Switch back to the `main` branch
+- [ ] Switch back to the `main` branch.
 
 - [ ] Merge TODO into `main` with `$ git merge TODO`.
 
 ## Part 3: Merging Overlapping Changes
 
 We're assigned yet another feature to build:
+
+TODO
 
 For this part, we will follow some directions to force us to resolve a merge conflict.
 
@@ -154,17 +164,21 @@ Simon is going to push a commit onto the `main` branch.
 
 - [ ] Add this content to TODO:
 
+TODO
+
 - [ ] Make a commit with this work with the message, "I'm Simon and I'm adding TODO"
 
 ### Switch to the Feature Branch
 
-Return back to being yourself, who was in the middle of development on a feature branch!
+Return to being yourself, who was in the middle of development on a feature branch!
 
 - [ ] Switch to the TODO branch
 
 ### Build Up the Feature Branch With Overlap
 
 - [ ] Add this content to TODO:
+
+TODO
 
 - [ ] Make a commit with the message, "TODO."
 
@@ -180,7 +194,7 @@ We want Simon's work on `main` in our current feature branch.
 
 - [ ] Run `$ git status` in order to see the message once again.
 
-- [ ] Notice that Git suggests to resolve things by adding resolved files to staging.
+- [ ] Notice that Git suggests resolving the conflict by adding resolved files to staging.
 
 - [ ] Notice that Git suggests actions to do with the merge, such as running `git merge --continue` or `git merge --abort`.
 
@@ -188,15 +202,25 @@ We want Simon's work on `main` in our current feature branch.
 
 - [ ] Find the location of the conflicting code. Change the lines of code to this compromise of code:
 
-- [ ] Return back to the terminal and run `$ git status` again
+TODO
 
-- [ ] Add the file to staging
+### !callout-info
 
-- [ ] Make a commit **with no commit message** using `$ git commit`
+## Deciding How to Resolve Conflicts
 
-- [ ] Accept the default commit message for this merge commit
+How did we decide what the code should look like at this point? We needed to use context clues and the situation at hand to decide what lines of code to keep, remove, or modify.
 
-- [ ] Run `$ git status` to confirm that the merge has concluded
+### !end-callout
+
+- [ ] Return to the terminal and run `$ git status` again.
+
+- [ ] Add the TODO file to staging.
+
+- [ ] Make a commit **with no commit message** using `$ git commit`.
+
+- [ ] Accept the default commit message for this merge commit.
+
+- [ ] Run `$ git status` to confirm that the merge has concluded.
 
 - [ ] Run `$ git log` to check the current git history. Check that Simon's commits, your commits, and the merge commit are all present.
 
