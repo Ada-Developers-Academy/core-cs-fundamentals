@@ -6,9 +6,11 @@
 
 ## Introduction
 
-A powerful problem-solving technique in computer science is to use recursion. It takes advantage of operations that computers excel at.
+Life is full of problems. Big problems. But sometimes big problems are based on a smaller version of the same problem. And that smaller problem is itself based on a yet smaller version of the same problem. And that yet smaller problem is itself based on an even smaller version of the same problem, all the way down until we reach a size of the problem that isn't so big, and that we know how to solve.
 
-However, recursion happens around us all the time! Observing and naming recursion is a great way to begin thinking about recursion.
+Such problems are said to be recursive.
+
+But recursion applies to more than just problems. Recursion happens around us all the time. Observing and naming recursion in the real world is a great way to begin thinking about recursion in our programs!
 
 ## Vocabulary and Synonyms
 
@@ -20,7 +22,7 @@ However, recursion happens around us all the time! Observing and naming recursio
 
 Recursion is what happens when something's definition refers to itself. This could mean that something is constructed using itself, or that its construction is based on itself.
 
-A recursive algorithm solves a problem by using the solving a smaller version of the same problem.
+A recursive algorithm solves a problem by solving a smaller version of the same problem.
 
 ## Examples from Mathematics
 
@@ -30,11 +32,13 @@ The Sierpiński triangle is recursive because it is made up of other Sierpiński
 
 The [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake) (also known as Koch curve) is a shape made using a recursive algorithm.
 
-A Koch snowflake is created by starting with an equilateral triangle, and following this algorithm for each line segment in the shape:
+A Koch snowflake is created by starting with an equilateral triangle, and applying the following algorithm for each line segment in the shape:
 
 1. Divide the line segment into three segments of equal length
 1. Draw an equilateral triangle, whose base is the middle segment from step one
 1. Remove the line segment that is the base of the triangle from step two
+
+The [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number) is a sequence of numbers where each next number is defined in terms of previous numbers in the sequence. As the sequence grows, the ratios between consecutive terms approaches the golden ratio **𝛗**, which is often considered a marker of natural beauty.
 
 ## Examples from Nature
 
@@ -42,7 +46,9 @@ A Koch snowflake is created by starting with an equilateral triangle, and follow
 - Sourdough bread that was made from leftover sourdough
 - Branching behavior in certain plants and algae, where a branch branches off another branch
 
-We can observe many fractals and fibonacci sequences, both of which are recursive in nature.
+We can observe many fractal patterns—patterns which have internal similarity—in nature. They can often be described recursively.
+
+Many claim to find the golden ratio (related to the recursive Fibonacci sequence) hidden within numerous natural structures.
 
 - Sunflower seed heads
 - Pinecone seeds
@@ -66,12 +72,12 @@ We can observe many fractals and fibonacci sequences, both of which are recursiv
 * title: Thinking Recursively
 ##### !question
 
-Which of the following are obvious examples of recursion?
+Which of the following are examples of recursion?
 
 ##### !end-question
 ##### !options
 
-* A triangle which contains other triangles
+* A triangle which contains another triangle
 * A Sierpiński triangle made up of other Sierpiński triangles
 * Calculating the fibonacci sequence, in which the next number in the sequence is the sum of the last two numbers in the sequence
 * A row of similar jars and containers on a shelf
@@ -80,8 +86,23 @@ Which of the following are obvious examples of recursion?
 ##### !end-options
 ##### !answer
 
-* A Sierpiński triangle made up of other Sierpiński triangles
-* Calculating the fibonacci sequence, in which the next number in the sequence is the sum of the last two numbers in the sequence
+A Sierpiński triangle made up of other Sierpiński triangles is defined by referring to itself.
+
+<br />
+
+Calculating the fibonacci sequence follows a recursive algorithm. Its solution depends on the solutions of smaller versions of the same problem.
+
+<br />
+
+Putting a triangle in another triangle doesn't necessarily make it recursive. If that inner triangle also had an inner triangle, and _that_ inner triangle also had an inner triangle, and so on, then it could be recursive.
+
+<br />
+
+Similar jars aren't defined in terms of each other, so would not be recursive. They just happen to be similar.
+
+<br />
+
+A painted self portrait where the artist was painting a self portrait of themselves painting a self portrait, and so on, could be recursive, as in the Droste effect. But a typical self portrait would not be recursive.
 
 ##### !end-answer
 ##### !explanation
@@ -99,7 +120,7 @@ Calculating the fibonacci sequence follows a recursive algorithm. Its solution d
 ### !challenge
 * type: paragraph
 * id: xFPTHi
-* title: Thinking Recursively
+* title: Intro to Recursion
 ##### !question
 
 What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
