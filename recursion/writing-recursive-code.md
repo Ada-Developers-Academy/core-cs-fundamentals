@@ -161,6 +161,18 @@ print("The sum of all natural numbers up to and including 1 is",
       sum_natural_numbers(1))
 ```
 
+### !callout-info
+
+## Writing Recursive Code Takes Practice
+
+After reading through this lesson, it's okay if it's not entirely clear how we arrive at recursive algorithms. Writing them often depends on having a bit of an "Aha!" moment. Sometimes, charting the data in an iterative solution can reveal a self-similarity in the calculations that provides that moment of recognition. Other times, thinking about a problem in terms like, "I want to do _X_, but to do so, first I need to do _Y_," where _Y_ is somehow a "smaller" version of _X_ can also be helpful.
+
+<br />
+
+In any case, we shouldn't get discouraged if the that key recursive step doesn't immediately leap out at us. Practice will help us develop the knack for seeing it!
+
+### !end-callout
+
 ## Check for Understanding
 
 <!-- Question Takeaway -->
