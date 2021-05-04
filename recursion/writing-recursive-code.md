@@ -6,7 +6,7 @@
 
 ## Considerations for a Recursive Function
 
-When writing a recursive function, the following prompts will help construct different parts of a recursive function.
+The following prompts will help us construct different parts of a recursive function.
 
 - What is the base case? What is the version of the problem where we know the answer without recursing?
 - How can we describe the repeated problem that gets divided into smaller versions of the problem?
@@ -16,9 +16,9 @@ When writing a recursive function, the following prompts will help construct dif
 
 ### Determine the Base Case
 
-The base case is the the version of the problem where we can determine the answer without recursing. Generally, the base case is used as the condition which ends the recursion.
+The base case is the the version of the problem where we can determine the answer without recursing. Without a base case, our recursion will never end!
 
-We may be able to determine the base case from the given problem statement, or we may need to ask clarifying questions.
+We may be able to determine the base case directly from the given problem statement. Sometimes we may have additional understanding that lets us determine the base case. Other times we may need to ask clarifying questions, or experiment with a few sample situations to get a feel for what might be a workable base case.
 
 ### Describe the Repeated Smaller Problem
 
@@ -32,7 +32,7 @@ Each version of the smaller problem needs input. What pieces of input are needed
 
 The answer to this question will help us determine the _parameters_ of our recursive function.
 
-At this moment, we should also consider how the parameter moves towards the base case. Recall that if the parameters never move towards the base case, we'll end up with infinite recursion.
+We should also consider how the parameters move towards the base case. Recall that if the parameters never move towards the base case, we'll end up with infinite recursion.
 
 ### Determine the Information We Want Back
 
@@ -44,18 +44,18 @@ The answer to this question will determine the _return_ value of our function.
 
 When we have a draft of our recursive function, we can create example tables to check our work.
 
-Here is a sample table with sample headers that we could use. Each row in the table should represent a function call that is on the system stack. The "function call" column in this table is meant to identify a function call on the system stack.
+Here is a set of sample headers that we could use to build an example table. Each row in the table should represent a function call that is on the call stack.
 
 | Function Call | Argument(s) | Return value |
 | ------------- | ----------- | ------------ |
 
 ## Walk-through: Summing Natural Numbers
 
-In mathematics, _natural numbers_ are numbers used for counting and ordering. For this situation, we can define natural numbers as all positive integers starting at 1.
+In mathematics, _natural numbers_ are numbers used for counting and ordering. For this situation, we will use the definition of the natural numbers as being all positive integers starting at 1.
 
 Let's consider this programming problem:
 
-Create a function named `sum_natural_numbers` that is responsible for summing all natural numbers up to and including the input, `num`. We can assume that `num` is always a positive integer. This function should return the sum.
+Create a function named `sum_natural_numbers` that is responsible for summing all natural numbers up to and including the input, `num`. We will assume that `num` is always a positive integer. This function should return the sum.
 
 Examples:
 
@@ -112,7 +112,7 @@ Each smaller version of the problem needs an input number, `num`.
 
 Each recursive call should bring the number closer to the base case, `1`. Because `1` is the smallest natural number, and all other integers are greater than `1`, we should start our recursion from a larger integer and decrement `num`.
 
-By decrementing, we can predict that `num` will eventually become `1` and end the recursion.
+By starting `num` greater than `1`, and decrementing by `1` at each level of recursion, we can be certain that `num` will eventually become `1` and end the recursion.
 
 ### Determine the Information We Want Back
 
@@ -120,7 +120,7 @@ The value we need to `return` from each call is the sum of all natural numbers u
 
 ### Create Example Tables
 
-The following table represents the system stack when calling `sum_natural_numbers(4)`. The top of the stack is the first row, `sum_natural_numbers(1)`. This function call is at the top of the stack because it is the base case, so it is the final function call. With stacks, the last item pushed in is the first item popped out (LIFO!).
+The following table represents the call stack when calling `sum_natural_numbers(4)`. The top of the stack is the first row, `sum_natural_numbers(1)`. This function call is at the top of the stack because it is the base case, so it is the final function call. With stacks, the last item pushed in is the first item popped out (LIFO!).
 
 | Function Call            | `num` | Return value |
 | ------------------------ | ----- | ------------ |
@@ -160,6 +160,18 @@ print("-------------")
 print("The sum of all natural numbers up to and including 1 is",
       sum_natural_numbers(1))
 ```
+
+### !callout-info
+
+## Writing Recursive Code Takes Practice
+
+After reading through this lesson, it's okay if it's not entirely clear how we arrive at recursive algorithms. Writing them often depends on having a bit of an "Aha!" moment. Sometimes, charting the data in an iterative solution can reveal a self-similarity in the calculations that provides that moment of recognition. Other times, thinking about a problem in terms like, "I want to do _X_, but to do so, first I need to do _Y_," where _Y_ is somehow a "smaller" version of _X_ can also be helpful.
+
+<br />
+
+In any case, we shouldn't get discouraged if the that key recursive step doesn't immediately leap out at us. Practice will help us develop the knack for seeing it!
+
+### !end-callout
 
 ## Check for Understanding
 
