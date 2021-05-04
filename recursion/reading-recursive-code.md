@@ -15,7 +15,7 @@
 | Base Case                    | A condition which will end the recursion. This is case where the solution is concrete                                                                                 | "The base case for computing the nth fibonacci number is when `n` is 1 or 2, as the first two numbers of the fibonacci sequence are always 1 and 1." " |
 | Recursive Case               | A situation in a recursive function that will call the function itself                                                                                                | "When computing the nth fibonacci number, if `n` is greater than 2, the `fibonacci` function will call itself."                                        |
 | Stack (data structure)       | A data structure that operates as "Last-In-First-Out," where new data is pushed onto the top, and data is popped off from the top                                     |
-| System stack                 | A part of memory dedicated to storing the method calls and local variables of a running program. The system stack is responsible for keeping track of function calls. |
+| Call stack                 | A part of memory dedicated to storing the method calls and local variables of a running program. The call stack is responsible for keeping track of function calls. |
 
 ## Recursion
 
@@ -177,11 +177,11 @@ Executing both of these functions results in a `RecursionError`!
 
 ## Stacks and Function Calls
 
-A running program has a dedicated section of memory called **the system stack**.
+A running program has a dedicated section of memory called the **call stack**.
 
-The system stack is where method calls and local variables are stored. It's responsible for keeping track of function calls.
+The main responsibility of the call stack is to keep track of function calls. It stores information about the argument values and local variables used in the function. It also records the location from where the current function was called (the _call site_), so that it can _return_ there when the function ends.
 
-The "stack" in "system stack" implies that it uses the _stack_ data structure. The system stack keeps track of function calls using a stack data structure.
+The "stack" in "call stack" implies that it uses a _stack_ data structure.
 
 ### Intro to the Stack Data Structure
 
@@ -199,7 +199,7 @@ Stacks operate in a Last-In-First-Out (LIFO) manner. They remove things in the r
 
 ## Tracing Recursive Functions and Illustrating the Stack
 
-Let's read more recursive functions and apply our new knowledge about the _system stack_ in order to visualize it. Consider the following function.
+Let's read another recursive function, and apply our new knowledge about the _call stack_ in order to visualize it. Consider the following function.
 
 ```python
 def mystery(num):
@@ -215,7 +215,7 @@ What happens when we invoke the function when `num` is `5`?
 mystery(5)
 ```
 
-We can begin to illustrate the _system stack_. Because the system stack keeps track of function calls, we add in the function call `mystery(5)` onto the stack.
+We can begin to illustrate the _call stack_. Because the call stack keeps track of function calls, we add the function call `mystery(5)` onto the stack.
 
 ![Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack.](<../assets/recursion_reading-recursion_mystery(5).png>)  
 _Fig. Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack._
@@ -246,16 +246,16 @@ _Fig. Diagram showing the system stack. There is a stack of boxes inside the sys
 
 At this point, `num` is `1`, which is our base case! The base case provides a solution and `return`s `1`.
 
-As the function finishes and `return`s, it's time on the system stack is over. The system stack pops off the top function call after executing `return 1`.
+As the function finishes and `return`s, its time on the call stack is over. The call stack pops off the top function call after executing `return 1`.
 
 ![Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"](<../assets/recursion_reading-recursion_mystery(1)-return.png>)  
 _Fig. Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"_
 
-The system stack returns to `mystery(2)`.
+The call stack returns to `mystery(2)`.
 
-`mystery(2)` takes that return value (`1`), and executes `num * mystery(num-1)`, and then **returns it**. In this case, where `num` is `2`, it **returns** `2 * 1`, or `2`.
+`mystery(2)` takes that return value (`1`), and executes `num * mystery(num - 1)`, and then **returns this result**. In this case, where `num` is `2`, it **returns** `2 * 1`, or `2`.
 
-The function `mystery(2)` is popped off the system stack. The system stack returns to `mystery(3)` on the stack.
+The function `mystery(2)` is popped off the call stack. The call stack returns to `mystery(3)` on the stack.
 
 We can summarize the remaining returns like so:
 
