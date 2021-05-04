@@ -281,39 +281,39 @@ mystery(5)
 
 We can begin to illustrate the _call stack_. Because the call stack keeps track of function calls, we add the function call `mystery(5)` onto the stack.
 
-![Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack.](<../assets/recursion_reading-recursion_mystery(5).png>)  
-_Fig. Diagram showing the system stack as a box. There is a box labeled "mystery(5)" inside the system stack._
+![A box representing the call stack. There is a box labeled "mystery(5)" inside the call stack.](<../assets/recursion_reading-recursion_mystery(5).png>)  
+_Fig. The top of the call stack after calling **`mystery(5)`**_
 
 When `mystery(5)` executes, the base case is not met. It will call `mystery(4)`.
 
 The function call `mystery(4)` is added to the _top_ of the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(4).png>)  
-_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(4)", "mystery(5)"_
+![A box representing the call stack. There is a stack of boxes inside the call stack. The boxes are labeled from top-to-bottom: "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(4).png>)  
+_Fig. The top of the call stack after calling **`mystery(4)`**_
 
 Here, `num` is `4`, and the base case is still not met. This will call `mystery(3)`
 
 We add `mystery(3)` to the top of the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(3).png>)  
-_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"_
+![A box representing the call stack. There is a stack of boxes inside the call stack. The boxes are labeled from top-to-bottom: "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(3).png>)  
+_Fig. The top of the call stack after calling **`mystery(3)`**_
 
 This calls `mystery(2)`. Calling `mystery(2)` gets pushed onto the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(2).png>)  
-_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
+![A box representing the call stack. There is a stack of boxes inside the call stack. The boxes are labeled from top-to-bottom: "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(2).png>)  
+_Fig. The top of the call stack after calling **`mystery(2)`**_
 
 The base case is still not met. The function calls `mystery(1)`, which gets pushed onto the stack.
 
-![Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(1).png>)  
-_Fig. Diagram showing the system stack. There is a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"_
+![A box representing the call stack. There is a stack of boxes inside the call stack. The boxes are labeled from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)"](<../assets/recursion_reading-recursion_mystery(1).png>)  
+_Fig. The top of the call stack after calling **`mystery(1)`**_
 
 At this point, `num` is `1`, which is our base case! The base case provides a solution and `return`s `1`.
 
 As the function finishes and `return`s, its time on the call stack is over. The call stack pops off the top function call after executing `return 1`.
 
-![Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"](<../assets/recursion_reading-recursion_mystery(1)-return.png>)  
-_Fig. Diagram showing a stack of boxes inside the system stack. The boxes are labeled in this order, from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "Return 1"_
+![A box representing the call stack. There is a stack of boxes inside the call stack. The boxes are labeled from top-to-bottom: "mystery(1)", "mystery(2)", "mystery(3)", "mystery(4)", "mystery(5)". All the stack frame boxes are cyan, except mystery(1) which is grey indicating this frame is popped. There is an arrow pointing from "mystery(1)" to "mystery(2)" labeled "1", representing the return value from mystery(1) to the call site in mystery(2).](<../assets/recursion_reading-recursion_mystery(1)-return.png>)  
+_Fig. When the base case is encountered, it returns its result back to the previous function call._
 
 The call stack returns to `mystery(2)`.
 
@@ -329,8 +329,8 @@ We can summarize the remaining returns like so:
 | `mystery(4)`   | `4`   | `4 * 6`                | `24`         |
 | `mystery(5)`   | `5`   | `5 * 24`               | `120`        |
 
-![Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"](../assets/recursion_reading-recursion_mystery-result.png)  
-_Fig. Diagram showing a stack of "mystery()" function calls inside the system stack. There are arrows pointing from one function call to the function below. The arrows are labeled in this order, from top-to-bottom: "Return 1", "Return 2", "Return 6", "Return 24". An arrow leading from "mystery(5)" to empty space below is labeled "Return 120"_
+![A box representing the call stack showing a sequence of "mystery()" function calls inside the call stack. They are colored grey, indicating they have completed and have been popped off. There are circled numbers between each stack frame indicating the returned result. The order of popped frames and returned values is mystery(1)→1→mystery(2)→2→mystery(3)→6→mystery(4)→24→mystery(5)→120. 120 is the final value returned.](../assets/recursion_reading-recursion_mystery-result.png)  
+_Fig. As each call completes, its result is returned to the next call in the stack, eventually producing 120._
 
 As a final result, we see that `mystery(5)` returns `120`.
 
