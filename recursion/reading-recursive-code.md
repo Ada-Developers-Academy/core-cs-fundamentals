@@ -68,7 +68,7 @@ The "different input" in the recursive call should be working towards bringing t
 
 ## Example: Exponentiation
 
-Read through this recursive function, `pow`, whose responsibility is to calculate [exponentiation](https://en.wikipedia.org/wiki/Exponentiation), otherwise known as `num`<sup>`exponent`</sup>. It takes in two arguments:
+Read through this recursive function, `power(num, exponent)`, whose responsibility is to calculate [exponentiation](https://en.wikipedia.org/wiki/Exponentiation) of the form `num`<sup>`exponent`</sup>. It takes in two arguments:
 
 1. `num`, which is the base number
 1. `exponent`, which is the exponent
@@ -86,11 +86,11 @@ And 3<sup>6</sup> is expressed as:
 ```
 
 ```python
-def pow(num, exponent):
+def power(num, exponent):
     if exponent == 0:
         return 1
 
-    return num * pow(num, exponent - 1)
+    return num * power(num, exponent - 1)
 ```
 
 #### Base Case
@@ -102,60 +102,60 @@ if exponent == 0:
     return 1
 ```
 
-This code snippet is the _base case_. Whenever `pow` is called **and** the argument `exponent` is `0`, then we return `1`. This base case gives us an immediate solution to the problem: `1`!
+This code snippet is the _base case_. Whenever `power` is called **and** the argument `exponent` is `0`, then we return `1`. This base case gives us an immediate solution to the problem: `1`.
 
 #### Recursive Cases
 
 ```python
-return num * pow(num, exponent - 1)
+return num * power(num, exponent - 1)
 ```
 
 This code snippet handles the recursive cases. Recursive cases _call itself while making the problem smaller_. Recursive cases should move the problem closer and closer to the base case.
 
-The problem gets smaller by calling `pow` with a smaller exponent. As the `exponent` shrinks, it will eventually equal `0`!
+The problem gets smaller by calling `power` with a smaller exponent. As the `exponent` shrinks, it will eventually equal `0`.
 
-### Running `pow`
+### Running `power`
 
-How can we visualize the flow of code execution? Let's imagine the same `pow` function with several print statements, and then run it.
+How can we visualize the flow of code execution? Let's add some print statements to `power`, and then run it.
 
 ```python
-def pow(num, exponent):
-    print("Calling pow! num:", num, "exponent:", exponent)
+def power(num, exponent):
+    print("Calling power! num:", num, "exponent:", exponent)
     if exponent == 0:
         return 1
 
-    return num * pow(num, exponent - 1)
+    return num * power(num, exponent - 1)
 
 
-print(3, "raised to the power of", 5, "is", pow(3, 5))
+print(3, "raised to the power of", 5, "is", power(3, 5))
 
 print("-------------")
 
-print(3, "raised to the power of", 6, "is", pow(3, 6))
+print(3, "raised to the power of", 6, "is", power(3, 6))
 ```
 
 We should get the following output:
 
 ```
-Calling pow! num: 3 exponent: 5
-Calling pow! num: 3 exponent: 4
-Calling pow! num: 3 exponent: 3
-Calling pow! num: 3 exponent: 2
-Calling pow! num: 3 exponent: 1
-Calling pow! num: 3 exponent: 0
+Calling power! num: 3 exponent: 5
+Calling power! num: 3 exponent: 4
+Calling power! num: 3 exponent: 3
+Calling power! num: 3 exponent: 2
+Calling power! num: 3 exponent: 1
+Calling power! num: 3 exponent: 0
 3 raised to the power of 5 is 243
 -------------
-Calling pow! num: 3 exponent: 6
-Calling pow! num: 3 exponent: 5
-Calling pow! num: 3 exponent: 4
-Calling pow! num: 3 exponent: 3
-Calling pow! num: 3 exponent: 2
-Calling pow! num: 3 exponent: 1
-Calling pow! num: 3 exponent: 0
+Calling power! num: 3 exponent: 6
+Calling power! num: 3 exponent: 5
+Calling power! num: 3 exponent: 4
+Calling power! num: 3 exponent: 3
+Calling power! num: 3 exponent: 2
+Calling power! num: 3 exponent: 1
+Calling power! num: 3 exponent: 0
 3 raised to the power of 6 is 729
 ```
 
-We can confirm that the `pow` function was called multiple times. Each time, the problem was made smaller, and `exponent` decremented by one. Eventually, when `exponent` was `0`, it met the conditions for the base case, and returned `1`.
+We can confirm that the `power` function was called multiple times. Each time, the problem was made smaller, and `exponent` was decremented by one. Eventually, when `exponent` was `0`, it met the conditions for the base case, and returned `1`.
 
 ## Infinite Recursion
 
