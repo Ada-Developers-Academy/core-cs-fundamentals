@@ -21,7 +21,13 @@
 
 In programming, a recursive function is a function that calls itself.
 
-We can imagine a recursive function named `get_next_item`. When we call `get_next_item`, it will invoke itself, `get_next_item`. Of course, when _this_ function calls begins execution, it will also invoke itself.
+Consider the following recursive function:
+
+```python
+def hello_crash():
+    print("Hello, crash!")
+    hello_crash()
+```
 
 Both iteration and recursion are programming techniques used to repeat logic and behavior. There are often iterative and recursive solutions to the same problem!
 
