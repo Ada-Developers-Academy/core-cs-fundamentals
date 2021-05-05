@@ -274,4 +274,15 @@ def is_nested_parens(parens):
 
 For an additional challenge, implement `is_nested_parens` without creating new strings in the process of solving the problem.
 
+<br />
+
+<details>
+    <summary>Hint</summary>
+
+<br />
+
+Sometimes we create extra helper functions that can store more information in their parameters than we might use in the main solution function.
+
+</details>
+
 ### !end-callout
