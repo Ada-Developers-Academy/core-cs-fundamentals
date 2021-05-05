@@ -286,5 +286,38 @@ def digit_match(apples, oranges):
 ```
 
 ### !end-explanation
+### !hint
+
+Our solution uses Python's _floor division operator_, `//`.
+
+When Python divides two numbers, it will give you the answer:
+
+```python
+19 / 10
+# 1.9
+12 / 10
+# 1.2
+9 / 10
+# 0.9
+3 / 10
+# 0.3
+```
+
+With floor division, Python returns the answer, rounded down to a whole number. Observe:
+
+```python
+19 // 10
+# 1
+12 // 10
+# 1
+9 // 10
+# 0
+3 // 10
+# 0
+```
+
+Any number `//` by `10` will return `0`.
+
+### !end-hint
 ### !end-challenge
 <!-- prettier-ignore-end -->
