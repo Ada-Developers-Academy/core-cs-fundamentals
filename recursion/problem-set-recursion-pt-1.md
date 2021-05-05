@@ -16,7 +16,7 @@ Complete all questions below. **Solve all questions using recursion**, and not i
 * points: 3
 ### !question
 
-Write a function `factorial` that accepts an integer parameter `n`. It uses recursion to compute and return the value of `n` factorial (also known as `n!`).
+Write a function `factorial` that accepts an integer parameter `n`. It uses recursion to compute and return the value of `n` factorial (also written as `n!`).
 
 Here are the tests:
 
@@ -203,9 +203,9 @@ def bunny(count):
 * points: 3
 ### !question
 
-Write a function `is_nested_parens` that accepts a string `input` of only parenthesis. It returns `True` if those parentheses are properly nested, and `False` if they are not. You may assume that no non-parenthesis characters will be passed to this function.
+Write a function `is_nested_parens` that accepts a string `parens` of only parentheses. It returns `True` if those parentheses are properly nested, and `False` if they are not. You may assume that no non-parenthesis characters will be passed to this function.
 
-| Example `input` | Expected Output |
+| Example `parens` | Expected Output |
 | --------------- | --------------- |
 | `"((()))"`      | `True`          |
 | `""`            | `True`          |
@@ -215,9 +215,9 @@ Here are the tests:
 
 ```python
 def test_is_nested_parens():
-    input = "((()))"
+    parens = "((()))"
 
-    assert is_nested_parens(input)
+    assert is_nested_parens(parens)
 
 
 def test_is_nested_parens_empty_str():
@@ -225,9 +225,9 @@ def test_is_nested_parens_empty_str():
 
 
 def test_is_nested_parens_not_matching_length():
-    input = "(())))"
+    parens = "(())))"
 
-    assert not is_nested_parens(input)
+    assert not is_nested_parens(parens)
 ```
 ### !end-question
 ### !tests
@@ -237,17 +237,17 @@ from main import *
 
 class TestChallenge(unittest.TestCase):
     def test_is_nested_parens(self):
-        input = "((()))"
+        parens = "((()))"
 
-        self.assertTrue(is_nested_parens(input))
+        self.assertTrue(is_nested_parens(parens))
 
     def test_is_nested_parens_empty_str(self):
         self.assertTrue(is_nested_parens(""))
 
     def test_is_nested_parens_not_matching_length(self):
-        input = "(())))"
+        parens = "(())))"
 
-        self.assertFalse(is_nested_parens(input))
+        self.assertFalse(is_nested_parens(parens))
 ```
 ### !end-tests
 ### !explanation
@@ -255,13 +255,13 @@ class TestChallenge(unittest.TestCase):
 An example of a working implementation:
 
 ```python
-def is_nested_parens(input):
-    if len(input) == 0:
+def is_nested_parens(parens):
+    if len(parens) == 0:
         return True
-    elif input[:1] != "(" or input[-1:] != ")":
+    elif parens[:1] != "(" or parens[-1:] != ")":
         return False
     else:
-        return is_nested_parens(input[1:-1])
+        return is_nested_parens(parens[1:-1])
 ```
 
 ### !end-explanation
