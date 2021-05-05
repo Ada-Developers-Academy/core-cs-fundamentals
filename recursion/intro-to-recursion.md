@@ -86,6 +86,12 @@ Which of the following are examples of recursion?
 ##### !end-options
 ##### !answer
 
+* A Sierpiński triangle made up of other Sierpiński triangles
+* Calculating the fibonacci sequence, in which the next number in the sequence is the sum of the last two numbers in the sequence
+
+##### !end-answer
+##### !explanation
+
 A Sierpiński triangle made up of other Sierpiński triangles is defined by referring to itself.
 
 <br />
@@ -103,13 +109,6 @@ Similar jars aren't defined in terms of each other, so would not be recursive. T
 <br />
 
 A painted self portrait where the artist was painting a self portrait of themselves painting a self portrait, and so on, could be recursive, as in the Droste effect. But a typical self portrait would not be recursive.
-
-##### !end-answer
-##### !explanation
-
-A Sierpiński triangle made up of other Sierpiński triangles is defined by referring to itself.
-
-Calculating the fibonacci sequence follows a recursive algorithm. Its solution depends on the solutions of smaller versions of the same problem.
 
 ##### !end-explanation
 ### !end-challenge
