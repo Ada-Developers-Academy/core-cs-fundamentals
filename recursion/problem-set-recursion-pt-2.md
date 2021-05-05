@@ -16,7 +16,7 @@ Complete all questions below. **Solve all questions using recursion**, and not i
 * points: 3
 ### !question
 
-Write a function `search` that accepts an unsorted array of integers, `array`, and an integer value to find, `needle`. It returns `True` if `needle` is found in `array`, and `False` otherwise. Make the algorithm recursive.
+Write a function `search` that accepts an unsorted array of integers, `array`, and an integer value to find, `query`. It returns `True` if `query` is found in `array`, and `False` otherwise. Make the algorithm recursive.
 
 Be sure to implement `search` using recursion.
 
@@ -64,14 +64,14 @@ class TestChallenge(unittest.TestCase):
 An example of a working implementation:
 
 ```python
-def search(array, needle):
+def search(array, query):
     if not len(array):
         return False
-    elif array[0] == needle:
+    elif array[0] == query:
         return True
     # Use Python slicing to get all items
     # besides the first item
-    return search(array[1:], needle)
+    return search(array[1:], query)
 ```
 
 ### !end-explanation
@@ -88,7 +88,7 @@ def search(array, needle):
 * points: 3
 ### !question
 
-Write a recursive function `is_palindrome` that accepts a string `text` as a parameter. It returns a boolean value indicating if that string is a [palindrome](https://en.wikipedia.org/wiki/Palindrome) or not.
+Write a recursive function `is_palindrome` that accepts a string `text` as a parameter. It returns a boolean value indicating whether or not that string is a [palindrome](https://en.wikipedia.org/wiki/Palindrome).
 
 | Input `text` | Return value |
 | ------------ | ------------ |
@@ -166,14 +166,14 @@ Write a recursive function named `digit_match`. It accepts two non-negative inte
 
 Two digits match if they are equal _and_ have the same position relative to the end of the number (i.e. starting with the ones digit).
 
-In other words, the function should compare the last digits of each number, the second-to-last-digits-of-each number, the third-to-last digits of each number, and so fort, counting how many pairs match.
+In other words, the function should compare the last digits of each number, the second-to-last digits of each number, the third-to-last digits of each number, and so fort, counting how many pairs match.
 
 Example:
 
 - First number: `1072503891`
 - Second number: `62530841`
 - Number of matches: `4`
-    - Matching pairs: 202, 5-5, 8-8, 1-1
+    - Matching pairs: 2-2, 5-5, 8-8, 1-1
 
 ```
 1 0 7 2 5 0 3 8 9 1
