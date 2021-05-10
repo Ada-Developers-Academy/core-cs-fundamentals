@@ -53,9 +53,9 @@ Before a phone screen it is a good idea to:
 
 ### In-person Interview
 
-A technical in-person interview can vary greatly in length and process.  Typically however you will have some initial time to greet and introduce yourself to the interviewer(s) with some brief chitchat.  
+A technical in-person interview can vary greatly in length and process.  Typically however a candidate will have some initial time to greet and introduce yourself to the interviewer(s) with some brief chitchat.  
 
-Then the interviewer will begin the technical portion of the interview.  This is often a _whiteboard interview_, meant to test your ability to solve new problems and communicate your thinking.  Candidates are traditionally given a problem and a whiteboard and asked to develop a solution and explain it to the interviewer.
+Then the interviewer will begin the technical portion of the interview.  This is often a _whiteboard interview_, meant to test the candidate's ability to solve new problems and communicate their thoughts.  Candidates are traditionally given a problem and a whiteboard and asked to develop a solution and explain it to the interviewer.
 
 In recent times, candidates are often interviewed in an online technical interview using Zoom, Meet, Cisco WebEx and a shared online code editor such as [Feplit](https://replit.com/), [Coderpad](https://coderpad.io/), [HackerRank](https://hackerrank.com/) or [VS Code LiveShare](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode).  In a process similar to an in-person interview candidates are presented with a programming problem and work through a solution live with the interviewers demonstrating problem solving, and communication skills.
 
