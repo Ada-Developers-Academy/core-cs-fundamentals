@@ -46,3 +46,7 @@ Standards:
         Type: Lesson
         UID: 3c192ac0-6a5b-492a-9550-8bf503322571
         Path: /interview-process/how-to-interview.md
+      -
+        Type: Lesson
+        UID: db9dd27d-4bbd-4a4b-b52d-f86aed909de8
+        Path: /interview-process/interview-recording.md
