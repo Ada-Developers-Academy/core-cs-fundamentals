@@ -24,19 +24,19 @@ Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
 
 A technical interview typically starts like a general interview with introductions and a bit of discussion.
 
-You should be prepared to talk about:
+Candidates should be prepared to talk about:
 
 - Prior work experience
 - Past projects
-- Items highlighted on your resume
-- Why you are excited about the position
+- Items highlighted on their resume
+- Why they are excited about the position
 
 <!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-info
 
 ## This Will Sound Familiar
 
-If this process sounds famialiar... It SHOULD!  The **P**roblem **S**olving **E**xercises you have engaged in every week are designed to help you practice the interview process!
+If this process sounds famialiar... It SHOULD!  The **P**roblem **S**olving **E**xercises (PSEs) you have submitted almost every week, are designed to help you practice the interview process!
 
 ### !end-callout
 
