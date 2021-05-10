@@ -6,11 +6,11 @@
 
 ## Introduction
 
-Years of practice performing technical interviews have lead Ada to a process to improve candidate chances in a technical interview.  These steps describe a general approach and are useful to:
+Years of practice performing technical interviews have lead Ada to develop a process for interviewing.  These steps describe a general approach and are useful to:
 
 - Reduce nervousness by providing the candidate with a script to follow and practice
-- Reduce the chances of misunderstanding the question
-- Encourage the candidate to engage the interviewer and convey your thought process
+- Reduce the chances of misunderstanding the problem
+- Encourage the candidate to engage the interviewer and convey their thought process
 
 In this lesson we will apply these steps to the following interview question:
 
