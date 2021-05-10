@@ -59,7 +59,10 @@ Then the interviewer will begin the technical portion of the interview.  This is
 
 In recent times, candidates are often interviewed in an online technical interview using Zoom, Meet, Cisco WebEx and a shared online code editor such as [Feplit](https://replit.com/), [Coderpad](https://coderpad.io/), [HackerRank](https://hackerrank.com/) or [VS Code LiveShare](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode).  In a process similar to an in-person interview candidates are presented with a programming problem and work through a solution live with the interviewers demonstrating problem solving, and communication skills.
 
-### Mock Interviews
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-success
+
+## Mock Interviews
 
 As an Ada student you will be matched up for a practice interview, called a "mock interview" with an experienced hiring manager or engineer.  They will give you a sample interview problem and conduct a practice interview with you.  After the "mock interview" the interviewer will write up a set of feedback for you to help you prepare for your actual internship interviews.
 
@@ -67,7 +70,10 @@ Remember:
 
 ![don't panic](/assets/interview-process_interview-introduction_dont-panic.jpg)
 
-How you perform in your mock interview will not affect your internship placement.  The mock interview is designed to give you practice and experience with a technical interview and provide you useful feedback.
+The mock interview is designed to give you practice and experience with a technical interview and provide you useful feedback.
+
+### !end-callout
+
 
 <!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-info
