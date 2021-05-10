@@ -42,7 +42,7 @@ When possible, candidates should take advantage of opportunities to meet with en
 
 ### Phone Screen
 
-A phone screen, despite the name might be either on the phone or via an online platform such as Skype or Google Hangout.  You will likely initially talk to a recruiter, but the call may involve a hiring manager.  You may or may not be asked technical questions, but the goal of a phone screen is generally to narrow down the list of candidates for on site interviews.  Generally you should be ready to talk about work experience you have, projects you have worked on and how your interests align with the company and team you are applying for.  
+A phone screen, despite the name might be either on the phone or via an online platform such as Skype or Google Hangout.  Candidates will likely initially talk to a recruiter, but the call may involve a hiring manager.  Candidates may or may not be asked technical questions, but the goal of a phone screen is generally to narrow down the list of candidates for on site interviews.  Generally the discussion centers on work experience, projects worked on and how the candidate's interests align with the company and team applied for.
 
 Before a phone screen it is a good idea to:
 
