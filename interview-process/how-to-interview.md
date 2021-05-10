@@ -48,7 +48,7 @@ After the interviewer finishes the question, the candidate should repeat the pro
 
 ### Ask Clarifying Questions
 
-Before starting on the solution, ask clarifying questions.  Clarifying questions can help you identify any missing bits of information needed to solve the problem, and identify requirements.
+Before starting on the solution, the candidate should ask clarifying questions.  Clarifying questions can help identify any missing bits of information needed to solve the problem, and identify requirements.
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -103,11 +103,11 @@ Some clarifying questions could include:
 
 ### Determine Test Input-Output
 
-The next step is to determine sample input into the problem and the resulting output.  This allows the applicant to verify how well they understand the problem and how the solution should perform.
+The next step is to determine sample input into the problem and the resulting output.  This allows the applicant to verify how well they understand the problem and identify how the answer is determined.
 
-When creating sample input-output look for edge-cases and nominal cases.  Solicit feedback from the interviewer to verify that your sample input and output values are correct and you understand the problem.
+When creating sample input-output look for edge-cases.  Solicit feedback from the interviewer to verify that the sample input and output values are correct and you understand the problem.
 
-Keep the sample input and output values because they can be useful in testing the solution.
+Keep note of the sample input and output values because they can be useful in testing the solution.
 
 It can also be quite helpful to ask for **test cases**.  Some interviewers may provide pre-written unit tests for the problem, others may provide useful input-output examples of their own.  Candidates who ask for test cases also demonstrate a knowledge of Test Driven Development.
 
