@@ -226,7 +226,7 @@ def test_five():
   assert ugly_number(30) == True
 
 def test_six():
-  assert ugly_number(150) == False
+  assert ugly_number(150) == True
 ```
 
 ##### !end-question
@@ -269,7 +269,9 @@ class TestUglyNumber(unittest.TestCase):
     self.assertEqual(ugly_number(30), True)
 
   def test_six(self):
-    self.assertEqual(ugly_number(150), False)    
+    self.assertEqual(ugly_number(150), True)
+  def test_151(self):
+      self.assertEqual(ugly_number(151), False)
 ```
 
 ##### !end-tests
