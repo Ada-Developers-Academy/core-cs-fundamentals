@@ -6,11 +6,7 @@ The tech hiring process can be stressful, but doing well as a job applicant is a
 
 The Ada curriculum and community provide a strong support network to help you succeed in the interview process.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XKu_SEDAykw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Goals
-
-By the end of this lesson you should be able to:
 
 - Describe the most common steps in the application process.
 - Understand hiring terminology such as:
@@ -25,10 +21,6 @@ By the end of this lesson you should be able to:
 |  Whiteboard Interview  	|  A problem solving exercise where a job applicant is asked to solve a programming or design problem on a whiteboard. 	|    Technical Interview	|   I have a whiteboard interview next week, so I need a buddy to practice with 	|
 | Phone Screen | An initial telephone or internet chat with a job candidate to ensure the candidate's suitability for an in-peron interview.  This could involve a hiring manager, but is more likely to involve a recruiter. | &nbsp; | I have a phone screening with a recruiter at Dynamic Widgets in 3 hours | 
 | Coding Challenge | A "homework" assignment given to job candidates to assess their programming skills and practices such as regularly committing and writing tests. |  | I'm trying to write tests for my Dynamic Widgets coding challenge assignment. 
-
-## Slides
-
-- [Whiteboarding Interviews Slides](https://docs.google.com/presentation/d/1cc6sePkEsksLNW0eFl3HfuPvo3bzJqC4XIzjjc811so/edit)
 
 ## The Typical Tech Hiring Process
 
