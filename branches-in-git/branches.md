@@ -2,7 +2,7 @@
 
 ## Goals
 
-The goal of this lesson is to introduce the definition and overall concept to Git branches.
+The goal of this lesson is to introduce the definition and overall concept of Git branches.
 
 ## Vocabulary and Synonyms
 
@@ -14,14 +14,14 @@ The goal of this lesson is to introduce the definition and overall concept to Gi
 
 As we use Git, we know we are creating a Git commit history by building commits.
 
-Each commit has:
+The parts of a commit we have so far discussed are:
 
-- A diff of changes
+- The current state of our files
 - A commit message
 - A commit hash (to identify it)
 - A sense of the commit that comes before it (its parent commit(s))
 
-Commits are also on _branches_. **Git branches** are like named commit histories. A Git branch keeps track of a commit history. Add a new commit extends that branch by another commit.
+Another piece of information Git tracks when committing is the _branch_ of the commit. **Git branches** apply names to a sequence of commits. A Git branch marks the latest commit in a particular commit history. Adding a new commit to a branch moves the name of that branch forward to the newly added commit.
 
 All of our Git work so far has been on a branch.
 
@@ -34,11 +34,12 @@ There is always at least one default branch in every Git project. The default na
 [Before the default branch was named `main`, it was named `master`](https://github.com/github/renaming). This is useful to know because:
 
 - It shows the current conversation around shared language and culture in the tech community
-- Many tutorials will refer to the `master` branch
+- Many tutorials will still refer to the `master` branch
+- Some systems that integrate with Git repositories do not yet recognize this change, so we may occasionally need to continue using the old name
 
 <br/>
 
-We can assume that for any modern software, renaming the branch `master` to `main` will operate identically.
+For most modern software, using `main` for the default branch will work without any issue.
 
 ### !end-callout
 
@@ -68,12 +69,18 @@ For example, we can have a `main` branch with the following Git log (and these c
 034g3 "Adds payment endpoint to create payments"
 ```
 
+![Git history for the main branch. It has two commits, 1d1kl "Refactors payment..." and 034g3 "Adds payment endpoint...". Commit 034g3 points to commit 1d1kl, indicating that 034g3 is the predecessor. The main branch label refers to commit 1d1kl.](../assets/branches-in-git_branches_main.png)  
+_Fig. Git history for the **`main`** branch._
+
 We can create a `click-button-feature` branch while on the `main` branch. When that happens, the `click-button-feature` will have the following Git log:
 
 ```
 1d1kl "Refactors payment endpoint to use make_payment helper"
 034g3 "Adds payment endpoint to create payments"
 ```
+
+![Git history for the main and click-button-feature branches. There are two commits, 1d1kl "Refactors..." and 034g3 "Adds payment...". Commit 034g3 points to commit 1d1kl, indicating that 034g3 is the predecessor. The main branch label refers to commit 1d1kl. The click-button-feature branch label also refers to commit 1d1kl.](../assets/branches-in-git_branches_second-branch.png)  
+_Fig. Git history for the **`main`** and **`click-button-feature`** branches._
 
 The `click-button-feature` starts with the same Git history as the `main` branch at the time of creation.
 
@@ -96,6 +103,9 @@ And, assuming the `click-button-feature` branch was created earlier, the Git his
 034g3 "Adds payment endpoint to create payments"
 ```
 
+![Git history for the main and click-button-feature branches. There are three commits, 2pgs7 "Adjusts payment...", 1d1kl, and 034g3. Commit 034g3 points to commit 1d1kl, indicating that 034g3 is the predecessor. Commit 1d1kl points to commit 2pgs7, indicating that 1d1kl is the predecessor. The main branch label refers to the new commit 2pgs7. The click-button-feature branch label still refers to commit 1d1kl.](../assets/branches-in-git_branches_commit-main.png)  
+_Fig. Update to Git history after committing in the **`main`** branch._
+
 Similarly, we can add a commit to the `click-button-feature` branch:
 
 ```
@@ -111,6 +121,9 @@ And it won't affect the Git history of the `main` branch:
 1d1kl "Refactors payment endpoint to use make_payment helper"
 034g3 "Adds payment endpoint to create payments"
 ```
+
+![Git history for the main and click-button-feature branches. There are four commits, 3gtqq "Enables button...", 2pgs7 "Adjusts payment...", 1d1kl, and 034g3. Commit 034g3 points to commit 1d1kl, indicating that 034g3 is the predecessor. Commit 1d1kl points to commit 2pgs7, indicating that 1d1kl is the predecessor. Commit 1d1kl also points to commit 3gtqq, again indicating that 1d1kl is the predecessor. It is the predecessor of both commits. The main branch label refers to commit 2pgs7. The click-button-feature branch label refers to the new commit 3gtqq.](../assets/branches-in-git_branches_commit-second.png)  
+_Fig. Update to Git history after committing in the **`click-button-feature`** branch._
 
 ## Merging Branches is Merging Commit Histories
 
@@ -144,6 +157,9 @@ This merge doesn't effect the Git history of the `main` branch:
 034g3 "Adds payment endpoint to create payments"
 ```
 
+![Git history for the main and click-button-feature branches. There are four commits, 3gtqq "Enables button...", 2pgs7 "Adjusts payment...", 1d1kl, and 034g3. Commit 034g3 points to commit 1d1kl, indicating that 034g3 is the predecessor. Commit 1d1kl points to commit 2pgs7, indicating that 1d1kl is the predecessor. Commit 2pgs7 points to commit 3gtqq, indicating that 2pgs7 is the predecessor. The main branch label refers to commit 2pgs7. The click-button-feature branch label refers to commit 3gtqq.](../assets/branches-in-git_branches_merge.png)  
+_Fig. Update to Git history after merging **`main`** into the **`click-button-feature`** branch._
+
 ## Branches Have Various Use Cases
 
 Git branches are merely a tool, and how they're used depends on the context and practices of the project at hand and the team working on it.
@@ -168,20 +184,22 @@ Feature branches can be responsible for:
 - Bug fixes
 - Making small, isolated changes, such as fixing typos
 
-In this strategy, each feature in development will get its own branch. When the feature development is complete, the developer will merge the feature branch _into_ `main`, so that `main` gets the unified, merged commit history.
+Under this strategy, each feature in development will get its own branch. When the feature development is complete, we will first merge `main` _into_ our feature branch, to handle any divergence in `main` that has happened while the feature work has been underway. This gives us a chance to handle any merge conflicts while still in our own branch.
 
-Then, the feature branch will be deleted.
+After resolving any merge conflicts and confirming our code is still working as expected, we will merge the feature branch back _into_ `main`, so that `main` gets the unified, merged commit history.
+
+After merging into `main`, the feature branch can be deleted.
 
 ### Proof of Concept Branches
 
 Branches can be used for small, temporary experiments.
 
-Sometimes, there is a task or a piece of work that prioritizes exploration and understanding over writing clean code or using tests for a short amount of time. When we need to work on an experiment rather than on project requirements directly, we can designate a specific short amount of time exploring solutions and possibilities, and make these changes on a branch.
+Sometimes, we will have a task or a piece of work that prioritizes, for a short amount of time, exploration and discovery over writing clean code or using tests. When we need to work on an experiment rather than on project requirements directly, we can give ourselves a time box for exploring solutions and possibilities. We can perform this investigation on a branch.
 
-These experimental branches tend to have an attitude making a "proof of concept," with the intention to write potentially messy code now, and spend time writing more intentional (better, TDD, more readable, usable, flexible) code later.
+Experimental branches tend to take the approach of a "proof of concept." We give ourselves permission to write potentially messy code now, then write more intentional code (considering testing, readability, usability, and flexibility) later.
 
-Sometimes it's necessary to work on an experiment for a brief amount of time. However, when you begin on this endeavor, keep the following things in mind:
+When we begin on such an endeavor, we should:
 
-- Determine what the goal of the exploration at the beginning
-- Create a time limit of less than one day
-- Decide to delete the branch at the end of the experiment, and create a separate new branch with clean commits after the research is over
+- Determine the goal of the exploration at the beginning.
+- Create a time limit of less than one day.
+- Decide to delete the branch at the end of the experiment, and create a separate new branch with clean commits after the research is over. This intentional step is to help us resist the temptation of including our exploratory code in our production code base.
