@@ -318,9 +318,10 @@ Interviewers want to know:
 - Can this candidate communicate their thoughts in a technical environment?
 - Would this candidate be a good team member?
 - How well does this candidate solve problems?
+- Is this a person who could mesh with our team?
 
 ### !end-callout
 
 ### Interview Conclusion
 
-At the conclusion of the interview the candidate should thank the interviewer for their time.  
+At the conclusion of the interview the candidate should thank the interviewer for their time.  The company will normally follow up later to either move forward or not.
