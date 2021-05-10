@@ -31,3 +31,18 @@ Standards:
         Type: Lesson
         UID: 4dc6f963f2f2d529d9b3dfe7b6dbc19f
         Path: /recursion/problem-set-recursion-pt-2.md
+  -
+    Title: The Interview Process
+    Description: "The Interview Process, How to approach interviews"
+    UID: 7f3b402c-d1f6-44d3-9ced-935e63b72b29
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: c9046bbf-7f2b-4441-9e8c-c29374265333
+        Path: /interview-process/interview-introduction.md
+      -
+        Type: Lesson
+        UID: 3c192ac0-6a5b-492a-9550-8bf503322571
+        Path: /interview-process/how-to-interview.md
