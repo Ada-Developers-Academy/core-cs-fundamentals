@@ -42,9 +42,9 @@ If this process sounds famialiar... It SHOULD!  The **P**roblem **S**olving **E*
 
 ## Introduction of the Whiteboard Problem
 
-After the introductions are concluded the interviewer will introduce the whiteboard problem(s).  Remember to let the interviewer finish providing the problem and take notes.
+After the introductions are concluded the interviewer will introduce the whiteboard problem(s).  Candidates should remember to let the interviewer finish providing the problem and take notes.
 
-After the interviewer finishes the question, repeat the problem in your own words and verify that you understand the problem.
+After the interviewer finishes the question, the candidate should repeat the problem in their own words to verify they understand the problem.
 
 ### Ask Clarifying Questions
 
