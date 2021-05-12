@@ -2,7 +2,7 @@
 Standards:
   -
     Title: Hash Tables
-    Description: "Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
+    Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
     UID: fac6e79e15b06e536f52e19c118bfff2
     SuccessCriteria:
       - success criteria
