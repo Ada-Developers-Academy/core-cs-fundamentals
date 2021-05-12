@@ -2,21 +2,21 @@
 
 ## Goals
 
-It's all well and good to know what hash tables _are_, but how can we use them? Using hash tables creatively will allow us to create efficient and organized solutions!
+It's all well and good to know what hash tables _are_, but how can we use them? Using hash tables creatively will allow us to design neat and efficient solutions!
 
 - Apply knowledge about hash tables to solve problems
 
 ## Python Dictionaries Are Hash Tables
 
-All hash tables are data structures that hold key-value pairs and implement an associative array. They all perform find, insert, and remove at O(1). Hash tables can be implemented in nearly any programming language.
+All hash tables are data structures that hold key-value pairs and implement an associative array. They all perform find, insert, and remove with O(1) time complexity. Hash tables can be implemented in nearly any programming language.
 
-Python implements hash tables and made a hash table into a data structure we use all the time: dictionaries!
+Python implements hash tables as a type we use all the time: dictionaries!
 
 ### !callout-info
 
 ## We Can See How Python Implements Dictionaries
 
-We can look at [Python's source code for dictionaries](https://github.com/python/cpython/blob/master/Objects/dictobject.c). The very first commented line titles the file as `/* Dictionary object implementation using a hash table */`! We can continue to read through the code and see comments about the hash function and how it handles collisions.
+We can look at [Python's source code for dictionaries](https://github.com/python/cpython/blob/master/Objects/dictobject.c). The very first commented line titles the file as `/* Dictionary object implementation using a hash table */`! We can continue to read through the code (it's written in the C language) and see comments about the hash function and how it handles collisions.
 
 ### !end-callout
 
@@ -45,13 +45,13 @@ Overall, here are some general strategies to consider when using a hash table to
 
 ## Walk-through Example: Missing Elements in a Range
 
-Let's walk through solving this problem, discovering how to use a hash table to our advantage.
+Let's walk through solving a problem, discovering how to use a hash table to our advantage.
 
-Write a function named `get_missing_numbers_in_range`. This function takes in an `array` of distinct integers, an integer `low` which is the lowest number in a range, and an integer `high` which is the highest number in a range.
+Write a function named `get_missing_numbers_in_range`. This function takes in an `array` of distinct integers, an integer `low` which is the lowest (inclusive) number in a range, and an integer `high` which is the highest (exclusive) number in a range.
 
-This function returns a list of all numbers that are between `low` (inclusive) and `high` (exclusive) and are **not** inside `array`.
+This function returns a list of all numbers that are between `low` (inclusive) and `high` (exclusive) and are **not** in `array`.
 
-The missing elements should be returned in the relative order that they are originally listed.
+The missing elements should be returned in order they appeared in the original list.
 
 Examples:
 
@@ -76,18 +76,18 @@ Therefore, we have the following pieces of data we could keep track of:
 
 - Each number in the input `array`
 - Each number within the range of `low` and `high`
-- If each number in `array` is within the range of `low` and `high`
-- If each number within the range is accounted for in `array`
+- Whether each number in `array` is within the range of `low` and `high`
+- Whether each number within the range is accounted for in `array`
 
-Which pieces of data have a close relationship with each other?
+Which pieces of data have a close relationship with each other, and could help us solve our problem?
 
 ### Key-Value Pairs to Solve Our Problem
 
 In this problem, _numbers_ are **either** _present_ or _missing_ from a range.
 
-We want to create a list of numbers that are missing, also known as numbers where **their presence in the range is `False`**.
+We want to create a list of numbers that are missing. In other words, we are looking for numbers where **their presence in the range is `False`**.
 
-Let's consider making our key-value pairs into pairs of a **number** and **a boolean** indicating if it's present. Therefore, we will use a hash table (dictionary) to store number-boolean pairs.
+Let's consider making our key-value pairs into pairs of a **number** and **a boolean** indicating whether it's present. Therefore, we will use a hash table (dictionary) to store number-boolean pairs.
 
 ### Initial State of Key-Value Pairs
 
@@ -117,8 +117,8 @@ With this strategy, our code will take this approach:
 1. Create a hash table (using a dictionary) that maps a number in an array to `True`, to show that it is present
 1. Create an empty list to hold all missing numbers
 1. For each number in the range between `low` and `high`, check the value in the map:
-   - If the number-boolean pair exists and the value is `True`, then the number is present
-   - If the value is `False`, then the number is missing
+   - If the number exists as a key in the dictionary, then the number is present
+   - If the number does not exist as a key in the dictionary, then the number is missing
      - Append it to our list that holds all missing numbers
 
 ### Solution: Get Missing Numbers in Range
@@ -136,11 +136,11 @@ Using a dictionary and the pseudocode above, implement `get_missing_numbers_in_r
 
 Here is the original prompt again:
 
-Write a function named `get_missing_numbers_in_range`. This function takes in an `array` of distinct integers, an integer `low` which is the lowest number in a range, and an integer `high` which is the highest number in a range.
+Write a function named `get_missing_numbers_in_range`. This function takes in an `array` of distinct integers, an integer `low` which is the lowest (inclusive) number in a range, and an integer `high` which is the highest (exclusive) number in a range.
 
-This function returns a list of all numbers that are between `low` (inclusive) and `high` (exclusive) and are **not** inside `array`.
+This function returns a list of all numbers that are between `low` (inclusive) and `high` (exclusive) and are **not** in `array`.
 
-The missing elements should be returned in the relative order that they are originally listed.
+The missing elements should be returned in order they appeared in the original list.
 
 Here are the tests:
 
@@ -222,13 +222,21 @@ Because we iterate through the range, we loop `m` times.
 
 _Inside_ each loop, we also search through the array of length `n` with `if i not in array`, which is O(n).
 
-Therefore, the time complexity of the iterative solution is O(n\*m).
+Therefore, the time complexity of the iterative solution is O(n*m).
+
+We haven't seen a time complexity like this before, where two different sizes are involved. But to put it into more familiar terms, lets simplify things by considering what occurs when the range is of the same magnitude as the list of numbers. If `m` is equal to `n`, then the time complexity becomes O(n*n), which is O(n<sup>2</sup>).
+
+So, on the whole, we can say that this approach is a O(n<sup>2</sup>) algorithm.
 
 ### !callout-info
 
 ## Finding the Big O of Python's `in`
 
 How did we know that the time complexity of `if i not in array` is O(n)? [We looked up Python documentation about the time complexity of a list's `in` operator!](https://wiki.python.org/moin/TimeComplexity)
+
+<br />
+
+Additionally, we know that a list is implemented as a contiguous list of references, and that to check whether a value is in the list, we must examine each location in the list one-by-one until we find it (or don't!). The implementors of Python can't get around this any more than we can, so checking whether a value is contained in a list _must_ be O(n)!
 
 ### !end-callout
 
@@ -238,9 +246,24 @@ Let's compare this to using a hash table:
 
 - To initialize the dictionary with all numbers in `array` set to `True`, we loop through the array of size `n` once
 - To check if a number is missing from the range, we iterate through the range of size `m` once
-  - Inside each loop, we search for the element from the dictionary. The complexity of finding an element from a dictionary is O(1).
+  - Inside each loop, we search for the element in the dictionary. The complexity of finding an element in a dictionary is O(1).
 
-Therefore, our time complexity is O(n+m). This solution is more time-efficient than the iterative solution!
+Therefore, our time complexity is O(n+m).
+
+Again, we can simplify our analysis if we consider the case when the range and the number of elements in the array are of the same magnitude. If `m` is equal to `n`, then the complexity simplifies to O(n+n), which is O(2n). After dropping the constant, the time complexity is O(n), or linear!
+
+This solution is more time-efficient than the iterative solution!
+
+### !callout-warning
+
+## The Importance of Scaling
+
+We have just argued that the hash table solution is more efficient with respect to time than the list-based solution. But there are two points of which we should take care.
+
+1. Big O tells us how the performance scales with the size of the input. It is true to say that as the input becomes larger, the length of time required by the solution using a hash table will grow more slowly than the solution that inspects the array directly. But for any particular size of input we can't say whether one solution will outperform the other! It's very possible that for small ranges, the array implementation could win!
+1. While the hash table solution is more time efficient, it does come at the cost of creating a hash table to store each of the elements. However the moderate cost in space complexity is often worth the savings in time complexity. This is a common trade-off we make as developers.
+
+### !end-callout
 
 ## Walk-Through Example: Find All Symmetric Pairs
 
@@ -250,13 +273,13 @@ Two pairs _[a, b]_ and _[c, d]_ are said to be symmetric if _a_ is equal to _d_ 
 
 Write a function named `get_symmetric_pairs`. This function takes in a list (`pairs`) of lists. Each sub-list is a list of two elements.
 
-This function should return a list of all symmetric pairs. A pair should only be listed once (without its symmetric counterpart). List the first pair of a pair of symmetric pairs.
+This function should return a list of all symmetric pairs. A pair should only be listed once (without its symmetric counterpart). So for the example above, the result would include _[10, 20]_ (the first pair), but not _[20, 10]_ (the symmetric pair).
 
 Assume that the first element of all pairs are distinct.
 
 Examples:
 
-| Input `pairs` list                                                                                                     | Symmetric Pairs                                    | Return value          |
+| Input `pairs` list                                                                                                     | Symmetric Pairs                                    | <div style="min-width:130px;">Return value</div>          |
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------- |
 | `[[11, 20], [30, 40], [5, 10], [40, 30], [10, 5]]`                                                                     | `[30, 40]` and `[40, 30]`; `[5, 10]` and `[10, 5]` | `[[30, 40], [5, 10]]` |
 | `[["Dan", "Kari"], ["Jeremy", "Val"], ["Jeremy", "Charles"], ["Devin", "Susan"], ["Kari", "Dan"], ["Devin", "Susan"]]` | `["Dan", "Kari"]` and `["Kari", "Dan"]`            | `[["Dan", "Kari"]]`   |
@@ -283,7 +306,7 @@ Consider the following possible pieces of data to keep track of in a hash table:
 
 ### Key-Value Pairs to Solve Our Problem
 
-Let's consider making our key-value pairs into pairs of **first item** and **second item**.
+Let's consider making our key-value pairs into pairs of the **first item** and the **second item**.
 
 In our hash table, the first item of a pair will be the key, and the second item of the pair will be the value.
 
@@ -313,10 +336,10 @@ Our solution will take this approach:
 
 1. Create a hash table that maps every pair's first item to its second item
 1. Create an empty list to hold all symmetric pairs
-1. For each "first item"-"second item" pair in the hash table:
+1. Iterate over the pair list again to ensure we process pairs in order:
    1. Check the hash table if the symmetric pair exists:
       1. Take the current second item, and use it as a key in the hash table
-      1. If the hash table has the current second item as a key, check if its value is equal to the current key (current first item)
+   1. Look up the value of the current second item in the hash table, and check whether its value is equal to the current key (current first item)
       1. If it's equal, then there's a symmetric pair!
          1. Append it to our list of symmetric pairs
          1. Set the symmetric pair to `None` in the hash table so that the symmetric pair does not get duplicated in our final result
@@ -338,7 +361,7 @@ Here is the original prompt again:
 
 Write a function named `get_symmetric_pairs`. This function takes in a list (`pairs`) of lists. Each sub-list is a list of two elements.
 
-This function should return a list of all symmetric pairs. A pair should only be listed once (without its symmetric counterpart). List the first pair of a pair of symmetric pairs.
+This function should return a list of all symmetric pairs. A pair should only be listed once (without its symmetric counterpart).
 
 Assume that the first element of all pairs are distinct.
 
