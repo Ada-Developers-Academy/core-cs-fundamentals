@@ -75,7 +75,6 @@ The mock interview is designed to give you practice and experience with a techni
 ### !end-callout
 
 
-<!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-info
 
 ## Do companies always perform a technical interview?
