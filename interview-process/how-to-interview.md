@@ -142,7 +142,6 @@ if num is 1 return True
 Otherwise return False
 ```
 
-<!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-success
 
 ## Pro-Tip Use "We"
