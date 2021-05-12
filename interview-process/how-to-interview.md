@@ -148,7 +148,7 @@ Otherwise return False
 
 When discussing the problem a candidate should try to engage the interviewer in the process as a collaborator.  Use terms like "we" when talking about the problem and the solution.  
 
-In general, an interviewer *wants* the candidate to succeed and by engaging in a collaborative process, you can both become more at-ease and solicit more helpful feedback.
+In general, an interviewer *wants* the candidate to succeed. By engaging in a collaborative process, you can both become more at-ease and solicit more helpful feedback.
 
 ### !end-callout
 
