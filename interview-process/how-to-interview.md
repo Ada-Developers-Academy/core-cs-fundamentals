@@ -154,7 +154,7 @@ In general, an interviewer *wants* the candidate to succeed and by engaging in a
 
 ### Begin Coding
 
-Once the candidate has discussed the approach with the interviewer and answered any questions it is time to begin coding.
+Once the candidate has discussed the approach with the interviewer and answered any questions, it is time to begin coding.
 
 While coding the solution it is important to remember to:
 
