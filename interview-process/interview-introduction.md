@@ -32,7 +32,7 @@ When applying for a junior developer position in the United States, applicants t
 1. Offer & Negotiation
 1. Acceptance
 
-These steps are typical in the process, but the process can vary greatly.  Companies may not engage in the phone screening or might require additional interviews, or provide homework in the form of a coding challenge.
+These steps are typical in the process, but the process can vary greatly.  Companies may not engage in phone screening, or they may require additional interviews. They may provide homework in the form of a coding challenge as well.
 
 ### Application
 
