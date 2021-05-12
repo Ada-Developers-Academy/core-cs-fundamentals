@@ -40,13 +40,15 @@ A junior developer can apply for a position in many ways. This can include an on
 
 There are a lot of ways to get in the door as a junior developer, but the most effective strategies typically involve networking.  
 
-When possible, candidates should take advantage of opportunities to meet with engineers, managers and recruiters either in person or electronically.  Online applications turned into hiring systems are much easier to ignore than a human being with a connection to the team or company.
+When possible, candidates should take advantage of opportunities to meet with engineers, managers, and recruiters, either in person or electronically.  Online applications turned into hiring systems are much easier to ignore than a human being with a connection to the team or company.
 
 ### Phone Screen
 
-A phone screen, despite the name might be either on the phone or via an online platform such as Skype or Google Hangout.  Candidates will likely initially talk to a recruiter, but the call may involve a hiring manager.  Candidates may or may not be asked technical questions, but the goal of a phone screen is generally to narrow down the list of candidates for on site interviews.  Generally the discussion centers on work experience, projects worked on and how the candidate's interests align with the company and team applied for.
+Despite the name, a phone screen can be either on the phone or via an online platform, such as Skype or Google Hangout.  Candidates will likely talk to a recruiter initially, but the call may involve a hiring manager.  
 
-Before a phone screen it is a good idea to:
+Candidates may or may not be asked technical questions, but the goal of a phone screen is to narrow down the list of candidates for onsite interviews.  Generally, the discussion centers on work experience, projects worked on, and how the candidate's interests align with the company and team applied for.
+
+Before a phone screen, it is a good idea to:
 
 - Review the job listing and take notes
 - Review the resume as the interviewer will likely ask about work experience
@@ -55,13 +57,12 @@ Before a phone screen it is a good idea to:
 
 ### In-person Interview
 
-A technical in-person interview can vary greatly in length and process.  Typically however a candidate will have some initial time to greet and introduce yourself to the interviewer(s) with some brief chitchat.  
+A technical in-person interview can vary greatly in length and process; however, typically a candidate will have some initial time to greet and introduce yourself to the interviewer(s) with some brief chitchat.  
 
-Then the interviewer will begin the technical portion of the interview.  This is often a _whiteboard interview_, meant to test the candidate's ability to solve new problems and communicate their thoughts.  Candidates are traditionally given a problem and a whiteboard and asked to develop a solution and explain it to the interviewer.
+Then the interviewer will begin the technical portion of the interview.  This is often a _whiteboard interview_, meant to test the candidate's ability to solve new problems and communicate their thoughts.  Candidates are traditionally given a problem and a whiteboard, asked to develop a solution, and then explain it to the interviewer.
 
-In recent times, candidates are often interviewed in an online technical interview using Zoom, Meet, Cisco WebEx and a shared online code editor such as [Feplit](https://replit.com/), [Coderpad](https://coderpad.io/), [HackerRank](https://hackerrank.com/) or [VS Code LiveShare](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode).  In a process similar to an in-person interview candidates are presented with a programming problem and work through a solution live with the interviewers demonstrating problem solving, and communication skills.
+In recent times, candidates are often interviewed online, using Zoom, Meet, Cisco WebEx, and use a shared online code editor, such as [Feplit](https://replit.com/), [Coderpad](https://coderpad.io/), [HackerRank](https://hackerrank.com/), or [VS Code LiveShare](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode).  In a process similar to an in-person interview, candidates are presented with a programming problem and are asked to work through a solution live with the interviewers, demonstrating problem solving and communication skills.
 
-<!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-success
 
 ## Mock Interviews
