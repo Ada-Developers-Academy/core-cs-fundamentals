@@ -83,9 +83,6 @@ Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
 
 ##### !end-placeholder
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 Some clarifying questions could include:
