@@ -64,7 +64,7 @@ In recent times, candidates are often interviewed in an online technical intervi
 
 ## Mock Interviews
 
-As an Ada student you will be matched up for a practice interview, called a "mock interview" with an experienced hiring manager or engineer.  They will give you a sample interview problem and conduct a practice interview with you.  After the "mock interview" the interviewer will write up a set of feedback for you to help you prepare for your actual internship interviews.
+As an Ada student, you will be matched up for a practice interview called a "mock interview" with an experienced hiring manager or engineer.  They will give you a sample interview problem and conduct a practice interview with you.  After the "mock interview," the interviewer will write up feedback for you to help you prepare for your actual internship interviews.
 
 Remember:  
 
