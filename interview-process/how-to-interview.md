@@ -173,8 +173,6 @@ When stuck, there is nothing wrong with a candidate asking for help.  The interv
 
 ### !end-callout
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
