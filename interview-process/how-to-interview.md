@@ -159,7 +159,7 @@ Once the candidate has discussed the approach with the interviewer and answered 
 While coding the solution it is important to remember to:
 
 - Explain each step while coding
-- When pausing to think, speak aloud to explain the thought process, interviewers need to understand what the candidate is thinking
+- When pausing to think, speak out loud about your thought process. Interviewers need to understand what the candidate is thinking.
 - Pause regularly to test each step using the input-output values from before
 
 Remember **communication is key**.  An interviewer needs to understand the candidate's thinking.
