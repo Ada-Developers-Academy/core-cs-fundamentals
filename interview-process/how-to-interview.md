@@ -164,7 +164,6 @@ While coding the solution, it is important to remember to:
 
 Remember **communication is key**.  An interviewer needs to understand the candidate's thinking.
 
-<!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-success
 
 ## Pro Tip - Ask for Help
