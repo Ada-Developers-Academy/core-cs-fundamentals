@@ -283,7 +283,6 @@ return num == 1
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
 
 ### Test Your Solution
 
