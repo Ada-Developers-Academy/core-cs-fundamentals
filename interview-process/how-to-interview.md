@@ -286,7 +286,7 @@ return num == 1
 
 ### Test Your Solution
 
-When a candidate finishes programming they should test their solution with the sample input and output values and verify that the solution works.  Testing helps verify that no edge-case has been missed.
+When a candidate finishes programming, they should test their solution with the sample input and output values and verify that the solution works.  Testing helps verify that no edge-cases have been missed.
 
 ### Solution Discussion
 
