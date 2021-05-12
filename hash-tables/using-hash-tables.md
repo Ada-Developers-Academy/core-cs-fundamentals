@@ -190,6 +190,11 @@ def get_missing_numbers_in_range(array, low, high):
     return missing_nums
 ```
 
+<br />
+Note that while we initially conceived of the solution as needing to check whether the value of a number in the hash table was `True`, in reality, its presence as a key (checked with `i not in map`) was sufficient to determine whether it had been in the initial `array`. The value didn't actually matter!
+<br />
+For such cases, we might use a Python type which is very closely related to `dict` called `set`, which consists of _only_ keys _without_ values. We can try solving this problem using a `set` after consulting the Python documentation. Follow your curiosity!
+
 ### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
