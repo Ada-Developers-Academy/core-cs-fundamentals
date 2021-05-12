@@ -311,3 +311,26 @@ Interviewers want to know:
 ### Interview Conclusion
 
 At the conclusion of the interview the candidate should thank the interviewer for their time.  The company will normally follow up later to either move forward or not.
+
+
+## Steps in an Interview
+
+1.  Listen to the question
+1.  Example walk through (leverage the white board or screen)
+1.  Describe solution (brute force is ok)
+1.  Write solution
+1.  Optimize and test
+1.  Discuss the solution 
+
+## Interview Dos and Don'ts
+
+| Dos  	|  Don'ts 	|
+|---	|---	|
+|   Do make sure you understand the problem statement (perhaps with an example).	|  Don’t make assumptions. 	|
+|  Do clarify the requirements.|   Don’t ignore the information given.	|
+|  Do design before you code.  |  Don’t jump straight to coding. (Get the interviewer to sign off on your design and give you the green light to code.)  |
+|  Do share possible alternative solutions and their time, space complexities. Discuss which approach to code.  |  Don’t silently work through the problem. (They are looking to understand your thought process. Give them a chance to understand.)  |
+|  Do share your thought process for algorithms.  | Don’t call your work done before ensuring it works for at least some basic functional test cases (and more).  |
+|  Do use examples to share your approach.  |   |
+|  Do stop, think and share. (Especially if are confused or unsure if something would work.)   |   |
+|  Do test your own code. |    |
