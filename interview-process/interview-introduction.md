@@ -52,7 +52,7 @@ Before a phone screen, it is a good idea to:
 
 - Review the job listing and take notes
 - Review the resume as the interviewer will likely ask about work experience
-- Prepare some questions to help determine how attractive the position
+- Prepare some questions to help determine the attractiveness of the position
 - Find a quiet place with good connectivity.
 
 ### In-person Interview
