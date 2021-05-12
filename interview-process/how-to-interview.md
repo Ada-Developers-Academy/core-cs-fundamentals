@@ -296,7 +296,7 @@ Interviews can be stressful and time constrained, so a candidate may not have ha
 
 ## Perfection is **NOT** the Goal
 
-The goal of a good interviewer is not to see the candidate arrive at a perfect solution, even if one exists.  A perfect solution is nice, but the real goal is to understand what the candidate could bring to the team.
+The goal of a good interviewer is to understand what the candidate could bring to the team. It is **not** to see if the candidate arrives at a perfect solution, whether or not one might exist. 
 
 Interviewers want to know:
 
