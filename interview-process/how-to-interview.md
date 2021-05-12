@@ -95,7 +95,6 @@ Some clarifying questions could include:
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
 
 ### Determine Test Input-Output
 
