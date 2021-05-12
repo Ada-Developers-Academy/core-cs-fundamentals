@@ -278,8 +278,6 @@ return num == 1
 ```
 
 ##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
 ### !end-challenge
 
