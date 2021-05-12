@@ -290,7 +290,9 @@ When a candidate finishes programming, they should test their solution with the 
 
 ### Solution Discussion
 
-After presenting the solution, the candidate will often be expected to discuss the pros and cons of the solution as written.  Candidates should be prepared to identify the time and space complexity and talk about alternate approaches, if time allows.  Interviews can be stressful and time constrained, so a candidate may not have had time to refactor and create an ideal solution, but they can discuss what next steps they would follow.
+After presenting the solution, the candidate will often be expected to discuss the pros and cons of the solution as it is written.  Candidates should be prepared to identify the time and space complexity and talk about alternate approaches (if time allows).  
+
+Interviews can be stressful and time constrained, so a candidate may not have had time to refactor and create an ideal solution, but they can discuss what next steps they would follow.
 
 ### !callout-success
 
