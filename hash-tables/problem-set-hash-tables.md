@@ -49,7 +49,7 @@ def test_get_intersection_many_matches():
 ### !tests
 ```python
 import unittest
-from main import *
+from main import get_intersection
 class TestChallenge(unittest.TestCase):
     # Note: Written with these asserts to mimic the pytest assertions we give students
 
@@ -166,6 +166,10 @@ class TestChallenge(unittest.TestCase):
         self.assertTrue(is_permutation("", ""))
 ```
 ### !end-tests
+### !hint
+Many problems that use dictionaries to solve problems related to strings involve counting the available letters. What must be true about the counts of the letters in two different words in order for them to be permutations of one another?
+### !end-hint
+
 ### !explanation
 
 An example of a working implementation:
@@ -258,6 +262,9 @@ class TestChallenge(unittest.TestCase):
         self.assertTrue(is_palindrome_permutation(""))
 ```
 ### !end-tests
+### !hint
+Many problems that use dictionaries to solve problems related to strings involve counting the available letters. What must be true about the counts of the letters in a string in order for it to be a palindrome? From the previous problem, can we say that the same must be true about a _permutation_ of a palindrome?
+### !end-hint
 ### !explanation
 
 An example of a working implementation:
