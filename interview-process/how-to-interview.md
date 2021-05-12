@@ -100,7 +100,7 @@ Some clarifying questions could include:
 
 The next step is to determine sample input into the problem and the resulting output.  This allows the applicant to verify how well they understand the problem and identify how the answer is determined.
 
-When creating sample input-output look for edge-cases.  Solicit feedback from the interviewer to verify that the sample input and output values are correct and you understand the problem.
+When creating sample input-output, look for edge-cases.  Solicit feedback from the interviewer to verify that the sample input and output values are correct and that you understand the problem.
 
 Keep note of the sample input and output values because they can be useful in testing the solution.
 
