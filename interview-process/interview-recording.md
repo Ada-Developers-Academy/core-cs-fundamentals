@@ -33,7 +33,7 @@ View markdown when you are ready to ask
 ## Examples of things you are looking for in your recorded playback
 
 - Is your writing legible?
-- Do you block the write board when you talk?
+- Do you block the whiteboard when you talk?
 - Do you have long pauses? Or are they shorter in playback than they are in your head?
 - Do you appear confident?
 - How is your eye contact and demeanor?
