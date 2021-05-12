@@ -83,10 +83,31 @@ def get_intersection(red, blue):
 
     for list in [red, blue]:
         for item in list:
-            if frequency_hash.get(item):
+            if item in frequency_hash:
                 frequency_hash[item] += 1
             else:
                 frequency_hash[item] = 1
+
+    intersections = []
+    for item, quantity in frequency_hash.items():
+        if quantity > 1:
+            intersections.append(item)
+
+    return intersections
+```
+
+<br/>
+
+Another example of a working implementation:
+
+```python
+def get_intersection(red, blue):
+    frequency_hash = {}
+
+    for list in [red, blue]:
+        for item in list:
+            count = frequency_hash.get(item, 0)
+            frequency_hash[item] = count + 1
 
     intersections = []
     for item, quantity in frequency_hash.items():
@@ -178,10 +199,30 @@ An example of a working implementation:
 def populate_frequency_map(text):
     frequency_hash = {}
     for char in text:
-        if frequency_hash.get(char):
+        if char in frequency_hash:
             frequency_hash[char] += 1
         else:
             frequency_hash[char] = 1
+    return frequency_hash
+
+
+def is_permutation(red, blue):
+    red_frequency_hash = populate_frequency_map(red)
+    blue_frequency_hash = populate_frequency_map(blue)
+
+    return red_frequency_hash == blue_frequency_hash
+```
+
+<br/>
+
+Another example of a working implementation:
+
+```python
+def populate_frequency_map(text):
+    frequency_hash = {}
+    for char in text:
+        count = frequency_hash.get(char, 0)
+        frequency_hash[char] = count + 1
     return frequency_hash
 
 
@@ -273,20 +314,17 @@ An example of a working implementation:
 def is_palindrome_permutation(text):
     frequency_hash = {}
     for char in text:
-        if frequency_hash.get(char):
+        if char in frequency_hash:
             frequency_hash[char] += 1
         else:
             frequency_hash[char] = 1
 
-    num_of_single_matches_allowed = 1 if len(text) % 2 == 1 else 0
+    odd_matches_count = 0
+    for frequency in frequency_hash.values():
+        if frequency % 2:
+            odd_matches_count += 1
 
-    for char, frequency in frequency_hash.items():
-        if frequency % 2 != 0 and num_of_single_matches_allowed:
-            num_of_single_matches_allowed -= 1
-        elif frequency % 2 != 0:
-            return False
-
-    return True
+    return odd_matches_count <= 1
 ```
 
 ### !end-explanation
