@@ -156,7 +156,7 @@ In general, an interviewer *wants* the candidate to succeed. By engaging in a co
 
 Once the candidate has discussed the approach with the interviewer and answered any questions, it is time to begin coding.
 
-While coding the solution it is important to remember to:
+While coding the solution, it is important to remember to:
 
 - Explain each step while coding
 - When pausing to think, speak out loud about your thought process. Interviewers need to understand what the candidate is thinking.
