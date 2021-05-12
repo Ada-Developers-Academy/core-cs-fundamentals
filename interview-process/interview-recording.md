@@ -41,6 +41,5 @@ View markdown when you are ready to ask
 - Do you talk to the whiteboard or the interviewer?
 - Are you unnecessarily apologizing?
 - Are you saying things like "I don't know where this is going" instead of something like "I might rethink this later, but I'll start here"?
-- Are you using technical describing words appropriately or are you saying a lot of "this", "that", etc?
+- Are you using technical-describing words appropriately, or are you saying a lot of "this", "that", etc?
 - Are you making any weird faces?
-
