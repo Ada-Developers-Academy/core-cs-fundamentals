@@ -158,7 +158,7 @@ def test_get_missing_numbers_in_range_small_range():
 ### !tests
 ```python
 import unittest
-from main import *
+from main import get_missing_numbers_in_range
 
 class TestChallenge(unittest.TestCase):
 
@@ -184,7 +184,7 @@ def get_missing_numbers_in_range(array, low, high):
 
     missing_nums = []
     for i in range(low, high):
-        if not map.get(i):
+        if i not in map:
             missing_nums.append(i)
 
     return missing_nums
@@ -198,7 +198,7 @@ def get_missing_numbers_in_range(array, low, high):
 
 #### Iterative Solution
 
-While solving this problem, we may have considered an iterative solution to this that did not use a hash table. For example:
+While solving this problem, we may have considered a solution to this that did not use a hash table. For example:
 
 ```python
 def get_missing_numbers_in_range(array, low, high):
@@ -342,7 +342,7 @@ Our solution will take this approach:
    1. Look up the value of the current second item in the hash table, and check whether its value is equal to the current key (current first item)
       1. If it's equal, then there's a symmetric pair!
          1. Append it to our list of symmetric pairs
-         1. Set the symmetric pair to `None` in the hash table so that the symmetric pair does not get duplicated in our final result
+      1. Remove the current pair from the hash table so that it can't be matched by the symmetric pair when we reach it in the list.
 
 ### Solution: Get Symmetric Pairs
 
@@ -389,7 +389,7 @@ def test_get_symmetric_pairs_no_pairs():
 ### !tests
 ```python
 import unittest
-from main import *
+from main import get_symmetric_pairs
 
 class TestChallenge(unittest.TestCase):
 
@@ -424,10 +424,11 @@ def get_symmetric_pairs(pairs):
 
     symmetric_pairs = []
 
-    for key, val in pairs_map.items():
-        if pairs_map.get(val) and pairs_map[val] == key:
+    for pair in pairs:
+        key, val = pair[0], pair[1]
+        if pairs_map.get(val) == key:
             symmetric_pairs.append([key, val])
-            pairs_map[val] = None
+            pairs_map.pop(key)
 
     return symmetric_pairs
 ```
