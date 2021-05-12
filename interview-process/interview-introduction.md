@@ -19,7 +19,7 @@ The Ada curriculum and community provide a strong support network to help you su
 | Vocab	|  Definition	| Synonym | How to Use in a Sentence |
 |---	|---	|---	|---	|
 |  Whiteboard Interview  	|  A problem solving exercise where a job applicant is asked to solve a programming or design problem on a whiteboard. 	|    Technical Interview	|   I have a whiteboard interview next week, so I need a buddy to practice with. 	|
-| Phone Screen | An initial telephone or internet chat with a job candidate to ensure the candidate's suitability for an in-peron interview.  This could involve a hiring manager, but is more likely to involve a recruiter. | &nbsp; | I have a phone screening with a recruiter at Dynamic Widgets in 3 hours. | 
+| Phone Screen | An initial telephone or internet chat with a job candidate to ensure the candidate's suitability for an in-person interview.  This could involve a hiring manager, but more likely a recruiter. | &nbsp; | I have a phone screening with a recruiter at Dynamic Widgets in 3 hours. | 
 | Coding Challenge | A "homework" assignment given to job candidates to assess their programming skills and practices such as regularly committing and writing tests. |  | I'm trying to write tests for my Dynamic Widgets coding challenge assignment. 
 
 ## The Typical Tech Hiring Process
