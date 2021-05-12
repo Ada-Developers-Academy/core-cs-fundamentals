@@ -31,7 +31,6 @@ Candidates should be prepared to talk about:
 - Items highlighted on their resume
 - Why they are excited about the position
 
-<!-- available callout types: info, success, warning, danger, secondary  -->
 ### !callout-info
 
 ## This Will Sound Familiar
