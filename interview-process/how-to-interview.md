@@ -265,7 +265,6 @@ class TestUglyNumber(unittest.TestCase):
 
 ##### !end-tests
 
-<!-- other optional sections -->
 ##### !hint
 
 Sample Solution
