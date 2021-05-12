@@ -36,7 +36,9 @@ These steps are typical in the process, but the process can vary greatly.  Compa
 
 ### Application
 
-A junior developer can apply for a position in many ways, this can include an online application form on the company website or a job-listing site like [Indeed](https://www.indeed.com/q-Apply-jobs.html).  Sometimes it can also include talking to a recruiter, a colleague at the company, or a hiring manager at a local meet-up.  Universities like the University of Washington hold job-fairs.  There are a lot of ways to get in the door as a junior developer, but the most effective strategies typically involve networking.  
+A junior developer can apply for a position in many ways. This can include an online application form on the company website or a job-listing site, like [Indeed](https://www.indeed.com/q-Apply-jobs.html).  Sometimes it can also include talking to a recruiter, a colleague at the company, or a hiring manager at a local meet-up.  Universities like the University of Washington hold job-fairs.  
+
+There are a lot of ways to get in the door as a junior developer, but the most effective strategies typically involve networking.  
 
 When possible, candidates should take advantage of opportunities to meet with engineers, managers and recruiters either in person or electronically.  Online applications turned into hiring systems are much easier to ignore than a human being with a connection to the team or company.
 
