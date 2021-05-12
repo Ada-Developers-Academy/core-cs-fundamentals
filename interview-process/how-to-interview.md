@@ -49,8 +49,6 @@ After the interviewer finishes the question, the candidate should repeat the pro
 
 Before starting on the solution, the candidate should ask clarifying questions.  Clarifying questions can help identify any missing bits of information needed to solve the problem, and identify requirements.
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
