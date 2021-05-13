@@ -31,6 +31,10 @@ Standards:
         Type: Lesson
         UID: 4dc6f963f2f2d529d9b3dfe7b6dbc19f
         Path: /recursion/problem-set-recursion-pt-2.md
+      -
+        Type: Checkpoint
+        UID: 96d170c9
+        Path: /recursion/problem-set-submit.checkpoint.md
   -
     Title: The Interview Process
     Description: "The Interview Process, How to approach interviews"
