@@ -192,7 +192,7 @@ Now that our `main` branch has new code, we should do the work of manually check
 
 ## Part 2: Merging Multiple Times
 
-We've received another new project requirement! We need to add functionality to be able to calculate the refund or payment of a tax payer.  We'll need a type that represents a tax payer, and a function to calculate a tax payer's tax liability. Using the payer's liability and withholdings, we can determine the size of their refund.
+We've received another new project requirement! We need to add functionality to calculate the refund or payment of a tax payer.  We'll need a type that represents a tax payer, and a function to calculate a tax payer's tax liability. Using the payer's liability and withholdings, we can determine the size of their refund.
 
  Let's start by working on the function that calculates an individual's tax liability: the taxes owed based on their income, less their deductions.
 
@@ -280,7 +280,7 @@ We will prefer frequently merging `main` into our feature branches so that they 
 
 - [ ] Check our current feature branch's Git log and confirm that we do _not_ have `main`'s commits merged into this branch.
 
-- [ ] Merge `main` into the current branch with `$ git merge main`.
+- [ ] Merge `main` into the current branch with `$ git merge main`. If we are prompted to accept a default commit message, we should accept it. This is usually accomplished by closing the editor that displays the suggested message.
 
 - [ ] Check our current branch's Git log now, and confirm that we now **do** have `main`'s commits merged in.
 
@@ -299,27 +299,27 @@ class TaxPayer:
         self.income = income
         self.deductions = deductions
 
-def calculate_return(taxpayer, standard_deduction, brackets):
-    deducted_income = calculate_deducted_income(
-        taxpayer.income,
-        taxpayer.deductions,
-        standard_deduction
-    )
+    def calculate_return(self, standard_deduction, brackets):
+        deducted_income = calculate_deducted_income(
+            self.income,
+            self.deductions,
+            standard_deduction
+        )
 
-    tax_liability = calculate_tax_by_bracket(deducted_income, brackets)
+        tax_liability = calculate_tax_by_bracket(deducted_income, brackets)
 
-    return taxpayer.withholdings - tax_liability
+        return self.withholdings - tax_liability
 
-def calculate_return_2020(taxpayer):
-    deducted_income = calculate_deducted_income(
-        taxpayer.income,
-        taxpayer.deductions,
-        STANDARD_DEDUCTION_2020
-    )
+    def calculate_return_2020(self):
+        deducted_income = calculate_deducted_income(
+            self.income,
+            self.deductions,
+            STANDARD_DEDUCTION_2020
+        )
 
-    tax_liability = calculate_tax_by_bracket(deducted_income, TAX_BRACKETS_2020)
+        tax_liability = calculate_tax_by_bracket(deducted_income, TAX_BRACKETS_2020)
 
-    return taxpayer.withholdings - tax_liability
+        return self.withholdings - tax_liability
 ```
 
 - [ ] Add the following code to the end of `test_tax_prep.py`.
@@ -328,14 +328,14 @@ def calculate_return_2020(taxpayer):
 def test_taxpayer_receiving_a_return_gets_a_return(all_valid_deductions):
     taxpayer = TaxPayer(withholdings=3000, income=50000, deductions=all_valid_deductions)
 
-    refund = calculate_return_2020(taxpayer)
+    refund = taxpayer.calculate_return_2020()
 
     assert refund == 197
 
 def test_taxpayer_owing_tax_has_negative_return(few_valid_deductions):
     taxpayer = TaxPayer(withholdings=3000, income=50000, deductions=few_valid_deductions)
 
-    refund = calculate_return_2020(taxpayer)
+    refund = taxpayer.calculate_return_2020()
 
     assert refund == -1003
 ```
@@ -346,7 +346,7 @@ def test_taxpayer_owing_tax_has_negative_return(few_valid_deductions):
 import pytest
 from ada_tax_prep.income_tax import (
     calculate_tax_2020, calculate_deducted_income_2020, calculate_tax_liability_2020,
-    TaxPayer, calculate_return_2020
+    TaxPayer
 )
 ```
 
