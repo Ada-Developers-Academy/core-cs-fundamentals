@@ -6,9 +6,9 @@ The goal of this lesson is to introduce the definition and overall concept of Gi
 
 ## Vocabulary and Synonyms
 
-| Vocab  | Definition                                                                          | Synonyms | How to Use in a Sentence                                                                                                                                                                                                                                                                   |
-| ------ | ----------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Branch | A feature in Git that captures a snapshot of code changes as one Git commit history | -        | "We worked on the `mark_complete` feature in a new branch `mark_complete`. We finished the `mark_complete` feature and pushed three commits to the branch. During this time, no other branch saw the commits for `mark_complete`. Then, we merged the `mark_complete` branch into `main`." |
+| Vocab  | Definition                                                                          | How to Use in a Sentence                                                                                                                                                                                                                                                                   |
+| ------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Branch | A feature in Git that captures a snapshot of code changes as one Git commit history | "We worked on the `mark_complete` feature in a new branch `mark_complete`. We finished the `mark_complete` feature and pushed three commits to the branch. During this time, no other branch saw the commits for `mark_complete`. Then, we merged the `mark_complete` branch into `main`." |
 
 ## Commits Are on Branches
 
@@ -43,7 +43,7 @@ For most modern software, using `main` for the default branch will work without 
 
 ### !end-callout
 
-## Branches Shares a Commit History Until Branching
+## Branches Share a Commit History Until Branching
 
 Each branch has a name and a commit history.
 
@@ -134,7 +134,7 @@ We can combine the work represented on two different branches by _merging_ them.
 The actual act of merging `branch-a` into `branch-b` takes this process:
 
 - Rewinding the histories of `branch-a` and `branch-b` to their common commit
-- Looking through the commits of `branch-a` and `branch-b` and applying the diffs one at a time until all of commits are applied
+- Looking through the commits of `branch-a` and `branch-b` and applying the diffs one at a time until all the commits are applied
 
 This process may re-order some commits out of necessity. Git ultimately applies one of several algorithms to determine the order of applied commits.
 
@@ -149,7 +149,7 @@ For our above example, we can merge `main` into `click-button-feature`. Then, th
 034g3 "Adds payment endpoint to create payments"
 ```
 
-This merge doesn't effect the Git history of the `main` branch:
+This merge doesn't affect the Git history of the `main` branch:
 
 ```
 2pgs7 "Adjusts payment logic for calculating shipping cost"
