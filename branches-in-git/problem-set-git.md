@@ -60,7 +60,7 @@ We've received a new project requirement that we must build a feature that calcu
 
 - [ ] Confirm that the commit history for this current branch includes all commits that are currently also on `main`, including the recent commit.
 
-- [ ] Implement the income deductions feature by adding the following code to the end of `income_tax.py`
+- [ ] Implement the income deductions feature by adding the following code to the end of `income_tax.py`, after the definition of the `calculate_tax_2020` function.
 
 ```python
 DEDUCTION_CATEGORIES = (
@@ -93,7 +93,7 @@ def calculate_deducted_income_2020(income, deductions):
     return calculate_deducted_income(income, deductions, STANDARD_DEDUCTION_2020)
 ```
 
-- [ ] Add the following tests to the end of `tests/test_tax_prep.py`
+- [ ] Add the following tests to the end of `tests/test_tax_prep.py`, after the test `test_big_bracket_last`.
 
 ```python
 @pytest.fixture
@@ -162,7 +162,7 @@ from ada_tax_prep.income_tax import (
 )
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`, and confirm that our tests are running and passing.
+- [ ] Run the tests of this project using `$ pytest`, and confirm that our tests are running and passing.
 
 - [ ] Finally, we'll make a commit that records this work on the feature branch. This commit should have the commit message,  `"implements deduction calculation"`.
 
@@ -186,7 +186,7 @@ Eventually, we need the commit history of the feature branch to be merged _into_
 
 Now that our `main` branch has new code, we should do the work of manually checking that `main` is running and working as intended.
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 - [ ] Confirm that our new tests are included and passing.
 
@@ -235,7 +235,7 @@ from ada_tax_prep.income_tax import (
 )
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 - [ ] Commit this change to the (current) `tax-refund` branch with the message `"implements tax liability calculation"`.
 
@@ -249,7 +249,7 @@ An urgent change request has suddenly arrived from our manager! Our income deduc
 
 Let's fix the issue!
 
-- [ ] In `income_tax.py`, let's change the `STANDARD_DEDUCTION_2020` to `12400`.
+- [ ] In `income_tax.py`, let's change the value of `STANDARD_DEDUCTION_2020` to `12400`. (Use your `cmd + f` searching skills!)
 
 - [ ] In `test_tax_prep.py`, update the `test_applies_standard_deduction` test as follows.
 
@@ -262,7 +262,7 @@ def test_applies_standard_deduction():
     assert deducted_income == 37600
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 - [ ] Commit this change to the (current) `main` branch with the message `"HOTFIX: updates standard deduction"`.
 
@@ -350,7 +350,7 @@ from ada_tax_prep.income_tax import (
 )
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 - [ ] Commit this change to the (current) `tax-refund` branch with the message `"implements refund calculation for TaxPayer"`.
 
@@ -364,7 +364,7 @@ As usual, once we finish a feature branch, we'll want to merge it back into `mai
 
 - [ ] Merge `tax-refund` into `main` with `$ git merge tax-refund`.
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 ## Part 3: Merging Overlapping Changes
 
@@ -412,7 +412,7 @@ def new_valid_deductions():
     }
 ```
 
-- [ ] Also in `test_tax_prep.py`, add the following new test after the existing `test_ignores_invalid_itemized_deductions` fixture.
+- [ ] Also in `test_tax_prep.py`, add the following new test after the existing `test_ignores_invalid_itemized_deductions` test.
 
 ```python
 def test_applies_new_itemized_deductions(new_valid_deductions):
@@ -423,7 +423,7 @@ def test_applies_new_itemized_deductions(new_valid_deductions):
     assert deducted_income == 20000
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`.
 
 - [ ] Make a commit for this work with the message, `"I'm Madeline and I'm adding the home office deduction"`.
 
@@ -476,7 +476,7 @@ def test_applies_new_itemized_deductions(new_valid_deductions):
     assert deducted_income == 20000
 ```
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests.
 
 - [ ] Make a commit with the message, `"adds sales tax deduction"`.
 
@@ -562,9 +562,9 @@ We can also talk to the other developer with whose code we are conflicting to tr
 
 ### !end-callout
 
-At this point, we have resolved all the changes. But we should run the tests to be sure our changes still allow the tests to pass.
+At this point, we have resolved all the changes. Before we complete the merging process in git,  we should run the tests to be sure our changes still allow the tests to pass.
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests of this project using `$ pytest`. (We can still run commands like `pytest` in our terminal, even if we're in the middle of merging in git!)
 
 Notice that `test_applies_new_itemized_deductions` is failing.
 
@@ -610,7 +610,7 @@ Once more, we have finished a feature branch, so we should merge it back into `m
 
 - [ ] Merge `new-deductions` into `main` with `$ git merge new-deductions`.
 
-- [ ] Run the tests of this project using `$ python3 -m pytest`.
+- [ ] Run the tests.
 
 ### !callout-success
 
