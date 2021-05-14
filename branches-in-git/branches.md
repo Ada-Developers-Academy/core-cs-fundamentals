@@ -203,3 +203,71 @@ When we begin on such an endeavor, we should:
 - Determine the goal of the exploration at the beginning.
 - Create a time limit of less than one day.
 - Decide to delete the branch at the end of the experiment, and create a separate new branch with clean commits after the research is over. This intentional step is to help us resist the temptation of including our exploratory code in our production code base.
+
+## Check for Understanding
+
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: multiple-choice
+* id: 5e3a4857
+* title: Branches
+##### !question
+
+Imagine that there is a branch named `main` with the following commit history:
+
+```
+1gj8o "Refactors book endpoint to check request verb"
+0uwp7 "Adds book endpoint to delete books"
+```
+
+Imagine that Wendy creates a branch named `author-routes`.
+
+Which of the following best describes the Git history of `author-routes` immediately after it's created?
+
+##### !end-question
+##### !options
+
+* `author-routes` has diverged from `main` and needs to be merged in
+* `author-routes` and `main` have identical Git histories
+* `author-routes` copies the Git history from `main`, but with different commit hashes
+
+##### !end-options
+##### !answer
+
+* `author-routes` and `main` have identical Git histories
+
+##### !end-answer
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 2 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: multiple-choice
+* id: b434d3b2
+* title: Branches
+##### !question
+
+Imagine that there are two branches: `main` and `sort-books-endpoint`.
+
+The `sort-books-endpoint` is a feature branch. The development on this branch is finished, and we want to merge `main` and `sort-books-endpoint`, such that the Git history of `sort-books-endpoint` is merged into the Git history of `main`.
+
+The end result is that the `main` branch's Git history will include all the commits in the `sort-books-endpoint` branch.
+
+Of the following options, what is the best way to achieve this?
+
+##### !end-question
+##### !options
+
+* On the `main` branch, merge `sort-books-endpoint` _into_ `main`
+* On the `sort-books-endpoint` branch, merge `main` _into_ `sort-books-endpoint`
+
+##### !end-options
+##### !answer
+
+* On the `main` branch, merge `sort-books-endpoint` _into_ `main`
+
+##### !end-answer
+### !end-challenge
+<!-- prettier-ignore-end -->

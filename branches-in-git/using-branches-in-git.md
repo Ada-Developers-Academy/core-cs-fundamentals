@@ -155,3 +155,34 @@ Note that just as in the command line, we cannot delete the branch in which we a
 Because branches are made and finished so frequently (ideally), projects will accumulate a _lot_ of branches. It's worthwhile to organize branches and delete them after they've been merged into `main`, or are no longer actively used.
 
 ### !end-callout
+
+## Check for Understanding
+
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: checkbox
+* id: 9edcb5fe
+* title: Using Branches in Git
+##### !question
+
+Imagine an existing branch named `create-books-endpoint`. Which of the following options are valid ways to switch branches in Git?
+
+##### !end-question
+##### !options
+
+* `$ git switch create-books-endpoint`
+* `$ git branch create-books-endpoint`
+* `$ git checkout create-books-endpoint`
+* Using VS Code
+
+##### !end-options
+##### !answer
+
+* `$ git switch create-books-endpoint`
+* `$ git checkout create-books-endpoint`
+* Using VS Code
+
+##### !end-answer
+### !end-challenge
+<!-- prettier-ignore-end -->
