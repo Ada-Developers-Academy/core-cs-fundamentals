@@ -249,7 +249,7 @@ An urgent change request has suddenly arrived from our manager! Our income deduc
 
 Let's fix the issue!
 
-- [ ] In `income_tax.py`, let's change the value of `STANDARD_DEDUCTION_2020` to `12400`. (Use your `cmd + f` searching skills!)
+- [ ] In `income_tax.py`, let's change the value of `STANDARD_DEDUCTION_2020` to `12400`. (Use your ⌘F searching skills!)
 
 - [ ] In `test_tax_prep.py`, update the `test_applies_standard_deduction` test as follows.
 
@@ -465,7 +465,7 @@ def new_valid_deductions():
     }
 ```
 
-- [ ] Also in `test_tax_prep.py`, add the following new test after the existing `test_ignores_invalid_itemized_deductions` fixture.
+- [ ] Also in `test_tax_prep.py`, add the following new test after the existing `test_ignores_invalid_itemized_deductions` test.
 
 ```python
 def test_applies_new_itemized_deductions(new_valid_deductions):
@@ -562,9 +562,9 @@ We can also talk to the other developer with whose code we are conflicting to tr
 
 ### !end-callout
 
-At this point, we have resolved all the changes. Before we complete the merging process in git,  we should run the tests to be sure our changes still allow the tests to pass.
+At this point, we have resolved all the conflicts. Before we complete the merging process in Git, we should run the tests to be sure our changes still allow the tests to pass. We can still run commands like `pytest` in our terminal, even if we're in the middle of merging in Git!
 
-- [ ] Run the tests of this project using `$ pytest`. (We can still run commands like `pytest` in our terminal, even if we're in the middle of merging in git!)
+- [ ] Run the tests.
 
 Notice that `test_applies_new_itemized_deductions` is failing.
 
@@ -600,7 +600,7 @@ def test_applies_new_itemized_deductions(new_valid_deductions):
 
 - [ ] Run `$ git status` to confirm that the merge has concluded.
 
-- [ ] Run `$ git log` to check the current git history. Check that Madeline's commits, our commits, and the merge commit are all present.
+- [ ] Run `$ git log` to check the current Git history. Check that Madeline's commits, our commits, and the merge commit are all present.
 
 ### Merge the Feature Branch into `main`
 
