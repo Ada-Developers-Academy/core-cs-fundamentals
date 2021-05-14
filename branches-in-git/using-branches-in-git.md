@@ -91,15 +91,6 @@ $ git switch <destination-branch-name>
 
 Where `<destination-branch-name>` is the name of the destination branch.
 
-### Switching Branches in VSCode
-
-While working in VSCode, we can switch between branches. Clicking the current branch in the status bar will open an option picker with selections that display the names of other available branches. Clicking a branch name will switch to the other branch.
-
-![A VSCode screen with box around the bottom-left of the status bar, where main is displayed. There is a drop down option showing four branches: main, add-deployment-config, convert-to-hooks, and rename-task-model. A box is drawn around the branch names.](../assets/branches-in-git_using-branches_branches.png)  
-_Fig. By clicking the current branch in the status bar, an option display will appear where we can pick a branch to which to switch._
-
-After clicking the current branch in the status bar, we see the same four branches available as displayed by `git branch`. Clicking one will switch to that branch.
-
 ### !callout-info
 
 ## `git switch` Replaces `git checkout`
@@ -110,9 +101,20 @@ The following command also changes our location to a different branch:
 $ git checkout <destination-branch-name>
 ```
 
+<br/>
+
 This command was the dominant way for switching branches for a long time, so it's important to recognize this syntax.
 
 ### !end-callout
+
+### Switching Branches in VSCode
+
+While working in VSCode, we can switch between branches. Clicking the current branch in the status bar will open an option picker with selections that display the names of other available branches. Clicking a branch name will switch to the other branch.
+
+![A VSCode screen with box around the bottom-left of the status bar, where main is displayed. There is a drop down option showing four branches: main, add-deployment-config, convert-to-hooks, and rename-task-model. A box is drawn around the branch names.](../assets/branches-in-git_using-branches_branches.png)  
+_Fig. By clicking the current branch in the status bar, an option display will appear where we can pick a branch to which to switch._
+
+After clicking the current branch in the status bar, we see the same four branches available as displayed by `git branch`. Clicking one will switch to that branch.
 
 ### Sometimes Switching Is "Unsafe"
 
