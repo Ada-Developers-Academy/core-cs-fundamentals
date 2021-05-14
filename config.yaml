@@ -81,3 +81,22 @@ Standards:
         Type: Lesson
         UID: 912e7b7efb8219dbd6639bdb575322bb
         Path: /hash-tables/problem-set-hash-tables.md
+  -
+    Title: Branches In Git
+    Description: "Branches, Using Branches in Git, Problem Set: Git"
+    UID: 76a4001e9bc2734c2e93ede4b8f1297e
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 6c8aa01cc55f51f3cb90f1fd9f851595
+        Path: /branches-in-git/branches.md
+      -
+        Type: Lesson
+        UID: f88500a61648d8752735ca1b0b3e9522
+        Path: /branches-in-git/using-branches-in-git.md
+      -
+        Type: Lesson
+        UID: a23c8692ae7b601177cd574151717d51
+        Path: /branches-in-git/problem-set-git.md
