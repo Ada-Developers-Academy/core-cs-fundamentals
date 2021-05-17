@@ -1,5 +1,7 @@
 # Using Hash Tables
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4aee1f37-7078-495a-8571-ad2b00050670&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Goals
 
 It's all well and good to know what hash tables _are_, but how can we use them? Using hash tables creatively will allow us to design neat and efficient solutions!
