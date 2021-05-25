@@ -265,24 +265,22 @@ An example of a working implementation:
 ```python
 def digit_match(apples, oranges):
     # Base cases:
-    # If apples and oranges get reduced
-    # to the same power at the same time,
-    # they are both "in the same position"
+    # If both apples and oranges are 0 return 1
     if apples == 0 and oranges == 0:
         return 1
-    # If apples or oranges gets reduced
-    # to single digits before the other,
-    # then they are not "in the same position"
-    elif apples <= 1 or oranges <= 1:
+    # If one or both are 1-digit numbers
+    elif apples < 10 or oranges < 10:
+        if apples % 10 == oranges % 10:
+            return 1
+        
         return 0
-
-    # Each recursive call reduces the number by
-    # a power of ten
-    # If apples and oranges are the same number, add 1
+    
+    # Recursive Cases
     if apples % 10 == oranges % 10:
         return 1 + digit_match(apples // 10, oranges // 10)
-    else:
-        return digit_match(apples // 10, oranges // 10)
+        
+    return digit_match(apples // 10, oranges // 10)
+
 ```
 
 ### !end-explanation
