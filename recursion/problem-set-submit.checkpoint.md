@@ -4,7 +4,7 @@ Instructors provide code feedback through pull requests.
 
 In order to get code feedback on [Problem Set: Recursion Pt. 1](problem-set-recursion-pt-1.md) and [Problem Set: Recursion Pt. 2](problem-set-recursion-pt-2.md), follow these directions:
 
-1. Fork [this repo, `core-problem-set-recursion`](https://github.com/Ada-C15A/core-problem-set-recursion) to your GitHub account
+1. Fork [this repo, `core-problem-set-recursion`](https://github.com/AdaGold/core-problem-set-recursion) to your GitHub account
 1. Clone your repo
 1. Open `part-1.py` and `part-2.py`
 
@@ -26,7 +26,7 @@ There are comments in these files to designate where and how to put your solutio
 * topics: python, flask
 ##### !question
 
-Make a pull request against the [repo `core-problem-set-recursion`](https://github.com/Ada-C15A/core-problem-set-recursion) (see directions above). Place the URL of the pull request here.
+Make a pull request against the [repo `core-problem-set-recursion`](https://github.com/AdaGold/core-problem-set-recursion) (see directions above). Place the URL of the pull request here.
 
 ##### !end-question
 ##### !placeholder
