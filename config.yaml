@@ -1,64 +1,6 @@
 ---
 Standards:
   -
-    Title: The Interview Process
-    Description: "The Interview Process, How to approach interviews"
-    UID: 7f3b402c-d1f6-44d3-9ced-935e63b72b29
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Lesson
-        UID: c9046bbf-7f2b-4441-9e8c-c29374265333
-        Path: /interview-process/interview-introduction.md
-      -
-        Type: Lesson
-        UID: 3c192ac0-6a5b-492a-9550-8bf503322571
-        Path: /interview-process/how-to-interview.md
-      -
-        Type: Lesson
-        UID: db9dd27d-4bbd-4a4b-b52d-f86aed909de8
-        Path: /interview-process/interview-recording.md
-      -
-        Type: Lesson
-        UID: 1c4de8b5-215d-47b4-81d4-22d808e1dc11
-        Path: /interview-process/sample-questions.md
-  -
-    Title: Recursion
-    Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
-    UID: 12fa464a36f8e5a187f5acfde99b7029
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Instructor
-        UID: 9314cec297d08f8e6944d4ffa8d8ebf7
-        Path: /recursion/recursion.instructor.md
-      -
-        Type: Lesson
-        UID: 741b7dd7a6160942b5f7fc2dff011f50
-        Path: /recursion/intro-to-recursion.md
-      -
-        Type: Lesson
-        UID: 4464e923942b9d0395ac38e687fbaeb3
-        Path: /recursion/reading-recursive-code.md
-      -
-        Type: Lesson
-        UID: 21bc10ab78c0a1e7822b8021150feebd
-        Path: /recursion/writing-recursive-code.md
-      -
-        Type: Lesson
-        UID: be58d3489bf4314f9ddf9703624e2842
-        Path: /recursion/problem-set-recursion-pt-1.md
-      -
-        Type: Lesson
-        UID: 4dc6f963f2f2d529d9b3dfe7b6dbc19f
-        Path: /recursion/problem-set-recursion-pt-2.md
-      -
-        Type: Checkpoint
-        UID: 96d170c9
-        Path: /recursion/problem-set-submit.checkpoint.md
-  -
     Title: Hash Tables
     Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
     UID: fac6e79e15b06e536f52e19c118bfff2
@@ -100,3 +42,100 @@ Standards:
         Type: Lesson
         UID: a23c8692ae7b601177cd574151717d51
         Path: /branches-in-git/problem-set-git.md
+  -
+    Title: The Interview Process
+    Description: "The Interview Process, How to approach interviews"
+    UID: 7f3b402c-d1f6-44d3-9ced-935e63b72b29
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: c9046bbf-7f2b-4441-9e8c-c29374265333
+        Path: /interview-process/interview-introduction.md
+      -
+        Type: Lesson
+        UID: 3c192ac0-6a5b-492a-9550-8bf503322571
+        Path: /interview-process/how-to-interview.md
+      -
+        Type: Lesson
+        UID: db9dd27d-4bbd-4a4b-b52d-f86aed909de8
+        Path: /interview-process/interview-recording.md
+      -
+        Type: Lesson
+        UID: 1c4de8b5-215d-47b4-81d4-22d808e1dc11
+        Path: /interview-process/sample-questions.md
+  -
+    Title: Sorting Algorithms
+    Description: "Sorting Algorithms, Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Problem Set: Sorting Algorithms"
+    UID: 184d8af4792d6c2f80c90b27919caa10
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
+        Path: /sorting-algorithms/sorting-algorithms.instructor.md
+      -
+        Type: Lesson
+        UID: 32b0bd4445f66fd2663288c634432c2e
+        Path: /sorting-algorithms/sorting-algorithms.md
+      -
+        Type: Lesson
+        UID: 0806cdb2d0a4b885790d3793999db841
+        Path: /sorting-algorithms/bubble-sort.md
+      -
+        Type: Lesson
+        UID: 1dc3ffdcda584ccb3a445105b67bf21f
+        Path: /sorting-algorithms/selection-sort.md
+      -
+        Type: Lesson
+        UID: 04c103dab4d7e24b3e0922fba11ab2e7
+        Path: /sorting-algorithms/insertion-sort.md
+      -
+        Type: Lesson
+        UID: 64b3cc9b8ee0c4d4d7d0dadbaa0d618d
+        Path: /sorting-algorithms/merge-sort.md
+      -
+        Type: Lesson
+        UID: 383253988f7afc58dd4fe867d42d7cad
+        Path: /sorting-algorithms/problem-set-sorting-algorithms.md
+      -
+        Type: Instructor
+        UID: 70acaebba6da64c98fef0d184cd40e5b
+        Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
+  -
+    Title: Recursion
+    Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
+    UID: 12fa464a36f8e5a187f5acfde99b7029
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 9314cec297d08f8e6944d4ffa8d8ebf7
+        Path: /recursion/recursion.instructor.md
+      -
+        Type: Lesson
+        UID: 741b7dd7a6160942b5f7fc2dff011f50
+        Path: /recursion/intro-to-recursion.md
+      -
+        Type: Lesson
+        UID: 4464e923942b9d0395ac38e687fbaeb3
+        Path: /recursion/reading-recursive-code.md
+      -
+        Type: Lesson
+        UID: 21bc10ab78c0a1e7822b8021150feebd
+        Path: /recursion/writing-recursive-code.md
+      -
+        Type: Lesson
+        UID: be58d3489bf4314f9ddf9703624e2842
+        Path: /recursion/problem-set-recursion-pt-1.md
+      -
+        Type: Lesson
+        UID: 4dc6f963f2f2d529d9b3dfe7b6dbc19f
+        Path: /recursion/problem-set-recursion-pt-2.md
+      -
+        Type: Checkpoint
+        UID: 96d170c9
+        Path: /recursion/problem-set-submit.checkpoint.md
