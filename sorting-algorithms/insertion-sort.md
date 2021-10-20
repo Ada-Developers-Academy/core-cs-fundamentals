@@ -62,7 +62,18 @@ The sorted sub-array is **bolded**. The next value to be inserted is always the 
 
 ## Big O Complexity
 
-As with the other sorting algorithms we have considered, with insertion sort we examine the number of comparisons performed in the inner loop.
+There are two basic operations in which we are interested when analyzing sorting algorithms:
+
+1. the number of comparisons
+1. the number of swaps
+
+In our big O analysis of sorting algorithms, we will typically focus on the number of comparisons. In some languages, the number of swaps will also be important and could provided a reason to favor an algorithm with fewer swaps over an algorithm with many swaps.
+
+Also, recall that big O analysis considers the worst case for an algorithm! Although it's possible for insertion sort to finish after a single pass (_O(n)_) if the array happened to be sorted already, we are less interested in that situation.
+
+Noticing best case performance can be useful if we are choosing between multiple algorithms that otherwise have the same complexity, or if we have forehand knowledge about the data with which we will be working.
+
+To determine the time complexity of insertion sort we examine the number of comparisons performed in the inner loop.
 
 The insertion sort algorithm requires (in the worst case):
 
@@ -72,17 +83,31 @@ The insertion sort algorithm requires (in the worst case):
 - ... and so on
 - _n-1_ comparisons to insert the last element
 
-Overall, this is _1 + 2 + 3 + ... + (n-1)_, the same expression we saw for bubble sort and selection sort.
+Overall, this is _1 + 2 + 3 + ... + (n-1)_.
 
-Therefore insertion sort has a complexity of _O(n<sup>2</sup>)_.
+There is a mathematical identity which states this summation is the same as _n(n-1)/2_. When multiplied out this results in _1⁄2n<sup>2</sup>-1⁄2n_, for _O(n<sup>2</sup>)_.
 
-We might also notice that insertion sort, like bubble sort, has a best case time complexity of _O(n)_ if the list is already sorted. As we expand the sorted sub-part of the array, each new item is already in its correct spot, which we can determine with a single check per item. Since there are _n_ items, this gives a best case of _O(n)_.
+Notice that _n(n-1)/2_ does _not_ equal _n<sup>2</sup>_. Recall that when performing big O analysis, we are interested in the rate of growth in the algorithm rather than the exact number of operations. The growth rate will be dominated by the largest term in the equation.
+
+After multiplying out the expression, the largest term is _1⁄2n<sup>2</sup>_. After dropping the constant, this allows us to say that insertion sort is _O(n<sup>2</sup>)_.
+
+### !callout-info
+
+## Mathematical Proofs Out of Scope
+
+In general, full mathematical proofs for the algorithms we discuss are out of scope for the curriculum. We will often apply analyses that are more intuitive than rigorous. However, there are great resources online that explain the math in-depth! Follow your curiosity!
+
+### !end-callout
+
+Therefore insertion sort has a time complexity of _O(n<sup>2</sup>)_.
+
+We might also notice that insertion sort, has a best case time complexity of _O(n)_ if the list is already sorted. As we expand the sorted sub-part of the array, each new item is already in its correct spot, which we can determine with a single check per item. Since there are _n_ items, this gives a best case of _O(n)_.
 
 Insertion sort generally improves in complexity the closer the list is to being sorted, that is, the more items are already relatively in their correct places. In other words, insertion sort runs in _nearly_ linear time on a _nearly_ sorted list of elements.
 
 ## Stability
 
-Insertion sort is a stable sorting algorithm. Like bubble sort, we only move items in the list using adjacent swaps, and then only when they are strictly out of order.
+Insertion sort is a stable sorting algorithm. We only move items in the list using adjacent swaps, and then only when they are strictly out of order.
 
 ## Example Implementation
 
