@@ -1,4 +1,4 @@
-# Selection Sort
+# OPTIONAL - Selection Sort
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=facbdf57-b727-40c6-9b40-ad120019daed&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
