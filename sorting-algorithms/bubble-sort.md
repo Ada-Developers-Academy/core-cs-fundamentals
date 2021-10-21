@@ -8,7 +8,7 @@
 
 ## Overview
 
-The bubble sort algorithm works by repeatedly looping through a list of data. With each pass through the list, the "next" sorted value will "bubble up" to its proper place in the list.
+This section is optional to review. It discusses the bubble sort algorithm, which works by repeatedly looping through a list of data. With each pass through the list, the "next" sorted value will "bubble up" to its proper place in the list.
 
 ### Detailed Explanation
 

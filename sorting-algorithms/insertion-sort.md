@@ -109,6 +109,10 @@ Insertion sort generally improves in complexity the closer the list is to being 
 
 Insertion sort is a stable sorting algorithm. We only move items in the list using adjacent swaps, and then only when they are strictly out of order.
 
+That is, if the value 10 appeared in the list twice, the leftmost instance would always remain to the left, while the rightmost would remain to the right.
+
+As discussed in the Sorting Algorithms lesson, stability can be a useful property for a sorting algorithm to have. If our values were more complex records that we would like to sort based on multiple attributes, then we can simply apply a stable sort multiple times. Or if the initial ordering of a list isn't entirely random, a stable sort will preserve the ordering between records that are otherwise equivalent.
+
 ## Example Implementation
 
 Consider this example implementation of insertion sort.

@@ -8,7 +8,7 @@
 
 ## Overview
 
-The selection sort algorithm works by selecting the smallest unsorted item in the list, and swapping it with index 0, then finding the next smallest and swapping it into index 1, and so on.
+This section is optional to review. It discusses the selection sort algorithm, which works by selecting the smallest unsorted item in the list, and swapping it with index 0, then finding the next smallest and swapping it into index 1, and so on.
 
 ### Detailed Explanation
 
