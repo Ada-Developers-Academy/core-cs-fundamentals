@@ -184,24 +184,3 @@ Compare this code with this detailed explanation of the algorithm:
 This implementation does _not_ explicitly track whether a swap has been made (which could allow early termination). But when we get down to a single item in the unsorted portion, this is implicitly true, as there is nothing left with which we can compare.
 
 This implementation sorts the array in-place. That is, it uses only a small amount of constant extra memory (just a few local variables), and the original array itself is updated. Because the original array is modified, no return statement is needed.
-
-## Check for Understanding
-
-<!-- Question Takeaway -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: Ym2Y2e
-* title: Bubble Sort
-##### !question
-
-What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
-
-##### !end-question
-##### !placeholder
-
-My biggest takeaway from this lesson is...
-
-##### !end-placeholder
-### !end-challenge
-<!-- prettier-ignore-end -->

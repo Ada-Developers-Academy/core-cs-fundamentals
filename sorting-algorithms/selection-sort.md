@@ -105,23 +105,3 @@ Compare this code with this detailed explanation of the algorithm:
 
 This implementation sorts the array in-place. Because the original array is modified, no return statement is needed.
 
-## Check for Understanding
-
-<!-- Question Takeaway -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: WcmHej
-* title: Selection Sort
-##### !question
-
-What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
-
-##### !end-question
-##### !placeholder
-
-My biggest takeaway from this lesson is...
-
-##### !end-placeholder
-### !end-challenge
-<!-- prettier-ignore-end -->
