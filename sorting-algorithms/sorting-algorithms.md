@@ -93,7 +93,7 @@ Notice that the order of the names with identical ages is preserved between the 
 
 ## O(n<sup>2</sup>) Algorithms
 
-Several commonly introduced sorting algorithms have time complexities of O(n<sup>2</sup>). These include _bubble sort_, _selection sort_, and _insertion sort_, which will be discussed in detail in the following lessons.
+Several commonly introduced sorting algorithms have time complexities of O(n<sup>2</sup>). These include _insertion sort_, _bubble sort_, and _selection sort_. We will discuss insertion sort in the next lesson. Bubble sort and selection sort will be discussed in sections that are optional to review.
 
 These algorithms are fine when the array length _n_ is small, but quickly cease to be useful as the size of the array increases. Bubble sort and insertion sort can perform well in the best case, but they do not scale well.
 
@@ -103,11 +103,11 @@ Moving beyond these O(n<sup>2</sup>) algorithms, we will discuss _merge sort_, a
 
 ## Summary
 
-There are many sorting algorithms that have been developed. We will discuss four of them in the coming lessons, but we can learn more about other sorting methods at [geeksforgeeks.org/sorting-algorithms/](http://www.geeksforgeeks.org/sorting-algorithms/).
+There are many sorting algorithms that have been developed. We will discuss some of them in the coming lessons, but we can learn more about other sorting methods at [geeksforgeeks.org/sorting-algorithms/](http://www.geeksforgeeks.org/sorting-algorithms/).
 
 Not all sorting algorithms are created equally, so we will want to keep the performance characteristics of each algorithm in mind when selecting one to use.
 
-Most modern programming languages provide a standard sorting algorithm that will work well for many kinds of data, but we should take time to understand it's properties. In certain situations, it might still be worthwhile to provide our own sort implementations.
+Most modern programming languages provide a standard sorting algorithm that will work well for many kinds of data, but we should take time to understand its properties.
 
 And keeping the goals presented at the beginning of this lesson in mind, the study of sorting algorithms has many benefits, even if we never end up needing to write our own sorting algorithm.
 
