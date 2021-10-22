@@ -91,6 +91,8 @@ Notice that _n(n-1)/2_ does _not_ equal _n<sup>2</sup>_. Recall that when perfor
 
 After multiplying out the expression, the largest term is _1⁄2n<sup>2</sup>_. After dropping the constant, this allows us to say that insertion sort is _O(n<sup>2</sup>)_.
 
+Therefore insertion sort has a time complexity of _O(n<sup>2</sup>)_.
+
 ### !callout-info
 
 ## Mathematical Proofs Out of Scope
@@ -98,8 +100,6 @@ After multiplying out the expression, the largest term is _1⁄2n<sup>2</sup>_. 
 In general, full mathematical proofs for the algorithms we discuss are out of scope for the curriculum. We will often apply analyses that are more intuitive than rigorous. However, there are great resources online that explain the math in-depth! Follow your curiosity!
 
 ### !end-callout
-
-Therefore insertion sort has a time complexity of _O(n<sup>2</sup>)_.
 
 We might also notice that insertion sort, has a best case time complexity of _O(n)_ if the list is already sorted. As we expand the sorted sub-part of the array, each new item is already in its correct spot, which we can determine with a single check per item. Since there are _n_ items, this gives a best case of _O(n)_.
 

@@ -6,7 +6,6 @@ Complete all questions below.
 
 ## Practice
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -31,7 +30,6 @@ The insertion sort algorithm is unique because...
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -56,7 +54,6 @@ The merge sort algorithm is unique because...
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 3 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: code-snippet
@@ -65,7 +62,7 @@ The merge sort algorithm is unique because...
 * title: Sorting Algorithms
 ### !question
 
-There's nothing like getting familiar with sorting algorithms than to implement it yourself!
+There's no better way to get familiar with sorting algorithms than to implement one yourself!
 
 Without using Python's `sort()` method (or anything like that), implement `sort_by_length` based on insertion sort.
 
@@ -150,7 +147,6 @@ def sort_by_length(sentence):
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 4 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
