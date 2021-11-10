@@ -142,7 +142,7 @@ Standards:
   -
     Title: "Algorithmic Strategies"
     Description: "Divide and Conquer, Dynamic Programming, Problem Set: Algorithmic Strategies"
-    UID: b1ec8907
+    UID: 7379a433-3626-43b2-840b-ae98bd890555
     SuccessCriteria:
       - success criteria
     ContentFiles:
@@ -162,4 +162,3 @@ Standards:
         Type: Lesson
         UID: 673f70af
         Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
-  -
