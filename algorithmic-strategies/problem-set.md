@@ -72,20 +72,18 @@ def find_smallest_missing_number(nums, left=None, right=None):
 
 ```py
 import unittest
-from main import longest_common_prefix
+from main import find_smallest_missing_number
 
 class TestPython1(unittest.TestCase):
-    def test_ada_and_add(self):
-        self.assertEqual("ad",longest_common_prefix("ada", "add"))
+    def test_empty_list(self):
+        self.assertEqual(0,find_smallest_missing_number([]))
     
-    def test_awesome_and_awkward(self):
-        self.assertEqual("aw",longest_common_prefix("awesome", "awkward"))
+    def test_missing_three(self):
+        self.assertEqual(3,find_smallest_missing_number([0, 1, 2, 4, 5, 6]))
 
-    def test_javascript_and_javascript(self):
-        self.assertEqual("javascript",longest_common_prefix("javascript", "javascript"))
+    def test_missing_last_number_seven(self):
+        self.assertEqual(7,find_smallest_missing_number([0, 1, 2, 3, 4, 5, 6]))
 
-    def test_two_strings_with_no_common_prefix(self):
-        self.assertEqual("",longest_common_prefix("tea", "javascript"))
 ```
 ##### !end-tests
 
