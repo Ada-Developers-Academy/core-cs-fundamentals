@@ -139,3 +139,27 @@ Standards:
         Type: Checkpoint
         UID: 96d170c9
         Path: /recursion/problem-set-submit.checkpoint.md
+  -
+    Title: "Algorithmic Strategies"
+    Description: "Divide and Conquer, Dynamic Programming, Problem Set: Algorithmic Strategies"
+    UID: b1ec8907
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 282c6bfa
+        Path: /algorithmic-strategies/algorithmic-strategies.instructor.md
+      -
+        Type: Lesson
+        UID: 31eb5440
+        Path: /algorithmic-strategies/divide-and-conquer.md
+      -
+        Type: Lesson
+        UID: a9083082
+        Path: /algorithmic-strategies/dynamic-programming.md
+      -
+        Type: Lesson
+        UID: 673f70af
+        Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
+  -
