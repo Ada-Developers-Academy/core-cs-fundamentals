@@ -160,5 +160,9 @@ Standards:
         Path: /algorithmic-strategies/dynamic-programming.md
       -
         Type: Lesson
+        UID: f3a52ac2-060b-45ac-bb99-006f1fc7ff94
+        Path: /algorithmic-strategies/problem-set.md
+      -
+        Type: Lesson
         UID: 673f70af
         Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
