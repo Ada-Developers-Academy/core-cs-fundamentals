@@ -252,6 +252,7 @@ def get_nth_ugly_number(n):
         multiple_of_5 = ugly_numbers[last_multiple_of_5] * 5
 
         next_ugly_number = min(multiple_of_2, multiple_of_3, multiple_of_5)
+        ugly_numbers.append(next_ugly_number)
 
         if next_ugly_number == multiple_of_2:
             last_multiple_of_2 += 1
