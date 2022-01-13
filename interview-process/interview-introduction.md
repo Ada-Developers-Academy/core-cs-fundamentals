@@ -100,4 +100,3 @@ Other strategies include:
 - [LeetCode](https://leetcode.com/)
 - [CodeFights](https://codefights.com/)
 - [Pramp](https://www.pramp.com/) - Online practice coding interviews 6 free.
-- [Previous cohort lists of practice problems](https://docs.google.com/spreadsheets/d/1fEDgUvF3e7VVVzlkrV2X6_5nqFA7_34B7FdWsZUDxZc/edit#gid=1999142690)
