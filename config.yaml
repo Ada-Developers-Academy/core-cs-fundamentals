@@ -162,3 +162,14 @@ Standards:
         Type: Lesson
         UID: 673f70af
         Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
+  -
+    Title: "External Resources"
+    Description: "Learning Resources Provided by the Ada Community"
+    UID: 19d7c672-ae13-407d-9cf2-d0615e75a726
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: b928006a
+        Path: /resources/external-resources.md
