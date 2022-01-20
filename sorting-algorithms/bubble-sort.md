@@ -1,4 +1,4 @@
-# Bubble Sort
+# OPTIONAL - Bubble Sort
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=45dab937-de88-4987-8539-ad11018a382c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The bubble sort algorithm works by repeatedly looping through a list of data. With each pass through the list, the "next" sorted value will "bubble up" to its proper place in the list.
+This section is optional to review. It discusses the bubble sort algorithm, which works by repeatedly looping through a list of data. With each pass through the list, the "next" sorted value will "bubble up" to its proper place in the list.
 
 ### Detailed Explanation
 
@@ -127,17 +127,6 @@ Notice that for our nine value list, eight passes through the data were required
 
 ## Big O Complexity
 
-There are two basic operations in which we are interested when analyzing sorting algorithms:
-
-1. the number of comparisons
-1. the number of swaps
-
-In our big O analysis of sorting algorithms, we will typically focus on the number of comparisons. In some languages, the number of swaps will also be important and could provided a reason to favor an algorithm with fewer swaps over an algorithm with many swaps.
-
-Also, recall that big O analysis considers the worst case for an algorithm! Although it's possible for bubble sort to finish after a single pass (_O(n)_) if the array happened to be sorted already, we are less interested in that situation.
-
-Noticing best case performance can be useful if we are choosing between multiple algorithms that otherwise have the same complexity, or if we have forehand knowledge about the data with which we will be working.
-
 In the worst case, we would need to perform the check and swap with each pair, and everything would be out of order so that we don't finish early. This would require about as many passes through the array as there are values.
 
 This gives us a time complexity for bubble sort of _O(n<sup>2</sup>)_, where _n_ is the array length.
@@ -151,27 +140,11 @@ We can even be a little more precise with our counting.
 
 The inner loop runs _n-1_ times during the first iteration of the outer loop, _n-2_ times during the second iteration through the outer loop, and so on. i.e. _n-1 + n-2 + n-3 + ... + 3 + 2 + 1_.
 
-There is a mathematical identity which states this summation is the same as _n(n-1)/2_. When multiplied out this results in _1⁄2n<sup>2</sup>-1⁄2n_, for _O(n<sup>2</sup>)_.
-
-Notice that _n(n-1)/2_ does _not_ equal _n<sup>2</sup>_. Recall that when performing big O analysis, we are interested in the rate of growth in the algorithm rather than the exact number of operations. The growth rate will be dominated by the largest term in the equation.
-
-After multiplying out the expression, the largest term is _1⁄2n<sup>2</sup>_. After dropping the constant, this allows us to say that bubble sort is _O(n<sup>2</sup>)_.
-
-### !callout-info
-
-## Mathematical Proofs Out of Scope
-
-In general, full mathematical proofs for the algorithms we discuss are out of scope for the curriculum. We will often apply analyses that are more intuitive than rigorous. However, there are great resources online that explain the math in-depth! Follow your curiosity!
-
-### !end-callout
+This the same expression we saw for insertion sort, which means our time complexity is _O(n<sup>2</sup>)_.
 
 ## Stability
 
-Bubble sort is a stable sorting algorithm. Since we only shift values by one position, and even then only if they are strictly out of order, equivalent values will never "jump" over one another.
-
-That is, if the value 10 appeared in the list twice, the leftmost instance would always remain to the left, while the rightmost would remain to the right.
-
-As discussed in the Sorting Algorithms lesson, stability can be a useful property for a sorting algorithm to have. If our values were more complex records that we would like to sort based on multiple attributes, then we can simply apply a stable sort multiple times. Or if the initial ordering of a list isn't entirely random, a stable sort will preserve the ordering between records that are otherwise equivalent.
+Like insertion sort, bubble sort is a stable sorting algorithm. Since we only shift values by one position, and even then only if they are strictly out of order, equivalent values will never "jump" over one another.
 
 ## Example Implementation
 
@@ -211,28 +184,3 @@ Compare this code with this detailed explanation of the algorithm:
 This implementation does _not_ explicitly track whether a swap has been made (which could allow early termination). But when we get down to a single item in the unsorted portion, this is implicitly true, as there is nothing left with which we can compare.
 
 This implementation sorts the array in-place. That is, it uses only a small amount of constant extra memory (just a few local variables), and the original array itself is updated. Because the original array is modified, no return statement is needed.
-
-Note that the presented implementation used a temporary variable to perform the swap. This is a common pattern in languages that don't support multiple values in a single assignment. This implementation has been written in a general manner to emphasize that the algorithm—the steps for performing bubble sort—are not specific to any one language.
-
-We will follow this same style when discussing other sorting algorithms. But we should feel free to modify the presented implementation to make better use of language-specific features!
-
-## Check for Understanding
-
-<!-- Question Takeaway -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: Ym2Y2e
-* title: Bubble Sort
-##### !question
-
-What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
-
-##### !end-question
-##### !placeholder
-
-My biggest takeaway from this lesson is...
-
-##### !end-placeholder
-### !end-challenge
-<!-- prettier-ignore-end -->

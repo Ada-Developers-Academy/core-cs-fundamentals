@@ -1,4 +1,4 @@
-# Selection Sort
+# OPTIONAL - Selection Sort
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=facbdf57-b727-40c6-9b40-ad120019daed&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The selection sort algorithm works by selecting the smallest unsorted item in the list, and swapping it with index 0, then finding the next smallest and swapping it into index 1, and so on.
+This section is optional to review. It discusses the selection sort algorithm, which works by selecting the smallest unsorted item in the list, and swapping it with index 0, then finding the next smallest and swapping it into index 1, and so on.
 
 ### Detailed Explanation
 
@@ -105,23 +105,3 @@ Compare this code with this detailed explanation of the algorithm:
 
 This implementation sorts the array in-place. Because the original array is modified, no return statement is needed.
 
-## Check for Understanding
-
-<!-- Question Takeaway -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: WcmHej
-* title: Selection Sort
-##### !question
-
-What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
-
-##### !end-question
-##### !placeholder
-
-My biggest takeaway from this lesson is...
-
-##### !end-placeholder
-### !end-challenge
-<!-- prettier-ignore-end -->

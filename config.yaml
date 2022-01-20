@@ -82,14 +82,6 @@ Standards:
         Path: /sorting-algorithms/sorting-algorithms.md
       -
         Type: Lesson
-        UID: 0806cdb2d0a4b885790d3793999db841
-        Path: /sorting-algorithms/bubble-sort.md
-      -
-        Type: Lesson
-        UID: 1dc3ffdcda584ccb3a445105b67bf21f
-        Path: /sorting-algorithms/selection-sort.md
-      -
-        Type: Lesson
         UID: 04c103dab4d7e24b3e0922fba11ab2e7
         Path: /sorting-algorithms/insertion-sort.md
       -
@@ -104,6 +96,14 @@ Standards:
         Type: Instructor
         UID: 70acaebba6da64c98fef0d184cd40e5b
         Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
+      -
+        Type: Lesson
+        UID: 0806cdb2d0a4b885790d3793999db841
+        Path: /sorting-algorithms/bubble-sort.md
+      -
+        Type: Lesson
+        UID: 1dc3ffdcda584ccb3a445105b67bf21f
+        Path: /sorting-algorithms/selection-sort.md
   -
     Title: Recursion
     Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
@@ -139,3 +139,26 @@ Standards:
         Type: Checkpoint
         UID: 96d170c9
         Path: /recursion/problem-set-submit.checkpoint.md
+  -
+    Title: "Algorithmic Strategies"
+    Description: "Divide and Conquer, Dynamic Programming, Problem Set: Algorithmic Strategies"
+    UID: 7379a433-3626-43b2-840b-ae98bd890555
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 282c6bfa
+        Path: /algorithmic-strategies/algorithmic-strategies.instructor.md
+      -
+        Type: Lesson
+        UID: 31eb5440
+        Path: /algorithmic-strategies/divide-and-conquer.md
+      -
+        Type: Lesson
+        UID: a9083082
+        Path: /algorithmic-strategies/dynamic-programming.md
+      -
+        Type: Lesson
+        UID: 673f70af
+        Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
