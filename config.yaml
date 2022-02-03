@@ -1,6 +1,21 @@
 ---
 Standards:
   -
+    Title: Variables and Memory
+    Description: "Variable Scope, Variables Are References, Problem Set: Variables and Memory"
+    UID: 8add2047-cbf3-4f35-9707-7c75bf919918
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 7bac503f-1fd7-4979-9d74-3e17be1fd59e
+        Path: /variables-and-memory/variable-scope.md
+      -
+        Type: Lesson
+        UID: b995d045-d2e8-4c44-9179-ea82c25a3376
+        Path: /variables-and-memory/variables-are-references.md
+  -
     Title: Big O
     Description: "Time and Space Complexity, Big O Notation, Big O Analysis, Problem Set: Big O"
     UID: f2703dfead197309bf41c0a2d8ff1daf
