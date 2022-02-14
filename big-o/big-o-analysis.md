@@ -21,7 +21,7 @@ We encourage you all to read through these sections. After each example, re-read
 
 ## Time Complexity: Code to Big O
 
-Recall that time complexity is the measurement of how the amount of time an algorithm takes to run as the size of the input changes. Also, time complexity is usually measured in _number of operations._ Therefore, our goal is to find a formula that captures how many operations an algorithm executes.
+Recall that time complexity is the measurement of how the amount of time an algorithm takes to run as the size of the input changes. Also, time complexity is usually measured in _number of operations._ Therefore, our goal is to determine how many operations an algorithm executes. Often we will express the number of operations as a formula (i.e. algebraic expression). 
 
 ### Time Complexity: Generic Steps
 
@@ -159,6 +159,14 @@ def reverse(input_list):
 
 6. Match this formula with the most relevant complexity:
    1. _n_ matches _O(n)_ the most closely. This algorithm has linear time complexity.
+
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-warning
+
+## Steps
+The steps outlined above are a great starting place for analyzing time complexity. Depending on the problem, using these steps can be more or less straightforward. If following the exact steps doesn't make sense for the algorithm you're analyzing, that's okay. Remember our goal is to determine dominant order of the number of operations an algorithm executes. 
+
+### !end-callout
 
 ## Space Complexity: Code to Big O
 
