@@ -1,56 +1,471 @@
 # Problem Set: Variables and Memory
 
 ## Variable Scope
-1. The function below has a bug related to variable scope. Fix the bug to pass the tests.
-1. The function below has a bug related to variable scope. Fix the bug to pass the tests.
-1. What is fahrenheit_temp?
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-def convert_to_fahrenheit(temp):
-    fahrenheit = 2*temp
-    return fahrenheight
+### !challenge
 
-def convert_to_celsius(temp):
-    fahrenheit = 2*temp
-    return fahrenheight
+* type: multiple-choice
+* id: 45bbfac6-3851-461a-9ef2-36832f43459d
+* title: Variable Scope
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
 
-celsius_temp = 5
-fahrenheit_temp = 32
+##### !question
 
-convert_to_fahrenheit(celsius_temp)
-convert_to_fahrenheit(fahrenheit_temp)
+What is the value of `result` after the function `is_letter_in_word` is invoked as shown below.
 
-print(fahrenheit_temp)
+```py
+1  def is_letter_in_word(word, letter):
+2       """
+3       input: word (string) and letter (single character)
+4       output: boolean
+5       """
+6       if letter not in word:
+7           result = False
+8       else: 
+9           result = True
+10
+11      return result
+12
+13 result = True
+14 is_letter_in_word("hello", "x"):
+```
 
-what is fahrenheit?
+##### !end-question
 
-32
+##### !options
 
+* `True`
+* `False`
+* `"hello"`
+* `"x"`
 
-## Variables Are References
+##### !end-options
 
-1. Immutable Example (string)
+##### !answer
 
+* `True`
+
+##### !end-answer
+
+##### !explanation 
+
+The variable `result` on line `7` is defined in function scope. The variable `result` on line `13` is defined in global scope. When we invoke `is_letter_in_word` on line `14` we do not assign its return value to a variable, so `result = True` is unchanged.
+
+##### !end-explanation
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: b56446e2-22dc-47b3-901c-e3510dbbcbfb
+* title: Variable Scope
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+What is the value of `result` after the function `is_letter_in_word` is invoked as shown below.
+
+```py
+1  def is_letter_in_word(word, letter):
+2       """
+3       input: word (string) and letter (single character)
+4       output: boolean
+5       """
+6       if letter not in word:
+7           result = False
+8       else: 
+9           result = True
+10
+11      return result
+12
+13 result = True
+14 result = is_letter_in_word("hello", "x"):
+```
+
+##### !end-question
+
+##### !options
+
+* `True`
+* `False`
+* `"hello"`
+* `"x"`
+
+##### !end-options
+
+##### !answer
+
+* `False`
+
+##### !end-answer
+
+##### !explanation 
+
+When we invoke `is_letter_in_word` on line `14` we do assign its return value to the global variable `result`. As such the value of `result` is overwritten with `False` (the value returned by the function).
+
+##### !end-explanation
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: c8a41151-3eb4-4a4f-ac8d-cab3b1e869c3
+* title: Variables Are References
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+What are the values of `a` and `b` after the following code snippet is run.
+
+```py
 a = "hello"
 b = a
 a = "world"
+```
 
-what is a? what is b?
+##### !end-question
 
-1. Immutable Example (string)
+##### !options
 
-a = 5
-b = a
-a += 2
+* `a = "hello"`, `b = "hello"`
+* `a = "hello"`, `b = "world"`
+* `a = "world"`, `b = "hello"`
+* `a = "world"`, `b = "world"`
 
-what is a? what is b?
+##### !end-options
 
-1. Mutable Example (list)
+##### !answer
 
-a = [1,2,3]
-b = a
-a.append(4)
+* `a = "world"`, `b = "hello"`
 
-what is a? what is b?
+##### !end-answer
 
-1. Mutable Example (dictionary)
+##### !explanation
+
+Strings are an immutable datatype. When `a` is reassigned to the value `"world"`, `b` still points to the value `"hello"`.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: bf869b3d-23f9-4643-b1a4-9c661c865ac1
+* title: Variables Are References
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+What are the values of `before_tax` and `after_tax` after the following code snippet is run.
+
+```py
+before_tax = 10
+after_tax = before_tax  * 1.1
+before_tax = 20
+```
+
+##### !end-question
+
+##### !options
+
+* `a = 10`, `b = 11`
+* `a = 20`, `b = 11`
+* `a = 20`, `b = 22`
+
+##### !end-options
+
+##### !answer
+
+* `a = 20`, `b = 11`
+
+##### !end-answer
+
+##### !explanation
+
+Integers are an immutable datatype. If we want to update the `after_tax` value after we reassign the `before_tax` to `20`, we need another line `after_tax = before_tax  * 1.1`.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: checkbox
+* id: 9c70af03-8c71-4995-8c02-46d32e6a2e10
+* title: Variables Are References
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+What are the values of `all_stores` and `book_stores` after the following code snippet is run.
+
+```py
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+    {"name": "Central Co-op", "type": "grocery"} 
+]
+
+book_stores = all_stores
+
+for store in book_stores:
+    if store["type"] != "book":
+        book_stores.remove(store)
+```
+
+##### !end-question
+
+##### !options
+
+*
+```python
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+    {"name": "Central Co-op", "type": "grocery"} 
+]
+book_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+    {"name": "Central Co-op", "type": "grocery"} 
+]
+```
+*   
+```python
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+    {"name": "Central Co-op", "type": "grocery"} 
+]
+book_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+]
+```
+*   
+```python
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+]
+book_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+]
+```
+
+##### !end-options
+
+##### !answer
+
+*   
+```python
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+]
+book_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+]
+```
+
+##### !end-answer
+
+##### !explanation
+
+Lists are a mutable datatype. `all_stores` and `book_stores` point to the same place in memory. When we modify `book_stores`, we also modify `all_stores`. 
+
+Consider this alternative implementation where `book_stores` points to a different place in memory than `all_stores`:
+
+```python
+all_stores = [
+    {"name": "Ada's Technical Books", "type": "book"},
+    {"name": "Elliott Bay", "type": "book"},
+    {"name": "Central Co-op", "type": "grocery"} 
+]
+
+book_stores = []
+for store in all_stores:
+    if store["type"] == "book":
+        book_stores.append(store)
+```
+##### !end-explanation
+
+### !end-challenge
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: checkbox
+* id: 861b3fdf-8339-4031-897b-0e7f41f1c6ee
+* title: Variables Are References
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+What is the values `book_stores` after the following code snippet is run.
+
+```py
+ada = {"name": "Ada's Technical Books", "type": "book"}
+elliott = {"name": "Elliott Bay", "type": "book"}
+
+book_stores = [ada, elliott]
+
+ada["city"] = "Seattle"
+elliott["city"] = "Seattle"
+```
+
+##### !end-question
+
+##### !options
+
+*
+```python
+ada = {
+    "name": "Ada's Technical Books", 
+    "type": "book",
+    }
+elliot = {
+    "name": "Elliott Bay", 
+    "type": "book", 
+    }
+
+book_stores = [
+    {
+        "name": "Ada's Technical Books", 
+        "type": "book", 
+    },
+    {
+        "name": "Elliot Bay", 
+        "type": "book",
+    },
+```
+
+*
+```python
+ada = {
+    "name": "Ada's Technical Books", 
+    "type": "book", 
+    "city": "Seattle
+    }
+elliot = {
+    "name": "Elliott Bay", 
+    "type": "book", 
+    "city": "Seattle
+    }
+
+book_stores = [
+    {
+        "name": "Ada's Technical Books", 
+        "type": "book", 
+    },
+    {
+        "name": "Elliot Bay", 
+        "type": "book", 
+    },
+]
+```
+
+*
+```python
+ada = {
+    "name": "Ada's Technical Books", 
+    "type": "book", 
+    "city": "Seattle
+    }
+elliot = {
+    "name": "Elliott Bay", 
+    "type": "book", 
+    "city": "Seattle
+    }
+
+book_stores = [
+    {
+        "name": "Ada's Technical Books", 
+        "type": "book", 
+        "city": "Seattle
+    },
+    {
+        "name": "Elliot Bay", 
+        "type": "book", 
+        "city": "Seattle
+    },
+]
+```
+
+##### !end-options
+
+##### !answer
+
+*
+```python
+ada = {"name": "Ada's Technical Books", "type": "book", "city": "Seattle}
+elliot = {"name": "Elliott Bay", "type": "book", "city": "Seattle}
+
+book_stores = [
+    {"name": "Ada's Technical Books", "type": "book", "city": "Seattle},
+    {"name": "Elliot Bay", "type": "book", "city": "Seattle},
+]
+```
+
+##### !end-answer
+
+##### !explanation
+
+Lists and dictionaries are a mutable datatypes. When we add a key-value pair to a dictionary, the variable that points to this dictionary has the new key-value pair. With a list of dictionaries, when the contents of the dictionaries are updated, the updated content is in the list.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
