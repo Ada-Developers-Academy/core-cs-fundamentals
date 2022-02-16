@@ -15,7 +15,7 @@
 
 ##### !question
 
-What is the value of `result` after the function `is_letter_in_word` is invoked as shown below.
+What is the value of `result` after the function `is_letter_in_word` is invoked as shown below?
 
 ```py
 1  def is_letter_in_word(word, letter):
@@ -77,7 +77,7 @@ The variable `result` on line `7` is defined in function scope. The variable `re
 
 ##### !question
 
-What is the value of `result` after the function `is_letter_in_word` is invoked as shown below.
+What is the value of `result` after the function `is_letter_in_word` is invoked as shown below?
 
 ```py
 1  def is_letter_in_word(word, letter):
@@ -115,7 +115,7 @@ What is the value of `result` after the function `is_letter_in_word` is invoked 
 
 ##### !explanation 
 
-When we invoke `is_letter_in_word` on line `14` we do assign its return value to the global variable `result`. As such the value of `result` is overwritten with `False` (the value returned by the function).
+When we invoke `is_letter_in_word` on line `14` we assign its return value to the global variable `result`. As such, the value of `result` is overwritten with `False` (the value returned by the function).
 
 ##### !end-explanation
 
@@ -141,7 +141,7 @@ When we invoke `is_letter_in_word` on line `14` we do assign its return value to
 
 ##### !question
 
-What are the values of `a` and `b` after the following code snippet is run.
+What are the values of `a` and `b` after the following code snippet is run?
 
 ```py
 a = "hello"
@@ -191,7 +191,7 @@ Strings are an immutable datatype. When `a` is reassigned to the value `"world"`
 
 ##### !question
 
-What are the values of `before_tax` and `after_tax` after the following code snippet is run.
+What are the values of `before_tax` and `after_tax` after the following code snippet is run?
 
 ```py
 before_tax = 10
@@ -238,7 +238,7 @@ Integers are an immutable datatype. If we want to update the `after_tax` value a
 
 ##### !question
 
-What are the values of `all_stores` and `book_stores` after the following code snippet is run.
+What are the values of `all_stores` and `book_stores` after the following code snippet is run?
 
 ```py
 all_stores = [
@@ -351,7 +351,7 @@ for store in all_stores:
 
 ##### !question
 
-What is the values `book_stores` after the following code snippet is run.
+What are the values of `ada`, `elliott`, and `book_stores` after the following code snippet is run?
 
 ```py
 ada = {"name": "Ada's Technical Books", "type": "book"}
@@ -447,12 +447,28 @@ book_stores = [
 
 *
 ```python
-ada = {"name": "Ada's Technical Books", "type": "book", "city": "Seattle}
-elliot = {"name": "Elliott Bay", "type": "book", "city": "Seattle}
+ada = {
+    "name": "Ada's Technical Books", 
+    "type": "book", 
+    "city": "Seattle
+    }
+elliot = {
+    "name": "Elliott Bay", 
+    "type": "book", 
+    "city": "Seattle
+    }
 
 book_stores = [
-    {"name": "Ada's Technical Books", "type": "book", "city": "Seattle},
-    {"name": "Elliot Bay", "type": "book", "city": "Seattle},
+    {
+        "name": "Ada's Technical Books", 
+        "type": "book", 
+        "city": "Seattle
+    },
+    {
+        "name": "Elliot Bay", 
+        "type": "book", 
+        "city": "Seattle
+    },
 ]
 ```
 
