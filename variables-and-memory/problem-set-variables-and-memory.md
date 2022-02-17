@@ -383,7 +383,8 @@ book_stores = [
     {
         "name": "Elliot Bay", 
         "type": "book",
-    },
+    }
+]
 ```
 
 *
