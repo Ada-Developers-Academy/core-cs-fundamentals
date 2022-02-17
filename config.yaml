@@ -15,6 +15,11 @@ Standards:
         Type: Lesson
         UID: b995d045-d2e8-4c44-9179-ea82c25a3376
         Path: /variables-and-memory/variables-are-references.md
+      -
+        Type: Lesson
+        UID: 43d36cab-991c-47a7-bdb2-86b6d77d4af3
+        Path: /variables-and-memory/problem-set-variables-and-memory.md
+      
   -
     Title: Big O
     Description: "Time and Space Complexity, Big O Notation, Big O Analysis, Problem Set: Big O"
