@@ -201,15 +201,15 @@ before_tax = 20
 
 ##### !options
 
-* `a = 10`, `b = 11`
-* `a = 20`, `b = 11`
-* `a = 20`, `b = 22`
+* `before_tax = 10`, `after_tax = 11`
+* `before_tax = 20`, `after_tax = 11`
+* `before_tax = 20`, `after_tax = 22`
 
 ##### !end-options
 
 ##### !answer
 
-* `a = 20`, `b = 11`
+* `before_tax = 20`, `after_tax = 11`
 
 ##### !end-answer
 
