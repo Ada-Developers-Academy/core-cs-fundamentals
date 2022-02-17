@@ -1,7 +1,5 @@
 # Problem Set: Variables and Memory
 
-## Variable Scope
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
