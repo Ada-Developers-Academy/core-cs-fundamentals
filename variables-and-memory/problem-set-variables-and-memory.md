@@ -168,13 +168,11 @@ a = "world"
 
 ##### !explanation
 
-Strings are an immutable datatype. When `a` is reassigned to the value `"world"`, `b` still points to the value `"hello"`.
+Strings are an immutable datatype. In this example, the variables "a" and "b" point to where a string value is stored in memory. When `a` is reassigned to the value `"world"`, `b` still points to the value `"hello"`.
 
 ##### !end-explanation
 
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
 
 <!-- ======================= END CHALLENGE ======================= -->
 
@@ -335,8 +333,7 @@ for store in all_stores:
 
 ### !end-challenge
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
+<!-- ======================= END CHALLENGE ======================= -->
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -482,6 +479,4 @@ Lists and dictionaries are a mutable datatypes. When we add a key-value pair to 
 
 ### !end-challenge
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- ======================= END CHALLENGE ======================= -->
