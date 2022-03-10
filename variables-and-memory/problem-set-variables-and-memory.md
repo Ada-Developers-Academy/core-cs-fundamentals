@@ -17,19 +17,19 @@ What is the value of `result` after the function `is_letter_in_word` is invoked 
 
 ```py
 1  def is_letter_in_word(word, letter):
-2       """
-3       input: word (string) and letter (single character)
-4       output: boolean
-5       """
-6       if letter not in word:
-7           result = False
-8       else: 
-9           result = True
-10
-11      return result
+2    """
+3    input: word (string) and letter (single character)
+4    output: boolean
+5    """
+6    if letter not in word:
+7        result = False
+8    else: 
+9        result = True
+10 
+11   return result
 12
 13 result = True
-14 is_letter_in_word("hello", "x"):
+14 is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
@@ -79,19 +79,19 @@ What is the value of `result` after the function `is_letter_in_word` is invoked 
 
 ```py
 1  def is_letter_in_word(word, letter):
-2       """
-3       input: word (string) and letter (single character)
-4       output: boolean
-5       """
-6       if letter not in word:
-7           result = False
-8       else: 
-9           result = True
+2    """
+3    input: word (string) and letter (single character)
+4    output: boolean
+5    """
+6    if letter not in word:
+7        result = False
+8    else: 
+9        result = True
 10
-11      return result
+11    return result
 12
 13 result = True
-14 result = is_letter_in_word("hello", "x"):
+14 result = is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
@@ -226,7 +226,7 @@ Integers are an immutable datatype. If we want to update the `after_tax` value a
 
 ### !challenge
 
-* type: checkbox
+* type: multiple-choice
 * id: 9c70af03-8c71-4995-8c02-46d32e6a2e10
 * title: Variables Are References
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
@@ -244,10 +244,7 @@ all_stores = [
 ]
 
 book_stores = all_stores
-
-for store in book_stores:
-    if store["type"] != "book":
-        book_stores.remove(store)
+book_stores.pop()
 ```
 
 ##### !end-question
@@ -313,20 +310,6 @@ book_stores = [
 
 Lists are a mutable datatype. `all_stores` and `book_stores` point to the same place in memory. When we modify `book_stores`, we also modify `all_stores`. 
 
-Consider this alternative implementation where `book_stores` points to a different place in memory than `all_stores`:
-
-```python
-all_stores = [
-    {"name": "Ada's Technical Books", "type": "book"},
-    {"name": "Elliott Bay", "type": "book"},
-    {"name": "Central Co-op", "type": "grocery"} 
-]
-
-book_stores = []
-for store in all_stores:
-    if store["type"] == "book":
-        book_stores.append(store)
-```
 ##### !end-explanation
 
 ### !end-challenge
@@ -338,7 +321,7 @@ for store in all_stores:
 
 ### !challenge
 
-* type: checkbox
+* type: multiple-choice
 * id: 861b3fdf-8339-4031-897b-0e7f41f1c6ee
 * title: Variables Are References
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
@@ -390,12 +373,12 @@ book_stores = [
 ada = {
     "name": "Ada's Technical Books", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 elliot = {
     "name": "Elliott Bay", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 
 book_stores = [
@@ -415,24 +398,24 @@ book_stores = [
 ada = {
     "name": "Ada's Technical Books", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 elliot = {
     "name": "Elliott Bay", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 
 book_stores = [
     {
         "name": "Ada's Technical Books", 
         "type": "book", 
-        "city": "Seattle
+        "city": "Seattle"
     },
     {
         "name": "Elliot Bay", 
         "type": "book", 
-        "city": "Seattle
+        "city": "Seattle"
     },
 ]
 ```
@@ -446,24 +429,24 @@ book_stores = [
 ada = {
     "name": "Ada's Technical Books", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 elliot = {
     "name": "Elliott Bay", 
     "type": "book", 
-    "city": "Seattle
+    "city": "Seattle"
     }
 
 book_stores = [
     {
         "name": "Ada's Technical Books", 
         "type": "book", 
-        "city": "Seattle
+        "city": "Seattle"
     },
     {
         "name": "Elliot Bay", 
         "type": "book", 
-        "city": "Seattle
+        "city": "Seattle"
     },
 ]
 ```
