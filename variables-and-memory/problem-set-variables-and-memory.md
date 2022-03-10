@@ -29,7 +29,7 @@ def is_letter_in_word(word, letter):
     return result
 
 result = True
-is_letter_in_word("hello", "x"):
+is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
@@ -91,7 +91,7 @@ def is_letter_in_word(word, letter):
     return result
 
 result = True
-result = is_letter_in_word("hello", "x"):
+result = is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
