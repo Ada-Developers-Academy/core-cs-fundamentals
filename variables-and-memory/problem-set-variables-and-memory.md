@@ -16,20 +16,20 @@
 What is the value of `result` after the function `is_letter_in_word` is invoked as shown below?
 
 ```py
-def is_letter_in_word(word, letter):
-    """
-    input: word (string) and letter (single character)
-    output: boolean
-    """
-    if letter not in word:
-        result = False
-    else: 
-        result = True
-
-    return result
-
-result = True
-is_letter_in_word("hello", "x")
+1  def is_letter_in_word(word, letter):
+2    """
+3    input: word (string) and letter (single character)
+4    output: boolean
+5    """
+6    if letter not in word:
+7        result = False
+8    else: 
+9        result = True
+10 
+11   return result
+12
+13 result = True
+14 is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
@@ -78,20 +78,20 @@ The variable `result` on line `7` is defined in function scope. The variable `re
 What is the value of `result` after the function `is_letter_in_word` is invoked as shown below?
 
 ```py
-def is_letter_in_word(word, letter):
-    """
-    input: word (string) and letter (single character)
-    output: boolean
-    """
-    if letter not in word:
-        result = False
-    else: 
-        result = True
-
-    return result
-
-result = True
-result = is_letter_in_word("hello", "x")
+1  def is_letter_in_word(word, letter):
+2    """
+3    input: word (string) and letter (single character)
+4    output: boolean
+5    """
+6    if letter not in word:
+7        result = False
+8    else: 
+9        result = True
+10
+11    return result
+12
+13 result = True
+14 result = is_letter_in_word("hello", "x")
 ```
 
 ##### !end-question
