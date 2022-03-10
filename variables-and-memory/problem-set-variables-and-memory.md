@@ -226,7 +226,7 @@ Integers are an immutable datatype. If we want to update the `after_tax` value a
 
 ### !challenge
 
-* type: checkbox
+* type: multiple-choice
 * id: 9c70af03-8c71-4995-8c02-46d32e6a2e10
 * title: Variables Are References
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
@@ -321,7 +321,7 @@ Lists are a mutable datatype. `all_stores` and `book_stores` point to the same p
 
 ### !challenge
 
-* type: checkbox
+* type: multiple-choice
 * id: 861b3fdf-8339-4031-897b-0e7f41f1c6ee
 * title: Variables Are References
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
