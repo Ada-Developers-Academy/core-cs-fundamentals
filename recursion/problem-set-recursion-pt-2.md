@@ -314,7 +314,7 @@ With floor division, Python returns the answer, rounded down to a whole number. 
 # 0
 ```
 
-Any number `//` by `10` will return `0`.
+Any number less than 10 `//` by `10` will return `0`.
 
 ### !end-hint
 ### !end-challenge
