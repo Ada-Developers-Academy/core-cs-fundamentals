@@ -137,22 +137,25 @@ Other than merge sort, the most well known _O(n log n)_ sorting algorithms inclu
 
 ### !end-callout
 
-## Check for Understanding
-
-<!-- Question Takeaway -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: d4d6b4de
-* title: Merge Sort
+* id: oIbAq4
+* title: Sorting Algorithms
 ##### !question
 
-What was your biggest takeaway from this lesson? Feel free to answer in 1-2 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
+Describe the algorithm for Merge Sort in your own words. Make sure to touch on:
+
+- What makes this algorithm unique?
+- What is its time complexity?
+- What factors contribute to its time complexity?
+
+Answer in 3-6 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
 
 ##### !end-question
 ##### !placeholder
 
-My biggest takeaway from this lesson is...
+The merge sort algorithm is unique because...
 
 ##### !end-placeholder
 ### !end-challenge

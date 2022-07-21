@@ -30,29 +30,6 @@ The insertion sort algorithm is unique because...
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: oIbAq4
-* title: Sorting Algorithms
-##### !question
-
-Describe the algorithm for Merge Sort in your own words. Make sure to touch on:
-
-- What makes this algorithm unique?
-- What is its time complexity?
-- What factors contribute to its time complexity?
-
-Answer in 3-6 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
-
-##### !end-question
-##### !placeholder
-
-The merge sort algorithm is unique because...
-
-##### !end-placeholder
-### !end-challenge
-<!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
 ### !challenge
