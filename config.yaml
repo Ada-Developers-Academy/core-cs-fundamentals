@@ -73,15 +73,19 @@ Standards:
       -
         Type: Lesson
         UID: a30aecf4-6f22-4d9c-87b6-6dbdd4e68686
-        Path: /lists-and-memory/sorting-algorithms.md
+        Path: /lists-and-memory/sorting-algorithms-lists-memory.md
       -
         Type: Lesson
         UID: 6703f700-3d4c-42bb-b0c0-35a3ea9c6c67
-        Path: /lists-and-memory/insertion-sort.md
+        Path: /sorting-algorithms/insertion-sort.md
       -
         Type: Lesson
         UID: 36a61d83-b47f-414f-a6f0-3bd4331e713f
         Path: /lists-and-memory/problem-set-lists-and-memory.md
+      -
+        Type: Lesson
+        UID: 383253988f7afc58dd4fe867d42d7cad
+        Path: /sorting-algorithms/problem-set-sorting-algorithms.md
   -
     Title: Hash Tables
     Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
@@ -122,26 +126,18 @@ Standards:
         Path: /sorting-algorithms/sorting-algorithms.md
       -
         Type: Lesson
-        UID: 04c103dab4d7e24b3e0922fba11ab2e7
-        Path: /sorting-algorithms/insertion-sort.md
-      -
-        Type: Lesson
         UID: 64b3cc9b8ee0c4d4d7d0dadbaa0d618d
         Path: /sorting-algorithms/merge-sort.md
-      -
-        Type: Lesson
-        UID: 383253988f7afc58dd4fe867d42d7cad
-        Path: /sorting-algorithms/problem-set-sorting-algorithms.md
       -
         Type: Instructor
         UID: 70acaebba6da64c98fef0d184cd40e5b
         Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
       -
-        Type: Lesson
+        Type: Resource
         UID: 0806cdb2d0a4b885790d3793999db841
         Path: /sorting-algorithms/bubble-sort.md
       -
-        Type: Lesson
+        Type: Resource
         UID: 1dc3ffdcda584ccb3a445105b67bf21f
         Path: /sorting-algorithms/selection-sort.md
   -
