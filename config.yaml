@@ -121,10 +121,6 @@ Standards:
         UID: 32b0bd4445f66fd2663288c634432c2e
         Path: /sorting-algorithms/sorting-algorithms.md
       -
-        Type: Lesson
-        UID: 64b3cc9b8ee0c4d4d7d0dadbaa0d618d
-        Path: /sorting-algorithms/merge-sort.md
-      -
         Type: Instructor
         UID: 70acaebba6da64c98fef0d184cd40e5b
         Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
@@ -159,6 +155,10 @@ Standards:
         Type: Lesson
         UID: 21bc10ab78c0a1e7822b8021150feebd
         Path: /recursion/writing-recursive-code.md
+      -
+        Type: Lesson
+        UID: 64b3cc9b8ee0c4d4d7d0dadbaa0d618d
+        Path: /sorting-algorithms/merge-sort.md
       -
         Type: Lesson
         UID: be58d3489bf4314f9ddf9703624e2842

@@ -288,14 +288,6 @@ As the loop executes with each iteration you may add an element to the `big_word
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-# Problem Set: Sorting Algorithms
-
-## Directions
-
-Complete all questions below.
-
-## Practice
-
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
