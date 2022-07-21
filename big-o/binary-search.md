@@ -9,6 +9,10 @@
 
 ## Introduction
 
+TO COMPLETE
+
+## Implementation
+
 <!-- Question 10 -->
 <!-- prettier-ignore-start -->
 ### !challenge
@@ -62,3 +66,6 @@ There is one loop in this method. The number of times the loop runs is proportio
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
+## Big-O Analysis
+
+TO COMPLETE
