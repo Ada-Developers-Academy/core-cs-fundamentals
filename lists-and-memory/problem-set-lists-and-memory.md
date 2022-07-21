@@ -1,4 +1,4 @@
-# Problem Set: Lists and Memory
+# Problem Set: Lists - Memory and Sorting
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->

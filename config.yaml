@@ -22,7 +22,7 @@ Standards:
       
   -
     Title: Big O
-    Description: "Time and Space Complexity, Big O Notation, Big O Analysis, Problem Set: Big O"
+    Description: "Time and Space Complexity, Big O Notation, Big O Analysis, Binary Search, Problem Set: Big O"
     UID: f2703dfead197309bf41c0a2d8ff1daf
     SuccessCriteria:
       - success criteria
