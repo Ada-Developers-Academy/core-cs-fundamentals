@@ -1,5 +1,7 @@
 # Sorting Algorithms
 
+This content has been moved to the **Lists - Memory and Sorting** Topic
+
 ## Goals
 
 The goal for this lesson is to introduce sorting algorithms.

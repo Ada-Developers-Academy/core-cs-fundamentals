@@ -59,6 +59,14 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
+        Path: /sorting-algorithms/sorting-algorithms.instructor.md
+      -
+        Type: Instructor
+        UID: 70acaebba6da64c98fef0d184cd40e5b
+        Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
+      -
         Type: Lesson
         UID: 0180eb42-ed8d-4f51-bcc2-2fe1e2f575c8
         Path: /lists-and-memory/lists-and-memory.md
@@ -82,6 +90,14 @@ Standards:
         Type: Lesson
         UID: 36a61d83-b47f-414f-a6f0-3bd4331e713f
         Path: /lists-and-memory/problem-set-lists-and-memory.md
+      -
+        Type: Resource
+        UID: 0806cdb2d0a4b885790d3793999db841
+        Path: /sorting-algorithms/bubble-sort.md
+      -
+        Type: Resource
+        UID: 1dc3ffdcda584ccb3a445105b67bf21f
+        Path: /sorting-algorithms/selection-sort.md
   -
     Title: Hash Tables
     Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
@@ -104,34 +120,7 @@ Standards:
       -
         Type: Lesson
         UID: 912e7b7efb8219dbd6639bdb575322bb
-        Path: /hash-tables/problem-set-hash-tables.md
-  -
-    Title: Sorting Algorithms
-    Description: "Sorting Algorithms, Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Problem Set: Sorting Algorithms"
-    UID: 184d8af4792d6c2f80c90b27919caa10
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Instructor
-        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
-        Path: /sorting-algorithms/sorting-algorithms.instructor.md
-      -
-        Type: Lesson
-        UID: 32b0bd4445f66fd2663288c634432c2e
-        Path: /sorting-algorithms/sorting-algorithms.md
-      -
-        Type: Instructor
-        UID: 70acaebba6da64c98fef0d184cd40e5b
-        Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
-      -
-        Type: Resource
-        UID: 0806cdb2d0a4b885790d3793999db841
-        Path: /sorting-algorithms/bubble-sort.md
-      -
-        Type: Resource
-        UID: 1dc3ffdcda584ccb3a445105b67bf21f
-        Path: /sorting-algorithms/selection-sort.md
+        Path: /hash-tables/problem-set-hash-tables.md    
   -
     Title: Recursion
     Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
