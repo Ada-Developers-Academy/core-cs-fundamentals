@@ -157,3 +157,10 @@ My biggest takeaway from this lesson is...
 ##### !end-placeholder
 ### !end-challenge
 <!-- prettier-ignore-end -->
+
+## Resources
+
+- [Merge sort on Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
+- [Merge Sort Visual Analysis](https://www.youtube.com/watch?v=w4LRRn7GgqU)
+- [MIT Open Courseware on MergeSort](https://www.youtube.com/watch?v=g1AwUYauqgg)
+- [Why is Merge Sort O(n log(n)? The **really** long answer)](https://www.youtube.com/watch?v=alJswNJ4P3U)
