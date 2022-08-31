@@ -1,6 +1,6 @@
 # Sorting Algorithms
 
-This content has been moved to the **Lists - Memory and Sorting** Topic
+This content has been moved to the [Lists - Memory and Sorting](../lists-and-memory/sorting-algorithms-lists-memory.md) Topic
 
 ## Goals
 
