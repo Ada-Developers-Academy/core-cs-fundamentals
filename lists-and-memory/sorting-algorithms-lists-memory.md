@@ -29,7 +29,7 @@ Picture yourself. Do you scan through the pile over and over again, slowly chang
 
 If you take two people and ask them to sort the same pile of cards, they will likely take different approaches.
 
-Machines need to be told how to think through these questions too, but with fewer index cards and more data. The strategies we tell a computer to use for sorting a list of values are called _sorting algorithms_.
+Machines need to be told how to think through these questions too, but data instead of index cards. The strategies we tell a computer to use for sorting a list of values are called _sorting algorithms_.
 
 ## Sorting Algorithms
 
@@ -107,7 +107,7 @@ Moving beyond these O(n<sup>2</sup>) algorithms, we will discuss _merge sort_ la
 
 There are many sorting algorithms that have been developed. We will discuss some of them in the coming lessons, but we can learn more about other sorting methods at [geeksforgeeks.org/sorting-algorithms/](http://www.geeksforgeeks.org/sorting-algorithms/).
 
-Not all sorting algorithms are created equally, so we will want to keep the performance characteristics of each algorithm in mind when selecting one to use.
+Not all sorting algorithms are created equal, so we will want to keep the performance characteristics of each algorithm in mind when selecting one to use.
 
 Most modern programming languages provide a standard sorting algorithm that will work well for many kinds of data, but we should take time to understand its properties.
 

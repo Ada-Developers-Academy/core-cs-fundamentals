@@ -297,7 +297,7 @@ As the loop executes with each iteration you may add an element to the `big_word
 
 Describe the algorithm for Insertion Sort in your own words. Make sure to touch on:
 
-- What makes this algorithm unique?
+- What makes this different from other algorithms we've seen?
 - What is its time and space complexity?
 - What factors contribute to its time complexity?
 
@@ -306,7 +306,7 @@ Answer in 3-6 sentences, draw a picture and describe it, or write a poem, an ana
 ##### !end-question
 ##### !placeholder
 
-The insertion sort algorithm is unique because...
+Insertion sort is different from other algorithms we've seen because...
 
 ##### !end-placeholder
 ### !end-challenge
