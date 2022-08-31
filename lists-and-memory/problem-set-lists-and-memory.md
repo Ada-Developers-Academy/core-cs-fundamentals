@@ -413,12 +413,30 @@ def sort_by_length(sentence):
 * title: Sorting Algorithms
 ##### !question
 
-Describe the time and space complexity of your implementation of `sort_by_length`.
+Describe the time complexity of your implementation of `sort_by_length`.
 
 ##### !end-question
 ##### !placeholder
 
-The time complexity is... The space complexity is...
+The time complexity is...
+
+##### !end-placeholder
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 51774124-db8e-439c-bcc0-f7f03cada84f
+* title: Sorting Algorithms
+##### !question
+
+Describe the space complexity of your implementation of `sort_by_length`.
+
+##### !end-question
+##### !placeholder
+
+The space complexity is...
 
 ##### !end-placeholder
 ### !end-challenge
