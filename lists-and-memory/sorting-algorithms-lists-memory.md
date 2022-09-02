@@ -1,7 +1,5 @@
 # Sorting Algorithms
 
-This content has been moved to the [Lists - Memory and Sorting](../lists-and-memory/sorting-algorithms-lists-memory.md) Topic
-
 ## Goals
 
 The goal for this lesson is to introduce sorting algorithms.
@@ -31,7 +29,7 @@ Picture yourself. Do you scan through the pile over and over again, slowly chang
 
 If you take two people and ask them to sort the same pile of cards, they will likely take different approaches.
 
-Machines need to be told how to think through these questions too, but with fewer index cards and more data. The strategies we tell a computer to use for sorting a list of values are called _sorting algorithms_.
+Machines need to be told how to think through these questions too, but data instead of index cards. The strategies we tell a computer to use for sorting a list of values are called _sorting algorithms_.
 
 ## Sorting Algorithms
 
@@ -95,19 +93,21 @@ Notice that the order of the names with identical ages is preserved between the 
 
 ## O(n<sup>2</sup>) Algorithms
 
-Several commonly introduced sorting algorithms have time complexities of O(n<sup>2</sup>). These include _insertion sort_, _bubble sort_, and _selection sort_. We will discuss insertion sort in the next lesson. Bubble sort and selection sort will be discussed in sections that are optional to review.
+Several commonly introduced sorting algorithms have time complexities of O(n<sup>2</sup>). These include _insertion sort_, _bubble sort_, and _selection sort_. We will discuss insertion sort in the next lesson. 
 
-These algorithms are fine when the array length _n_ is small, but quickly cease to be useful as the size of the array increases. Bubble sort and insertion sort can perform well in the best case, but they do not scale well.
+We saw the implementation of bubble sort in the previous lesson. Follow your curiosity to further review the details of [bubble sort](../sorting-algorithms/bubble-sort.md) and [selection sort](../sorting-algorithms/selection-sort.md). These Learn lessons are optional to review.
+
+These O(n<sup>2</sup>) algorithms are fine when the array length _n_ is small, but quickly cease to be useful as the size of the array increases. Bubble sort and insertion sort can perform well in the best case, but they do not scale well.
 
 They **do** have the advantage of being approachable for discussion.
 
-Moving beyond these O(n<sup>2</sup>) algorithms, we will discuss _merge sort_, a O(n log n) algorithm with a beautiful symmetry!
+Moving beyond these O(n<sup>2</sup>) algorithms, we will discuss _merge sort_ later in the curriculum after we cover _recursion_, a powerful algorithmic strategy. 
 
 ## Summary
 
 There are many sorting algorithms that have been developed. We will discuss some of them in the coming lessons, but we can learn more about other sorting methods at [geeksforgeeks.org/sorting-algorithms/](http://www.geeksforgeeks.org/sorting-algorithms/).
 
-Not all sorting algorithms are created equally, so we will want to keep the performance characteristics of each algorithm in mind when selecting one to use.
+Not all sorting algorithms are created equal, so we will want to keep the performance characteristics of each algorithm in mind when selecting one to use.
 
 Most modern programming languages provide a standard sorting algorithm that will work well for many kinds of data, but we should take time to understand its properties.
 
@@ -119,8 +119,6 @@ And keeping the goals presented at the beginning of this lesson in mind, the stu
 - [Sorting algorithms visualization](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 - [Selection sort on Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 - [Insertion sort on Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
-- [Merge sort on Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
-- [Merge Sort Visual Analysis](https://www.youtube.com/watch?v=w4LRRn7GgqU)
 - [Eugene Wang's blog post on "Not all sort algorithms are created equal"](http://eewang.github.io/blog/2013/04/22/sort-algorithms/)
-- [MIT Open Courseware on MergeSort](https://www.youtube.com/watch?v=g1AwUYauqgg)
-- [Why is Merge Sort O(n log(n)? The **really** long answer)](https://www.youtube.com/watch?v=alJswNJ4P3U)
+- [Bubble Sort Learn lesson](../sorting-algorithms/bubble-sort.md) 
+- [Selection Sort Learn Lesson](../sorting-algorithms/selection-sort.md)

@@ -1,4 +1,4 @@
-# Problem Set: Lists and Memory
+# Problem Set: Lists - Memory and Sorting
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -288,78 +288,156 @@ As the loop executes with each iteration you may add an element to the `big_word
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
-* type: multiple-choice
-* id: 955f133e-70e5-420b-8721-d886f726e6d1
-* title: Time complexity of a function
-* points: 1
-* topics: python-lists, Big-O
-
+* type: paragraph
+* id: fN9PLJ
+* title: Sorting Algorithms
 ##### !question
 
-**Bonus Challenge**
+Describe the algorithm for Insertion Sort in your own words. Make sure to touch on:
 
-What is the time complexity of the following function?
+- What makes this different from other algorithms we've seen?
+- What is its time and space complexity?
+- What factors contribute to its time complexity?
 
-```python
-def mystery(numbers, value):
-    low = 0
-    high = len(numbers) - 1
-    while low <= high:
-        mid = int((low + high)/2)
-        if numbers[mid] > value:
-            high = mid - 1
-        elif numbers[mid] < value:
-            low = mid + 1
-        else:
-            return mid
-    
-    
-    if numbers[low] == value:
-        return low
-    
-    return None
-```
+Answer in 3-6 sentences, draw a picture and describe it, or write a poem, an analogy, or a story.
 
 ##### !end-question
+##### !placeholder
 
-##### !options
+Insertion sort is different from other algorithms we've seen because...
 
-* O(1)
-* O(log n)
-* O(n)
-* O(n<sup>2</sup>)
-
-##### !end-options
-
-##### !answer
-
-* O(log n)
-
-##### !end-answer
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-##### !rubric
-
-Notice that the loop divides in half with each iteration.
-
-##### !end-rubric
-
-##### !explanation
-
-The loop will check the middle of the list and it will either return the item, if found, or change high or low, skipping the half of the list which cannot contain the element.  So with each iteration the loop bypasses 1/2 of the remaining elements.
-
-If the list was 16 elements long, we would be searching 16 elements, then 8, then 4, then 2, then 1 and we either find the element or return `None`.
-
-This algorithm is known as [binary search](https://www.geeksforgeeks.org/python-program-for-binary-search/) and you can read more about the algorithm by following the link.
-
-##### !end-explanation
-
+##### !end-placeholder
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: code-snippet
+* language: python3.6
+* id: P2sZ7P
+* title: Sorting Algorithms
+### !question
+
+There's no better way to get familiar with sorting algorithms than to implement one yourself!
+
+Without using Python's `sort()` method (or anything like that), implement `sort_by_length` based on insertion sort.
+
+`sort_by_length` is a function that takes in one string. It returns a list of strings, where the items are the words from the string, ordered by length. Words with shorter length are placed before words with longer length.
+
+When words are tied for length, maintain the order they appeared in the original string.
+
+Here are the tests:
+
+```python
+def test_sort_by_length_with_empty_string():
+    assert sort_by_length("") == []
+
+
+def test_sort_by_length():
+    assert sort_by_length("I love great awesome words") == [
+        "I", "love", "great", "words", "awesome"]
+
+
+def test_sort_by_length_checks_smallest_word_last():
+    assert sort_by_length("love great awesome words I") == [
+        "I", "love", "great", "words", "awesome"]
+
+
+def test_sort_by_length_equal_length_maintains_order():
+    assert sort_by_length("words of equal length") == [
+        "of", "words", "equal", "length"]
+```
+
+### !end-question
+### !placeholder
+
+```python
+def sort_by_length(sentence):
+    pass
+```
+### !end-placeholder
+### !tests
+```python
+import unittest
+from main import *
+
+class TestPython1(unittest.TestCase):
+    def test_sort_by_length_with_empty_string(self):
+        self.assertEqual(sort_by_length(""), [])
+
+    def test_sort_by_length(self):
+        self.assertEqual(sort_by_length("I love great awesome words"),
+                         ["I", "love", "great", "words", "awesome"])
+
+    def test_sort_by_length_checks_smallest_word_last(self):
+        self.assertEqual(sort_by_length("love great awesome words I"),
+                         ["I", "love", "great", "words", "awesome"])
+
+    def test_sort_by_length_equal_length_maintains_order(self):
+        self.assertEqual(sort_by_length("words of equal length"),
+                         ["of", "words", "equal", "length"])
+```
+### !end-tests
+### !explanation
+
+An example of a working implementation:
+
+```python
+def sort_by_length(sentence):
+    array = sentence.split()
+    i = 1
+    while i < len(array):
+        to_insert = array[i]
+        j = i
+        # Search in the sorted portion of the list
+        # for the correct position to insert sentence[i]
+        while j > 0 and len(array[j-1]) > len(to_insert):
+            array[j] = array[j-1]
+            j -= 1
+        array[j] = to_insert
+        i += 1
+    return array
+```
+
+### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: U2QaR9
+* title: Sorting Algorithms
+##### !question
+
+Describe the time complexity of your implementation of `sort_by_length`.
+
+##### !end-question
+##### !placeholder
+
+The time complexity is...
+
+##### !end-placeholder
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 51774124-db8e-439c-bcc0-f7f03cada84f
+* title: Sorting Algorithms
+##### !question
+
+Describe the space complexity of your implementation of `sort_by_length`.
+
+##### !end-question
+##### !placeholder
+
+The space complexity is...
+
+##### !end-placeholder
+### !end-challenge
+<!-- prettier-ignore-end -->
