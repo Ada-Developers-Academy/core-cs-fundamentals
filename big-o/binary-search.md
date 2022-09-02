@@ -64,6 +64,7 @@ The table below summarizes the number of iterations in the worst case scenario r
 |   16 |   4 |
 |   32 |   5 |
 |   64 |   6 |
+| 1,048,576 | 20 |
 
 *Table. Number of iterations for each input size.*
 
@@ -92,7 +93,7 @@ In general, in a coding problem:
 
 * If the size of the input is *divided* by some value with each iteration, the time complexity involves a logarithm with a base equal to the divisor.
 * By far, the most common logarithmic base is 2 because our algorithms often, like binary search, divide the input size by two with each iteration.
-  * Often we drop the base of the logarithm on the assumption that it is 2.
+  * Often we drop the base of the logarithm since all logarithms can be [converted into base 2 using constants](https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:logs/x2ec2f6f830c9fb89:change-of-base/a/logarithm-change-of-base-rule-intro).
 
 
 ### Space Complexity
