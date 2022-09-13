@@ -102,7 +102,7 @@ These are several imperfect analogies that can illustrate how variables refer to
 
 - Variables are like home addresses, such as 123 Main St. The value would be the literal residence located at 123 Main St., walls and doors and all.
 
-- "_The Little Prince_ was not written by Antoine de Saint-Exupéry, but _The Little Prince_ was written by a man named Antoine de Saint-Exupéry."
+- "_The Little Prince_" was not written by Antoine de Saint-Exupéry, but _The Little Prince_ was written by a man named Antoine de Saint-Exupéry.
 
 ## Immutable vs. Mutable Data Types
 
