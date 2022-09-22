@@ -2,7 +2,7 @@
 Standards:
   -
     Title: Variables and Memory
-    Description: "Variable Scope, Variables Are References, Problem Set: Variables and Memory"
+    Description: "Required: Variable Scope, Variables Are References, Problem Set: Variables and Memory"
     UID: 8add2047-cbf3-4f35-9707-7c75bf919918
     SuccessCriteria:
       - success criteria
