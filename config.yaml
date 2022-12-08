@@ -99,6 +99,26 @@ Standards:
         UID: 1dc3ffdcda584ccb3a445105b67bf21f
         Path: /sorting-algorithms/selection-sort.md
   -
+    Title: Linked Lists
+    Description: "Overview of Linked Lists, Linked List OOP, Linked List Methods"
+    UID: 024379b3-a0fe-4404-872d-e6fa898c9ffb
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 90c6cc4e-593a-4a79-8a18-6011e6bbbfa6
+        Path: /linked-lists/01-linked-lists.md
+      -
+        Type: Lesson
+        UID: 8b1561ec-9f99-4053-b64a-4a66dc057ab3
+        Path: /linked-lists/02-linked-lists-oop.md
+      -
+        Type: Lesson
+        UID: 132bcd65-ff04-491f-a041-45381777f112
+        Path: /linked-lists/03-linked-lists-implementation.md
+
+  -
     Title: Hash Tables
     Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
     UID: fac6e79e15b06e536f52e19c118bfff2
