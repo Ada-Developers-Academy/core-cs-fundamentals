@@ -26,7 +26,7 @@ Students should be able to:
 
 ## Overview
 
-We commonly encounter problems which require us to maintain ordered collections of data. This could be a list of students by name, jobs to process by priority or a collection of accounts by username. 
+We commonly encounter problems which require us to maintain ordered collections of data. This could be a list of students by name, jobs to process by priority, or a collection of accounts by username. 
 
 When dealing with an ordered collection of data, we need to consider the time and space complexity of the following operations:
 
@@ -62,22 +62,25 @@ A new non-linear data structure, a *binary search tree*, offers us a solution.
 
 ### Consider A Nonlinear Structure
 
-Binary search trees have a _non-linear structure_. Whereas each node in a (singly) linked list maintains a pointer to one other node in a linked list, each node in a binary search tree has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_. While we can think of the parent node as the `prev` pointer in a doubly linked list, tree nodes do not generally maintain a pointer to their parent node. 
+Binary search trees have a _non-linear structure_. Whereas each node in a (singly) linked list maintains a pointer to one other node in a linked list, each node in a binary search tree has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_. The parent node can be thought of as similar to the `prev` pointer in a doubly linked list; however, unlike a linked list, tree nodes do not generally maintain a pointer to their parent/previous node. 
 
-A binary search tree's `left` and `right` child nodes must maintain special properties. The `left` child must have a `key` that is less than the `key` of its parent node. The `right` child must have a `key`  that is greater than or equal to that of its parent node.
-
-When a new node's `key` is equal to a `key` already present in the binary search tree, the person(s) implementing the binary search tree can choose to add the new node to either the `left` or `right` subtree. The most important consideration here is _consistency_. In this lesson, we can assume when a new node has a `key` equal to a `key` already present in the binary search tree that new node is added to the *right* subtree of the node with which it shares a `key`.
+A binary search tree's `left` and `right` child nodes are required to maintain special properties. The `left` child must have a `key` that is less than the `key` of its parent node. The `right` child must have a `key`  that is greater than or equal to that of its parent node.
 
 ### !callout-info
 
 ## Keys vs Values
 
-Nodes can store a `value` or piece of data that is not a number. For example a node can have a string as a `value`. When our nodes store non-numerical data, we still need to determine whether one node is less than or greater than another node. This can be done by assigning each node a separate numerical `key`. 
+Nodes can store a `value` or piece of data that is not a number. For example a node can have a string as a `value`. When our nodes store non-numerical data, we still need to determine whether one node is less than or greater than another node. This can be done by assigning each node a separate numerical `key` in addition to a `value`. 
 
 ### !end-callout
 
+When a new node's `key` is equal to a `key` already present in the binary search tree, the person(s) implementing the binary search tree can choose to add the new node to either the `left` or `right` subtree. The most important consideration here is _consistency_. In this lesson, we can assume when a new node has a `key` equal to a `key` already present in the binary search tree that new node is added to the *right* subtree of the node with which it shares a `key`.
 
-Each node in a binary search tree can refer to other nodes. Like a real person, a node can be both a parent _and_ a child. Notice that we could consider a child node and any of its descendants its own tree. We refer to these trees as _subtrees_ of the parent node. A parent node can have both a left and right subtree.
+![Comparing Binary Search Trees and Linked Lists](images/tree-vs-linked-list.png)
+In the image above, both data structures maintain the nodes in the order `X`, `Z`, `Y` (where we use the `val` attribute to represent each node). Notice that to maintain this order, the parent node in the binary tree is not equivalent to the head node of the linked list. Further notice that that unlike the linked list, the binary search tree's left and right children do not maintain a `prev` pointer to their parent node. Unlike a binary search tree, linked list nodes do not need a `key` attribute to help maintain order. 
+
+
+Each node in a binary search tree can refer to other nodes. Like a real person, a node can be both a parent _and_ a child. Notice that we could consider a child node and any of its descendants their own tree. We refer to these trees as _subtrees_ of the parent node. A parent node can have both a left and right subtree.
 
 The topmost node in a tree is known as the _root_. The root has no parent node. Nodes with no children are called _leaves_. 
 
