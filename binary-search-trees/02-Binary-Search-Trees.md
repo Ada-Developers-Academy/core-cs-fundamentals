@@ -1,37 +1,78 @@
 # Binary Search Trees
 
+# Ordered Collections of Data Review
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ceac4982-192f-44a7-88a8-ad91016c972b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Learning Goals
+
+Students should be able to:
+
+- Compare a binary tree to a linked list
+- Explain how a binary search tree differs from a generic binary tree
+- Write methods to perform the following on a binary search tree:
+  - Search
+  - Insert value
+  - Delete value
+  - Find height
+  - Perform traversals including: 
+    - Depth first traversals: pre-order, in-order, post-order
+    - Breadth first traversal
+
+## Video Lesson & Exercises
+
+- [C16 Video Lesson](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d9746397-8a10-43be-b1cc-aaaf00720b31)
+- [C16 Slide Deck](https://docs.google.com/presentation/d/1Fj0deIUswGZ3ooJMpgVUqPEaWHKTkQ1w2Ci-yf8v66M/edit#slide=id.p)
+
 ## Overview
 
-The data structures we've reviewed thus far are all examples of a _linear structure_. Linked lists are a linear structure, with each node directly linking to exactly one other node in the structure (the next node).
+We commonly encounter problems which require us to maintain ordered collections of data. This could be a list of students by name, jobs to process by priority or a collection of accounts by username. 
 
-![Linked List Diagram](images/linked-list-vocab.png)
+When dealing with an ordered collection of data, we need to consider the time and space complexity of the following operations:
 
-*Fig. 1. Linked List Diagram*
+* **Insertion** - Adding elements to the collection
+* **Deletion** - Removing elements from the collection
+* **Searching** - Finding an element in the collection
+* **Serialization** - Converting the collection to an array or string to write to a file, network, or database
 
-Recall that our Node class from the [Linked List Topic](../02-linked-lists/01-linked-lists.md), which we will refer to here as `ListNode`, looked like this:
+So far, the data structures we've reviwed allow us to maintain ordered collections of data in a _linear structure_. Linked lists are a linear structure, with each node directly linking to exactly one other node in the structure (the next node). Arrays are also a linear structure, with neighboring elements contained in adjacent pieces of memory.
 
-```python
-class ListNode:
-    def __init__(self, value, next=None):
-        self.data = value
-        self.next = next
-```
+### Big-O For Linked Lists & Arrays
+Recall that the Big-O for our linear data structures, linked lists and arrays, are as follows. 
 
-The `ListNode` class was used in a larger `LinkedList` class which maintained a chain of `ListNode` objects starting with a node pointed to by an instance variable called `head`.
+**#**|**Data Structure**|**Access**|**Search**|**Insertion (Middle)**|**Deletion (Middle)**|**Add First**|**Add Last**|**Delete First**|**Delete Last**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+1|Unsorted Array|O(1)|O(n)|O(n)|O(n)|O(n)|O(1)|O(n)|O(1)|
+2|Sorted Array|O(1)|O(log n)|O(n)|O(n)|O(n)|O(1)|O(n)|O(1)|
+3|Singly Linked List| O(n)| O(n)| O(n)| O(n)|O(1)|O(n)|O(1)|O(n)|
+4|Doubly Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)|O(1)|O(1)|
+
+Can we do even better? If at all possible, we want to maintain an ordered collection of data and outperform both arrays and linked lists in terms of insertion, deletion, searching and serialization.
+
+The key requirements for this new data structure are:
+
+1. Maintain a list of items in order.
+2. Add and delete elements in better than O(n) time
+3. Find elements with an O(log n) time
+4. Serialize the list into a string or another data type that can be written to a file, network, or database in O(n) time or better.
+
+If need 1 & 2 are maintained, an array will struggle to add and delete items. A linked list will require O(n) for all 4 operations because it has to traverse the sorted list to do anything.
+
+A new non-linear data structure, a *binary search tree*, offers us a solution.
 
 ### Consider A Nonlinear Structure
 
-Binary search trees have a _non-linear structure_. In a binary search tree each node has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_.
+Binary search trees have a _non-linear structure_. Whereas each node in a (singly) linked list maintains a pointer to one other node in a linked list, each node in a binary search tree has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_. While we can think of the parent node as the `prev` pointer in a doubly linked list, tree nodes do not generally maintain a pointer to their parent node. 
 
 A binary search tree's `left` and `right` child nodes must maintain special properties. The `left` child must have a `key` that is less than the `key` of its parent node. The `right` child must have a `key`  that is greater than or equal to that of its parent node.
 
-Quick note for when a new node's `key` is equal to a `key` already present in the binary search tree: the person(s) who implemented the binary search tree has the choice to decide which subtree (`left` or `right`) to add the new node. The most important consideration here is _consistency_. In this lesson, please assume when a new node has a `key` equal to a `key` already present in the binary search tree then that new node is added to the *right* subtree of the node with which it shares a `key`.
+When a new node's `key` is equal to a `key` already present in the binary search tree, the person(s) implementing the binary search tree can choose to add the new node to either the `left` or `right` subtree. The most important consideration here is _consistency_. In this lesson, we can assume when a new node has a `key` equal to a `key` already present in the binary search tree that new node is added to the *right* subtree of the node with which it shares a `key`.
 
 ### !callout-info
 
 ## Keys vs Values
 
-Nodes can store a `value` or piece of data that is not a number. For example a node can have a string as a `value`. When our nodes store non-numerical data we still need a way to determine whether a node is less than or greater than another node. This can be done by assigning each node a separate numerical `key`. 
+Nodes can store a `value` or piece of data that is not a number. For example a node can have a string as a `value`. When our nodes store non-numerical data, we still need to determine whether one node is less than or greater than another node. This can be done by assigning each node a separate numerical `key`. 
 
 ### !end-callout
 
