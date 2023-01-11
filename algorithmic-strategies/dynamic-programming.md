@@ -1,4 +1,4 @@
-# Dynamic Programming
+# OPTIONAL: Dynamic Programming
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=06de5ab7-88ef-495d-a313-ad440033b00c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
@@ -9,6 +9,8 @@
 - Use dynamic programming to optimize programming solutions
 
 ## Overview
+
+This lesson is truly optional and will be covered again during Thursdays at Ada in Internship.
 
 **Dynamic Programming** is a way to optimize both recursive and iterative solutions. When we see a problem that repeatedly involves solving the same problem, we can optimize it by using dynamic programming.
 

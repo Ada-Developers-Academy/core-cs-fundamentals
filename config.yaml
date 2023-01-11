@@ -182,7 +182,7 @@ Standards:
         Path: /recursion/problem-set-submit.checkpoint.md
   -
     Title: "Algorithmic Strategies"
-    Description: "Divide and Conquer, Dynamic Programming, Problem Set: Algorithmic Strategies"
+    Description: "Divide and Conquer, (Optional) Dynamic Programming"
     UID: 7379a433-3626-43b2-840b-ae98bd890555
     SuccessCriteria:
       - success criteria
@@ -199,7 +199,3 @@ Standards:
         Type: Lesson
         UID: a9083082
         Path: /algorithmic-strategies/dynamic-programming.md
-      -
-        Type: Lesson
-        UID: 673f70af
-        Path: /algorithmic-strategies/problem-set-algorithmic-strategies.md
