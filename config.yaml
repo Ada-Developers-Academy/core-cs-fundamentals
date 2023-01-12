@@ -52,53 +52,6 @@ Standards:
         UID: 90465d8c4c1af56aed98039f4e95687c
         Path: /big-o/problem-set-big-o.md
   -
-    Title: Lists - Memory and Sorting
-    Description: "Lists and Memory, Lists as References, Lists and Big O, Intro to Sorting Algorithms, Insertion Sort, Problem Set: Lists - Memory and Sorting"
-    UID: fc8d96af-1277-4efc-8e4c-a7bb2facddb9
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Instructor
-        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
-        Path: /sorting-algorithms/sorting-algorithms.instructor.md
-      -
-        Type: Instructor
-        UID: 70acaebba6da64c98fef0d184cd40e5b
-        Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
-      -
-        Type: Lesson
-        UID: 0180eb42-ed8d-4f51-bcc2-2fe1e2f575c8
-        Path: /lists-and-memory/lists-and-memory.md
-      -
-        Type: Lesson
-        UID: f7fda59b-c157-49bb-aaf9-fe305904d0b7
-        Path: /lists-and-memory/lists-as-references.md
-      -
-        Type: Lesson
-        UID: 5395b235-30dc-47a8-a077-ac5cf578971c
-        Path: /lists-and-memory/lists-and-big-o.md
-      -
-        Type: Lesson
-        UID: a30aecf4-6f22-4d9c-87b6-6dbdd4e68686
-        Path: /lists-and-memory/sorting-algorithms-lists-memory.md
-      -
-        Type: Lesson
-        UID: 6703f700-3d4c-42bb-b0c0-35a3ea9c6c67
-        Path: /sorting-algorithms/insertion-sort.md
-      -
-        Type: Lesson
-        UID: 36a61d83-b47f-414f-a6f0-3bd4331e713f
-        Path: /lists-and-memory/problem-set-lists-and-memory.md
-      -
-        Type: Resource
-        UID: 0806cdb2d0a4b885790d3793999db841
-        Path: /sorting-algorithms/bubble-sort.md
-      -
-        Type: Resource
-        UID: 1dc3ffdcda584ccb3a445105b67bf21f
-        Path: /sorting-algorithms/selection-sort.md
-  -
     Title: Linked Lists
     Description: "Overview of Linked Lists, Linked List OOP, Linked List Methods"
     UID: 024379b3-a0fe-4404-872d-e6fa898c9ffb
@@ -184,6 +137,46 @@ Standards:
     Title: "Binary Search Trees"
     Description: "Binary Search Trees"
     UID: 7379a433-3626-43b2-840b-ae98bd890555
+      -
+        Type: Instructor
+        UID: 70acaebba6da64c98fef0d184cd40e5b
+        Path: /sorting-algorithms/activity-sorting-algorithms.instructor.md
+      -
+        Type: Lesson
+        UID: 0180eb42-ed8d-4f51-bcc2-2fe1e2f575c8
+        Path: /lists-and-memory/lists-and-memory.md
+      -
+        Type: Lesson
+        UID: f7fda59b-c157-49bb-aaf9-fe305904d0b7
+        Path: /lists-and-memory/lists-as-references.md
+      -
+        Type: Lesson
+        UID: 5395b235-30dc-47a8-a077-ac5cf578971c
+        Path: /lists-and-memory/lists-and-big-o.md
+      -
+        Type: Lesson
+        UID: a30aecf4-6f22-4d9c-87b6-6dbdd4e68686
+        Path: /lists-and-memory/sorting-algorithms-lists-memory.md
+      -
+        Type: Lesson
+        UID: 6703f700-3d4c-42bb-b0c0-35a3ea9c6c67
+        Path: /sorting-algorithms/insertion-sort.md
+      -
+        Type: Lesson
+        UID: 36a61d83-b47f-414f-a6f0-3bd4331e713f
+        Path: /lists-and-memory/problem-set-lists-and-memory.md
+      -
+        Type: Resource
+        UID: 0806cdb2d0a4b885790d3793999db841
+        Path: /sorting-algorithms/bubble-sort.md
+      -
+        Type: Resource
+        UID: 1dc3ffdcda584ccb3a445105b67bf21f
+        Path: /sorting-algorithms/selection-sort.md
+-
+    Title: Lists - Memory and Sorting Algorithms
+    Description: "Lists and Memory, Lists as References, Lists and Big O, Intro to Sorting Algorithms, Insertion Sort, Problem Set: Lists - Memory and Sorting"
+    UID: fc8d96af-1277-4efc-8e4c-a7bb2facddb9
     SuccessCriteria:
       - success criteria
     ContentFiles:
@@ -199,3 +192,6 @@ Standards:
         Type: Lesson
         UID: 673f70af
         Path: /binary-search-trees/04-Binary-Search-Trees-Traversal.md
+        Type: Instructor
+        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
+        Path: /sorting-algorithms/sorting-algorithms.instructor.md
