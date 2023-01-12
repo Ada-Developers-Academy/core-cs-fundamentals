@@ -182,7 +182,7 @@ Standards:
         Path: /sorting-algorithms/selection-sort.md
   -
     Title: Binary Search Trees
-    Description: "Binary Search Trees Overview, BST Height and Big O, BST Traversal"
+    Description: "Binary Search Trees Overview, Big O and Balancing, Serializing with Tree Traversal"
     UID: 824e0895-6c46-4b88-82ba-1c416987617a
     SuccessCriteria:
       - success criteria
@@ -190,12 +190,12 @@ Standards:
       -
         Type: Lesson
         UID: 9bd86e84-2a05-4b75-96dc-331729ea737c
-        Path: /binary-search-trees/02-Binary-Search-Trees.md
+        Path: /binary-search-trees/01-Binary-Search-Trees.md
       -
         Type: Lesson
         UID: ade1e05c-e9b9-416d-af1a-eb2d5d75b70b
-        Path: /binary-search-trees/03-Binary-Search-Trees-Height-Big-O.md
+        Path: /binary-search-trees/02-Binary-Search-Trees-Big-O.md
       -
         Type: Lesson
         UID: c0e0e258-00eb-4720-81fc-54e8a4b7fe2b
-        Path: /binary-search-trees/04-Binary-Search-Trees-Traversal.md
+        Path: /binary-search-trees/03-Binary-Search-Trees-Traversal.md

@@ -1,7 +1,5 @@
 # Binary Search Trees
 
-# Ordered Collections of Data Review
-
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ceac4982-192f-44a7-88a8-ad91016c972b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
@@ -11,10 +9,9 @@ Students should be able to:
 - Compare a binary tree to a linked list
 - Explain how a binary search tree differs from a generic binary tree
 - Write methods to perform the following on a binary search tree:
-  - Search
+  - Search for a value
   - Insert value
   - Delete value
-  - Find height
   - Perform traversals including: 
     - Depth first traversals: pre-order, in-order, post-order
     - Breadth first traversal
@@ -30,15 +27,16 @@ We commonly encounter problems which require us to maintain ordered collections 
 
 When dealing with an ordered collection of data, we need to consider the time and space complexity of the following operations:
 
+
+* **Searching** - Finding an element in the collection
 * **Insertion** - Adding elements to the collection
 * **Deletion** - Removing elements from the collection
-* **Searching** - Finding an element in the collection
 * **Serialization** - Converting the collection to an array or string to write to a file, network, or database
 
-So far, the data structures we've reviwed allow us to maintain ordered collections of data in a _linear structure_. Linked lists are a linear structure, with each node directly linking to exactly one other node in the structure (the next node). Arrays are also a linear structure, with neighboring elements contained in adjacent pieces of memory.
+So far, the data structures we've reviewed allow us to maintain ordered collections of data in a _linear structure_. Linked lists are a linear structure, with each node directly linking to exactly one other node in the structure (the next node). Arrays are also a linear structure, with neighboring elements contained in adjacent pieces of memory.
 
 ### Big-O For Linked Lists & Arrays
-Recall that the Big-O for our linear data structures, linked lists and arrays, are as follows. 
+Recall that the Big-O for our linear data structures, linked lists and arrays, is as follows. 
 
 **#**|**Data Structure**|**Access**|**Search**|**Insertion (Middle)**|**Deletion (Middle)**|**Add First**|**Add Last**|**Delete First**|**Delete Last**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -77,19 +75,19 @@ Nodes can store a `value` or piece of data that is not a number. For example a n
 When a new node's `key` is equal to a `key` already present in the binary search tree, the person(s) implementing the binary search tree can choose to add the new node to either the `left` or `right` subtree. The most important consideration here is _consistency_. In this lesson, we can assume when a new node has a `key` equal to a `key` already present in the binary search tree that new node is added to the *right* subtree of the node with which it shares a `key`.
 
 ![Comparing Binary Search Trees and Linked Lists](images/tree-vs-linked-list.png)
-In the image above, both data structures maintain the nodes in the order `X`, `Z`, `Y` (where we use the `val` attribute to represent each node). Notice that to maintain this order, the parent node in the binary tree is not equivalent to the head node of the linked list. Further notice that that unlike the linked list, the binary search tree's left and right children do not maintain a `prev` pointer to their parent node. Unlike a binary search tree, linked list nodes do not need a `key` attribute to help maintain order. 
+In the image above, both data structures maintain the nodes in the order `X`, `Z`, `Y` (where we use the `val` attribute to represent each node). Notice that to maintain this order, the parent node in the binary tree is not equivalent to the head node of the linked list. Also notice that unlike the linked list, the binary search tree's left and right children do not maintain a `prev` pointer to their parent node. Unlike a binary search tree, linked list nodes do not need a `key` attribute to help maintain order. 
 
 
-Each node in a binary search tree can refer to other nodes. Like a real person, a node can be both a parent _and_ a child. Notice that we could consider a child node and any of its descendants their own tree. We refer to these trees as _subtrees_ of the parent node. A parent node can have both a left and right subtree.
+Each node in a binary search tree can refer to other nodes. Like a real person, a node can be both a parent _and_ a child. Notice that we could consider a child node and any of its descendants - the child node's children, the child node's children's children, etc. - their own tree. We refer to these trees as _subtrees_ of the parent node. A parent node can have both a left and right subtree.
 
 The topmost node in a tree is known as the _root_. The root has no parent node. Nodes with no children are called _leaves_. 
 
 When we draw a binary search tree, parent nodes are always drawn above children nodes with the root node at the very top. We sometimes refer to the links or pointers between a parent and child node as an _edge_ between the parent and child. The _height_ of a node is the maximum number of edges it takes to travel from one of the leaves in the node's subtrees to the node itself. The height of the tree overall is the the height of the root node.
  
 
-![Binary Search Tree Vocabulary](images/TreeVocabulary.png)
+![Binary Search Tree Vocabulary](images/tree-vocabulary.png)
 
-In summary, in a Binary Search Tree:
+In summary, in a binary search tree:
 
 - Nodes with keys/values less than any node are stored to the **left** of that node.
 - Nodes with keys/values greater than any node are stored to the **right** of that node.
@@ -101,15 +99,15 @@ In summary, in a Binary Search Tree:
 
 A binary search tree is a subtype of a more general data type: a _tree_. Trees are always both non-linear and hierarchical, meaning that they are always a collection of nodes where each node points to a series of other _child_ nodes. 
 
-Different types of trees will maintain different properties including but not limited to the number of children nodes each parent has and the values children nodes can have in relation to their parent node.
+Different types of trees will maintain different properties including but not limited to the number of children each node can have and the values child nodes can have in relation to their parent node.
 
 ### !end-callout
 
 ### Binary Search Tree Node
 
-Instead of a node with one `next` pointer, we can create nodes with 2 pointers, `left` and `right`.  Since each node can have 2 successors or _children_, it forms a _non-linear_ binary structure as opposed to the linear structure of a linked list.
+We can create a `TreeNode` class to encapsulate a single element or node within a binary search tree. Whereas our linked list nodes maintained a single `next` pointer, our binary search tree nodes will maintain two pointers, `left` and `right`, to reference its left and right child nodes respectively.
 
-This node stores both a key and value for each node.  The `Tree` class will compare keys to maintain node order.
+Our `TreeNode` class also maintains both `key` and `value` attributes.  The `Tree` class we create further on in the lesson will compare the key attribute of `TreeNode` objects to maintain node order.
 
 ```python
 class TreeNode:
@@ -125,7 +123,9 @@ class TreeNode:
 
 ### The Tree Class
 
-Just like the `LinkedList` class discussed above, we can create a `Tree` class to represent the full data structure, using the `TreeNode` class to create nodes and build the tree.
+We can create a `Tree` to represent a full binary search tree data structure. Similar to how the `LinkedList` class for a singly linked list maintains only a `head` attribute pointing at the first node in the list, the `Tree` class maintains a single attribute `root` referencing the topmost node in the tree. 
+
+The `Tree` class will use nodes of type `TreeNode` to build the tree. 
 
 ```python
 class Tree:
@@ -134,11 +134,12 @@ class Tree:
                   # node in the Tree
     # Tree methods go here...
 ```
-How do the same operations we looked at with arrays and linked lists work with a binary search tree?
+
+The next step is to implement our four methods for ordered collections of data: search, insert, delete, and serialize.
 
 ### Searching
 
-When we search for a node in a linked list, we start at our traversal at the head of the list. In a binary search tree, the equivalent of the head of the list is the root of the tree. The root is where the tree begins; the topmost node. Thus, when we search for a node in a binary search tree, we will always start our traversal at the root of the tree.
+When we search for a node in a linked list, we start our traversal at the head of the list. In a binary search tree, the equivalent of the head of the list is the root of the tree. The root is where the tree begins; the topmost node. Thus, when we search for a node in a binary search tree, we will always start our traversal at the root of the tree.
 
 Our search method will find the first node in the tree with a given key. Unlike a linked list, we won't have to search the entire tree to find the node we are looking for. Because the left subtree of a given node will only hold nodes with keys less than the given node, and the right subtree will only hold nodes with keys greater than or equal to the given node, we have to search through at most one of the root node's subtrees to find our node.
 
@@ -195,9 +196,6 @@ We can see a full recursive implementation of find below:
         return self.find_helper(self.root, key)
 ```
 
-You can implement the `find` method in Python as follows:
-
-
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -212,7 +210,9 @@ You can implement the `find` method in Python as follows:
   
 ##### !question
 
-Now that you have seen `find` implemented recursively, try implementing the same function iteratively. The function takes in a key 'key'
+Now that you have seen `find` implemented recursively, try implementing the same function iteratively. The function takes in a key 'key',
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -333,20 +333,33 @@ Look at the recursive solution and try to translate each step into your iterativ
 Still feeling stuck? Check this video walkthrough of the solution.
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7667104b-4c67-4d78-8f0d-af0e01444c23&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ##### !end-hint 
 ##### !explanation 
 ```python
     def find(self, key):
+        # create a current variable and initialize it to the root
         current = self.root
 
+        # while there are still nodes to iterate through
         while current != None:
+            # if the key of the node we are iterating over 
+            # is the key we are searching for
             if current.key == key:
+                # return the value of the node we are iterating over
                 return current.value
+            # else if the key is less than that of the current node
             elif key < current.key:
+                # we know the node we are searching for must be in the left subtree
+                # so reassign current to the current node's left child
                 current = current.left
+            # else the key is greater than or equal to the current node
             else:
+                # so the node we are searching for must be in the right subtree
+                # reassign current to the current node's right child
                 current = current.right
-
+        # if we finish iterating through the tree, no node with the given key exists
+        # return None
         return None
 ```
 ##### !end-explanation 
@@ -380,6 +393,8 @@ You can experiment with this in the [Binary Tree Visualizer](https://visualgo.ne
 ##### !question
 
 Implement the `add` method iteratively. The method takes in a `key` and an optional `value` parameter that represent the key and value of the node the user would like to insert. A node with a value equal to that of its parent should be added to the parent's right subtree.
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -559,6 +574,8 @@ An example of a working implementation:
 
 Now implement the same `add` function recursively. The method takes in a `key` and an optional `value` parameter that represent the key and value of the node the user would like to insert. A node with a value equal to that of its parent should be added to the parent's right subtree.
 
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
+
 ##### !end-question
 
 ##### !placeholder
@@ -693,6 +710,7 @@ Try identifying your base and recursive cases in the iterative solution you just
 Still feeling stuck? Check this video walkthrough of the solution.
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=52a6dcd4-2dda-4a78-b7b6-af0e0142b465&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ##### !end-hint
 ##### !explanation 
 An example of a working implementation:
@@ -763,259 +781,14 @@ Method delete:
                     Set the current node equal to the minimum node
         Return the current node
 ```
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
-### !challenge
+As an optional extra chanllenge, you can attempt to implement `delete`  yourself. Our recursive solution to the `delete` method is below. 
 
-* type: code-snippet
-* language: python3.6
-* id: e6e5ea66-d55f-4fc0-bc6f-eeda3f8106bd
-* title: Binary Search Tree Recursive Removal
-* points: 1
-
-##### !question
-
-Implement `delete` recursively for a binary search tree. The `key` is the key of the node the user wants to remove. If there are multiple nodes with the same key, `delete` should remove the first node in the tree with that key.
-
-##### !end-question
-
-##### !placeholder
+<details>
+<summary> Binary Search Tree Deletion </summary>
 
 ```py
-class TreeNode:
-    def __init__(self, key, val = None):
-        if val == None:
-            val = key
-
-        self.key = key
-        self.value = val
-        self.left = None
-        self.right = None
-
-class Tree:
-    def __init__(self):
-        self.root = None 
-    
-    def delete(self, key):
-        pass
-```
-
-##### !end-placeholder
-
-##### !tests
-```py
-import unittest
-from main import *
-
-class TreeExtended(Tree):
-
-    def add_helper(self, current_node, new_node):
-        if new_node.key  < current_node.key:
-            if not current_node.left:
-                current_node.left = new_node
-                return
-            self.add_helper(current_node.left, new_node)
-        else:
-            if not current_node.right:
-                current_node.right = new_node
-                return
-            self.add_helper(current_node.right, new_node)
-
-    def add(self, key, value = None):
-        if not self.root:
-            self.root = TreeNode(key, value)
-        else:
-            new_node = TreeNode(key, value)
-            self.add_helper(self.root, new_node)
-
-    def inorder_helper(self, current_node, values):
-        if not current_node:
-            return values
-
-        self.inorder_helper(current_node.left, values)
-        values.append({ 
-            "key": current_node.key,
-            "value": current_node.value
-        })
-        self.inorder_helper(current_node.right, values)
-
-        return values
-
-    def inorder(self):
-        values = []
-        return self.inorder_helper(self.root, values)
-
-class TestPython1(unittest.TestCase):
-    def setUp(self) -> None:
-
-        def tree_with_nodes() -> TreeExtended():
-            t = TreeExtended()
-            t.add(5, "Peter")
-            t.add(3, "Paul")
-            t.add(1, "Mary")
-            t.add(10, "Karla")
-            t.add(9, "Mae")
-            t.add(15, "Ada")
-            t.add(13, "Nate")
-            t.add(11, "Jane")
-            t.add(12, "Jenny")
-            t.add(25, "Kari")
-            return t
-
-        def tree_with_dupe() -> TreeExtended():
-            t = TreeExtended()
-            t.add(5, "Peter")
-            t.add(3, "Paul")
-            t.add(1, "Mary")
-            t.add(5, "Peter's Twin")
-            return t
-        
-        self.empty_tree = TreeExtended()
-        self.tree_with_nodes = tree_with_nodes()
-        self.tree_with_dupe = tree_with_dupe()
-    
-    def tearDown(self) -> None:
-        self.empty_tree = TreeExtended()
-
-    def test_returns_none_for_empty_tree(self):
-        self.empty_tree.delete(5)
-        self.assertEqual([], self.empty_tree.inorder())
-    
-    def test_can_remove_single_root_node(self):
-        self.empty_tree.add(5, "Peter")
-        self.empty_tree.delete(5)
-
-        self.assertEqual([], self.empty_tree.inorder())
-
-    def test_can_remove_left_leaf(self):
-        self.empty_tree.add(5, "Peter")
-        self.empty_tree.add(3, "Mary")
-
-        expected = [{
-            'key': 5,
-            'value': 'Peter'
-        }]
-
-        self.empty_tree.delete(3)
-
-        self.assertEqual(expected, self.empty_tree.inorder())
-    
-    def test_can_remove_right_leaf(self):
-        self.empty_tree.add(5, "Peter")
-        self.empty_tree.add(10, "Paul")
-
-        expected = [{
-            'key': 5,
-            'value': 'Peter'
-        }]
-
-        self.empty_tree.delete(10)
-        self.assertEqual(expected, self.empty_tree.inorder())
-
-    def test_can_remove_node_with_two_children(self):
-        self.empty_tree.add(5, "Peter")
-        self.empty_tree.add(1, "Paul")
-        self.empty_tree.add(10, "Mary")
-
-        expected = [
-            {
-                'key': 1,
-                'value': 'Paul'
-            },
-            {
-                'key': 10,
-                'value': 'Mary'
-            }
-        ]
-        self.empty_tree.delete(5)
-
-        self.assertEqual(expected, self.empty_tree.inorder())
-
-    def test_can_find_inorder_successor(self):
-        self.tree_with_nodes.delete(10)
-
-        expected = [
-            {
-                'key': 1,
-                'value': 'Mary'
-            },
-            {
-                'key': 3,
-                'value': 'Paul' 
-            },
-            {
-                'key': 5,
-                'value': 'Peter'
-            },
-            {
-                'key': 9,
-                'value': 'Mae'
-            },
-            {
-                'key': 11,
-                'value': 'Jane'
-            },
-            {
-                'key': 12,
-                'value': 'Jenny'
-            },
-            {
-                'key': 13,
-                'value': 'Nate'
-            },
-            {
-                'key': 15,
-                'value': 'Ada'
-            },
-            {
-                'key': 25,
-                'value': 'Kari'
-            }
-        ]
-        self.assertEqual(expected, self.tree_with_nodes.inorder())
-
-    def test_can_delete_dupe(self):
-        self.tree_with_dupe.delete(5)
-
-        expected = [
-            {
-                "key": 1,
-                "value": "Mary"
-            },
-            {
-                "key": 3,
-                "value": "Paul"
-            },
-            {
-                "key": 5,
-                "value": "Peter's Twin"
-            }
-        ]
-
-        self.assertEqual(expected, self.tree_with_dupe.inorder())
-    
-
-```
-
-##### !end-tests
-
-<!-- other optional sections -->
-##### !hint 
-
-Consider creating a helper function to find the minimum node in a tree. 
-
-Still feeling stuck? Check this video walkthrough of the solution.
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e4deb73-094d-4c97-b2db-af0e0148f7f9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation 
-An example of a working implementation:
-
-```py
-
-#Helper function to find the minimum node in a tree
+# Helper function to find the minimum node in a tree
 def min_node(self, root):
     # minimum node will be in last leaf in left subtree
     # traverse left subtree
@@ -1025,6 +798,7 @@ def min_node(self, root):
     # return the key and the value of minimum node
     return root.key, root.value
 
+# Recursive helper function
 def delete_helper(self, current_root, key):
     #if key is less than current node's
     if key < current_root.key:
@@ -1053,18 +827,53 @@ def delete_helper(self, current_root, key):
     return current_root
 
 def delete(self, key):
+    # if the tree is empty
     if not self.root:
+        # exit the function
         return
+
+    # call our recursive helper on the root
     self.root = self.delete_helper(self.root, key)
-
 ```
+</summary>
 
-##### !end-explanation 
+## Reflection
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: b4148882-340f-40e2-87c0-0b2b1265fc49
+* title: Binary Search Trees Reflection
+* points: 1
+<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
+
+##### !question
+
+Take 5 minutes to review the above lesson and write down any questions you still have about the material. Is there anything that needs more clarification or you would like to go over again?
+
+Bring these questions to class! If reviewing this material after class, bring these questions to the #study-hall Slack channel or ask in office hours.
+
+##### !end-question
+
+##### !placeholder
+
+Ex. I'm having trouble understanding why the solutions all use a recursive helper function. 
+<br>
+Ex. In what cases are binary search trees used in real life?
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
 ### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
-
 
 
 
