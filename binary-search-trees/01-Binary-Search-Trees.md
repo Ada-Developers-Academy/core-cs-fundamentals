@@ -18,6 +18,8 @@ Students should be able to:
 
 ## Video Lesson & Exercises
 
+Please note that the video lesson above is for the C16 version of content. The written content has been updated since the video was recorded and may not perfectly align with what is in the written lesson. However, the overall concepts are the same.
+
 - [C16 Video Lesson](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d9746397-8a10-43be-b1cc-aaaf00720b31)
 - [C16 Slide Deck](https://docs.google.com/presentation/d/1Fj0deIUswGZ3ooJMpgVUqPEaWHKTkQ1w2Ci-yf8v66M/edit#slide=id.p)
 
