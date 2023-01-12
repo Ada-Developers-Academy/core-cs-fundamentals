@@ -134,9 +134,16 @@ Standards:
         UID: 96d170c9
         Path: /recursion/problem-set-submit.checkpoint.md
   -
-    Title: "Binary Search Trees"
-    Description: "Binary Search Trees"
-    UID: 7379a433-3626-43b2-840b-ae98bd890555
+    Title: Lists - Memory and Sorting Algorithms
+    Description: "Lists and Memory, Lists as References, Lists and Big O, Intro to Sorting Algorithms, Insertion Sort, Problem Set: Lists - Memory and Sorting"
+    UID: fc8d96af-1277-4efc-8e4c-a7bb2facddb9
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
+        Path: /sorting-algorithms/sorting-algorithms.instructor.md
       -
         Type: Instructor
         UID: 70acaebba6da64c98fef0d184cd40e5b
@@ -173,25 +180,22 @@ Standards:
         Type: Resource
         UID: 1dc3ffdcda584ccb3a445105b67bf21f
         Path: /sorting-algorithms/selection-sort.md
--
-    Title: Lists - Memory and Sorting Algorithms
-    Description: "Lists and Memory, Lists as References, Lists and Big O, Intro to Sorting Algorithms, Insertion Sort, Problem Set: Lists - Memory and Sorting"
-    UID: fc8d96af-1277-4efc-8e4c-a7bb2facddb9
+  -
+    Title: Binary Search Trees
+    Description: "Binary Search Trees Overview, BST Height and Big O, BST Traversal"
+    UID: 824e0895-6c46-4b88-82ba-1c416987617a
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 31eb5440
+        UID: 9bd86e84-2a05-4b75-96dc-331729ea737c
         Path: /binary-search-trees/02-Binary-Search-Trees.md
       -
         Type: Lesson
-        UID: a9083082
+        UID: ade1e05c-e9b9-416d-af1a-eb2d5d75b70b
         Path: /binary-search-trees/03-Binary-Search-Trees-Height-Big-O.md
       -
         Type: Lesson
-        UID: 673f70af
+        UID: c0e0e258-00eb-4720-81fc-54e8a4b7fe2b
         Path: /binary-search-trees/04-Binary-Search-Trees-Traversal.md
-        Type: Instructor
-        UID: 11ed7c3b-0b29-400d-9ed4-4af6ab4ba72d
-        Path: /sorting-algorithms/sorting-algorithms.instructor.md
