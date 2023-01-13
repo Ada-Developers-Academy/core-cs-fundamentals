@@ -424,7 +424,7 @@ We can see below a balanced Binary Search Tree provides good performance while m
 * type: paragraph
 * id: ce50eaaf-c5c9-448e-a26e-f59e4aeba9ed
 * title: Binary Search Trees Reflection
-* points: 1
+* points: 0
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question
