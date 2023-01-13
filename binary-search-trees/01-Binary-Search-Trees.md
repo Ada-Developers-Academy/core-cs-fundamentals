@@ -8,7 +8,7 @@ Students should be able to:
 
 - Compare a binary tree to a linked list
 - Explain how a binary search tree differs from a generic binary tree
-- Write methods to perform the following on a binary search tree:
+- Write and/or understand methods to perform the following on a binary search tree:
   - Search for a value
   - Insert value
   - Delete value
@@ -849,7 +849,7 @@ def delete(self, key):
 * type: paragraph
 * id: b4148882-340f-40e2-87c0-0b2b1265fc49
 * title: Binary Search Trees Reflection
-* points: 1
+* points: 0
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question
