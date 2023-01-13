@@ -199,3 +199,7 @@ Standards:
         Type: Lesson
         UID: c0e0e258-00eb-4720-81fc-54e8a4b7fe2b
         Path: /binary-search-trees/03-Binary-Search-Trees-Traversal.md
+      -
+        Type: Lesson
+        UID: 289be950-3086-4ad7-aff6-1653d6a0a201
+        Path: /binary-search-trees/04-Binary-Search-Trees-Vocab.md
