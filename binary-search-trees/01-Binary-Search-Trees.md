@@ -862,9 +862,7 @@ Bring these questions to class! If reviewing this material after class, bring th
 
 ##### !placeholder
 
-Ex. I'm having trouble understanding why the solutions all use a recursive helper function. 
-
-<br>
+Ex. I'm having trouble understanding why the solutions all use a recursive helper function.
 
 Ex. In what cases are binary search trees used in real life?
 

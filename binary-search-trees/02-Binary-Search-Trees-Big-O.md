@@ -439,8 +439,6 @@ Bring these questions to class! If reviewing this material after class, bring th
 
 Ex. This lesson went a little over my head. 
 
-<br>
-
 Ex. Is there ever a case in which we want a tree to be unbalanced?
 
 ##### !end-placeholder

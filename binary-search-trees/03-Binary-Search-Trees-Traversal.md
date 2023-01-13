@@ -649,8 +649,6 @@ Bring these questions to class! If reviewing this material after class, bring th
 
 Ex. I'm still not clear on how the call stack works with DFS traversals.  
 
-<br>
-
 Ex. I'm feeling a bit overwhelmed by the number of traversal algorithms.
 
 ##### !end-placeholder
