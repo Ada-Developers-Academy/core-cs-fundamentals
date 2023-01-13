@@ -1,4 +1,4 @@
-# Balancing Trees
+# Big O and Balancing
 
 ### Overview
 Before we move on to serialization of binary search trees, let's take a moment to discuss the time and space complexity of searching, insertion, and deletion. To fully understand that, we must first talk about _balancing_. 
@@ -351,154 +351,9 @@ For this reason, computer scientists spend a lot of time focusing on ways to mai
 
 The recursive solutions to search, insertion, and deletion all have a space complexity of O(log n) for a balanced tree while the iterative implementations all have a space complexity of O(1).
 
-This is because with the recursive solutions, each recursive call of the methods adds a frame to the system's [call stack](../02-linked-lists//05-linked-lists-supplemental-concepts.md). With each of these operations, we make a recursive call each time we choose to traverse a new subtree which we do O(log n) times. 
+This is because with the recursive solutions, each recursive call of the methods adds a frame to the system's call stack. With each of these operations, we make a recursive call each time we choose to traverse a new subtree which we do O(log n) times. 
 
 In contrast, the iterative solutions make only a single call to the method regardless of the size of the tree. We don't create any additional data structures that vary with the size of the tree in any of the operations, thus time complexity is constant or O(1).
-
-## Height
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-We can see that tree balancing and tree height have a close relationship. 
-
-To find the height we need to count how many levels of nodes there are in a tree. 
-
-
-### !challenge
-
-* type: code-snippet
-* language: python3.6
-* id: a8078856-e772-4e3f-9267-6bbeb006ee5d
-* title: Binary Search Tree Recursive Height
-* points: 1
-
-##### !question
-
-Implement a recursive `height` function for a binary search tree. The function should return the height of the tree.
-
-##### !end-question
-
-##### !placeholder
-
-```py
-class TreeNode:
-    def __init__(self, key, val = None):
-        if val == None:
-            val = key
-
-        self.key = key
-        self.value = val
-        self.left = None
-        self.right = None
-
-class Tree:
-    def __init__(self):
-        self.root = None
-    
-    def height(self):
-        # implement using recursion
-        pass
-```
-
-##### !end-placeholder
-
-##### !tests
-```py
-import unittest
-from main import *
-
-class TreeExtended(Tree):
-
-    def add_helper(self, current_node, new_node):
-        if new_node.key  < current_node.key:
-            if not current_node.left:
-                current_node.left = new_node
-                return
-            self.add_helper(current_node.left, new_node)
-        else:
-            if not current_node.right:
-                current_node.right = new_node
-                return
-            self.add_helper(current_node.right, new_node)
-
-    def add(self, key, value = None):
-        if not self.root:
-            self.root = TreeNode(key, value)
-        else:
-            new_node = TreeNode(key, value)
-            self.add_helper(self.root, new_node)
-
-class TestPython1(unittest.TestCase):
-  def setUp(self) -> None:
-
-    def tree_with_nodes() -> TreeExtended():
-        t = TreeExtended()
-        t.add(5, "Peter")
-        t.add(3, "Paul")
-        t.add(1, "Mary")
-        t.add(10, "Karla")
-        t.add(15, "Ada")
-        t.add(25, "Kari")
-        return t
-    
-    self.empty_tree = TreeExtended()
-    self.tree_with_nodes = tree_with_nodes()
-    
-  def tearDown(self) -> None:
-      self.empty_tree = TreeExtended()
-
-  def test_height_of_empty_tree_is_zero(self):
-    self.assertEqual(0,self.empty_tree.height())
-  
-  def test_height_of_one_node_tree_is_one(self):
-    self.empty_tree.add(5, "Peter")
-
-    self.assertEqual(1, self.empty_tree.height())
-
-  def test_height_of_many_node_tree(self):
-    self.assertEqual(4, self.tree_with_nodes.height())
-
-    self.tree_with_nodes.add(2, "pasta")
-    self.tree_with_nodes.add(2.5, "bread")
-    self.assertEqual(5, self.tree_with_nodes.height())
-
-```
-
-##### !end-tests
-
-<!-- other optional sections -->
-##### !hint
-Pseudocode:
-```
-If the current node is nil return 0
-
-Otherwise return 1 plus the maximum of the heights of the right and left subtrees
-```
-
-Still feeling stuck? Check this video walkthrough of the solution.
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=996e137b-e4f2-460e-a2e8-af0e01521de6&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
-##### !end-hint
-##### !explanation 
-An example of a working implementation:
-```py
-    def height_helper(self, current_node):
-        if not current_node:
-            return 0
-
-        return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
-    
-    def height(self):
-        return self.height_helper(self.root)
-```
-
-##### !end-explanation
-
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
 
 ## Summary
 
@@ -520,3 +375,39 @@ We can see below a balanced Binary Search Tree provides good performance while m
 3|Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
 4|Binary Tree (balanced)|O(log n)|O(log n)|O(log n)|O(log n)|NA|NA
 5|Hash Table|O(1)|O(1)|O(1)|O(1)|NA|NA
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: ce50eaaf-c5c9-448e-a26e-f59e4aeba9ed
+* title: Binary Search Trees Reflection
+* points: 0
+<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
+
+##### !question
+
+Take 5 minutes to review the above lesson and write down any questions you still have about the material. Is there anything that needs more clarification or you would like to go over again?
+
+Bring these questions to class! If reviewing this material after class, bring these questions to the #study-hall Slack channel or ask in office hours.
+
+##### !end-question
+
+##### !placeholder
+
+Ex. This lesson went a little over my head. 
+<br>
+Ex. Is there ever a case in which we want a tree to be unbalanced?
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
