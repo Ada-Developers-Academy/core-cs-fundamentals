@@ -33,9 +33,9 @@ While the queue is not empty:
 
 The following diagram shows a visualization of the algorithm.
 
-![Breadth First Search Traversal Animation](./images/bst-tree-traversal.gif)
+![Breadth First Search Traversal Animation](./images/bst-bfs.gif)
 
-In the above diagram, nodes that are outlined in pink have been added to the queue. Nodes shaded in pink are considered explored, or popped off the queue. BFS explores the nodes in the following order: `[19, 24, 18, 5, 22, 71, 6, 30, 96]`.
+In the above diagram, nodes that are outlined in pink have been added to the queue. Nodes shaded in pink are considered explored, or popped off the queue. BFS explores the nodes in the following order: `[19, 7, 25, 5, 22, 71, 6, 30, 96]`.
 
 
 ### !callout-info
@@ -160,7 +160,7 @@ When modeling a queue, `append` and `popleft` is the most common pairing for ins
 Using the pseudocode earlier in the lesson, implement a breadth first search method for a binary search tree class, `Tree()`. The method should accept no parameters other than `self`, and should return a list of visited nodes in the order they were traversed by the breadth first search algorithm. For example for the the following tree:
 ![Example Input Tree](./images/bfs-example-tree.png)
 
-The method should return `[19, 24, 18, 5, 22, 71, 6, 30, 96]`
+The method should return the values of each node in the order they were traversed: `[19, 7, 25, 5, 22, 71, 6, 30, 96]`.
 
 
  If the tree is empty, the method should return an empty list.
@@ -264,7 +264,7 @@ class TestPython1(unittest.TestCase):
 <!-- other optional sections -->
 ##### !hint 
 Feeling stuck? Watch the video walkthrough of the solution below:
-<!-- TODO: INSERT VIDEO SOLUTION -->
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7c976160-5bf6-4446-9419-af890170c5ed&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -648,7 +648,9 @@ Bring these questions to class! If reviewing this material after class, bring th
 ##### !placeholder
 
 Ex. I'm still not clear on how the call stack works with DFS traversals.  
+
 <br>
+
 Ex. I'm feeling a bit overwhelmed by the number of traversal algorithms.
 
 ##### !end-placeholder
