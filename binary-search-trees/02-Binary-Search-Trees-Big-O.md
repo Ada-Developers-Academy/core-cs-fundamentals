@@ -1,4 +1,4 @@
-# Big O and Balancing
+# Balancing and Big O
 
 ### Overview
 Before we move on to serialization of binary search trees, let's take a moment to discuss the time and space complexity of searching, insertion, and deletion. To fully understand that, we must first talk about _balancing_. 
@@ -31,6 +31,46 @@ This is an example of a balanced tree.
 On the other hand, this is an example of an unbalanced tree.
 
 ![unbalanced bst](images/unbalanced-bst.png)
+
+### !challenge
+
+* type: multiple-choice
+* id: a1703f9c-c97c-4b7a-86cf-cadb8780c77f
+* title: Balanced
+* points: 1
+* topics: bst
+
+##### !question
+
+![bst3](images/bst3.png)
+
+Is the tree balanced?
+
+##### !end-question
+
+##### !options
+
+* Yes
+* No
+* Huh?
+
+##### !end-options
+
+##### !answer
+
+* Yes
+
+##### !end-answer
+
+##### !hint
+
+In a balanced tree no sibling subtrees differ in height more than 1.  So no left-right subtrees differ in height by 1.
+
+##### !end-hint
+
+### !end-challenge
+
+
 
 The time and space complexity of operations such as search, insert, and delete depend on whether a tree is balanced or unbalanced. 
 
@@ -398,7 +438,7 @@ Bring these questions to class! If reviewing this material after class, bring th
 ##### !placeholder
 
 Ex. This lesson went a little over my head. 
-<br>
+
 Ex. Is there ever a case in which we want a tree to be unbalanced?
 
 ##### !end-placeholder
