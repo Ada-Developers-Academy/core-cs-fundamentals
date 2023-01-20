@@ -203,3 +203,22 @@ Standards:
         Type: Lesson
         UID: 289be950-3086-4ad7-aff6-1653d6a0a201
         Path: /binary-search-trees/04-Binary-Search-Trees-Vocab.md
+  -
+    Title: Graphs
+    Description: "Graphs, Graphs Algorithms, Graphs Resources"
+    UID: 7eb43c33-f233-4c3c-9ce8-ee75248ba16a
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 143454dd-fa73-4f25-937e-7dd378243f9c
+        Path: /graphs/01-graphs.md
+      -
+        Type: Lesson
+        UID: b7b86563-2d86-4a5a-a82d-634aa3d91518
+        Path: /graphs/02-graphs-algorithms.md
+      -
+        Type: Lesson
+        UID: 36b2d142-5bc1-404d-8ef4-829a6f8e0486
+        Path: /graphs/03-graphs-resources.md
