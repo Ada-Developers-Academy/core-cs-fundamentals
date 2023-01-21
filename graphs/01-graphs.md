@@ -62,7 +62,7 @@ As depicted in the example graph below, we use arrows to represent the edges of 
 
 Directed graphs can be useful to represent one-way relationships. For example, imagine the graph below depicts available flights for an airline. We can see that there is a flight available from Mexico City to Lima, but there is no available reciprocal flight from Lima back to Mexico City. Likewise, there is a flight from Paris to Istanbul, but no flight from Istanbul to Paris.
 
-Directed graphs can still include bidirectional relationships. For example, the double-ended between Mexico City and Paris indicates that there is both a flight from Mexico City to Paris and from Paris back to Mexico City. 
+Directed graphs can still include bidirectional relationships. For example, the edge with the double-ended arrow between Mexico City and Paris indicates that there is both a flight from Mexico City to Paris and from Paris back to Mexico City. 
 
 ![Example Directed Graph Airline Flights](images/directed-graph-flights.png)
 
