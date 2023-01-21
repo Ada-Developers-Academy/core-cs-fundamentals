@@ -35,7 +35,7 @@ For example, each node in the graph below represents a city. The edges represent
 ![flight paths between cities graph](images/graphs1.png)
 
 
-Nodes represent  represents an Australian state. The edges represent whether or not it is possible to drive from one state to another. Notice that the edges in the graph don't have a cost associated with them. Additionally notice that the node representing Tasmania is _unconnected_ to the rest of the graph, that is to say it does not have any edges. This is because Tasmania is an island! It's not possible to drive there from another Australian state. 
+Nodes represent an Australian state in the graph below. The edges represent whether or not it is possible to drive from one state to another. Notice that the edges in the graph don't have a cost associated with them. Additionally notice that the node representing Tasmania is _unconnected_ to the rest of the graph, that is to say it does not have any edges. This is because Tasmania is an island! It's not possible to drive there from another Australian state. 
 
 ![australian states graph](images/australia-graph.png)
 
