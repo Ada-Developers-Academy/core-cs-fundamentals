@@ -419,7 +419,7 @@ Because graphs are non-hierarchical and do not have a set start node, it is diff
 
 An adjacency matrix has a fast lookup time of O(1) to see if two nodes are connected by an edge, but it can be relatively expensive in terms of space complexity and the time it takes to find all the neighbors of a particular node. An adjacency list, has a better balance between time and space complexity, but the lookup time of O(d) to find if two nodes share an edge can be expensive when a graph is dense. 
 
-Lists of edges are another method for representing graphs, however the lookup time and space complexity are less efeficient than both adjacency matrices and adjacency lists.
+Lists of edges are another method for representing graphs, however the lookup time and space complexity are less efficient than both adjacency matrices and adjacency lists.
 
 
 <!-- Diagram sources:  https://drive.google.com/file/d/1bOXvfXdWi9pkKfmWnMZd9QK4zoG930c7/view?usp=sharing -->
