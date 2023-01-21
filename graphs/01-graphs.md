@@ -87,7 +87,7 @@ We can see that it costs more to travel from Seattle to Beijing directly ($1500)
 
 ![Example Weighted Directed Graph Airline Flights](images/weighted-graph-flights.png)
 
-Weights are not limited to  monetary cost. They might also represent the distance between two nodes, the priority of a relationship, or any number of things! Weights can also represent a combination of factors. For example, imagine an app which uses a graph to represent a map of the city. Nodes represent intersections between roads and edges represent the roads themselves. Each road might have an associated weight that represents a combination of the current traffic conditions, the speed limit, and the length of the road. The app can then write an algorithm that uses the roads' weights to calculate the fastest route between two locations. 
+Weights are not limited to  monetary cost. They might also represent the distance between two nodes, the priority of a relationship, or any number of things! Weights can also represent a combination of factors. For example, imagine an app which uses a graph to represent a map of the city. Nodes represent intersections between roads and edges represent the roads themselves. Each road might have an associated weight that represents a combination of the current traffic conditions, the speed limit, and the length of the road. The app can then write an algorithm that uses the roads' (aka the edges') weights to calculate the fastest route between two locations. 
 
 ### !callout-info
 
