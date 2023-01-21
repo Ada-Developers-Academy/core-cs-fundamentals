@@ -216,9 +216,13 @@ Standards:
         Path: /graphs/01-graphs.md
       -
         Type: Lesson
+        UID: 8031e579-2398-4be6-9296-a2591bb5a661
+        Path: /graphs/02-graph-representation-practice.md
+      -
+        Type: Lesson
         UID: b7b86563-2d86-4a5a-a82d-634aa3d91518
-        Path: /graphs/02-graphs-algorithms.md
+        Path: /graphs/03-graphs-algorithms.md
       -
         Type: Lesson
         UID: 36b2d142-5bc1-404d-8ef4-829a6f8e0486
-        Path: /graphs/03-graphs-resources.md
+        Path: /graphs/04-graphs-resources.md
