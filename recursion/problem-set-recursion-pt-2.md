@@ -16,7 +16,7 @@ Complete all questions below. **Solve all questions using recursion**, and not i
 * points: 3
 ### !question
 
-Write a function `search` that accepts an unsorted array of integers, `array`, and an integer value to find, `query`. It returns `True` if `query` is found in `array`, and `False` otherwise. Make the algorithm recursive.
+Write a function `search` that accepts an unsorted array of strings, `array`, and an string value to find, `query`. It returns `True` if `query` is found in `array`, and `False` otherwise. Make the algorithm recursive.
 
 Be sure to implement `search` using recursion.
 
