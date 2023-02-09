@@ -289,7 +289,7 @@ Examples:
 | Input `pairs` list                                                                                                     | Symmetric Pairs                                    | <div style="min-width:130px;">Return value</div>          |
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------- |
 | `[[11, 20], [30, 40], [5, 10], [40, 30], [10, 5]]`                                                                     | `[30, 40]` and `[40, 30]`; `[5, 10]` and `[10, 5]` | `[[30, 40], [5, 10]]` |
-| `[["Dan", "Kari"], ["Jeremy", "Val"], ["Jeremy", "Charles"], ["Devin", "Susan"], ["Kari", "Dan"], ["Devin", "Susan"]]` | `["Dan", "Kari"]` and `["Kari", "Dan"]`            | `[["Dan", "Kari"]]`   |
+| `[["Dan", "Kari"], ["Jeremy", "Val"], ["Jayce", "Charles"], ["Devin", "Susan"], ["Kari", "Dan"], ["Char", "Susan"]]` | `["Dan", "Kari"]` and `["Kari", "Dan"]`            | `[["Dan", "Kari"]]`   |
 | `[["Dan", "Kari"], ["Lisa", "Val"], ["Jeremy", "Charles"], ["Devin", "Susan"], ["Charles", "Jamie"]]`                  | -                                                  | `[]`                  |
 
 Take five minutes to answer:
@@ -381,8 +381,8 @@ def test_get_symmetric_pairs():
 
 
 def test_get_symmetric_pairs_strings():
-    pairs = [["Dan", "Kari"], ["Jeremy", "Val"], ["Jeremy", "Charles"], [
-        "Devin", "Susan"], ["Kari", "Dan"], ["Devin", "Susan"]]
+    pairs = [["Dan", "Kari"], ["Jeremy", "Val"], ["Jayce", "Charles"], [
+        "Devin", "Susan"], ["Kari", "Dan"], ["Char", "Susan"]]
     assert get_symmetric_pairs(pairs) == [["Dan", "Kari"]]
 
 
@@ -406,8 +406,8 @@ class TestChallenge(unittest.TestCase):
         self.assertEqual(get_symmetric_pairs(pairs), [[30, 40], [5, 10]])
 
     def test_get_symmetric_pairs_strings(self):
-        pairs = [["Dan", "Kari"], ["Jeremy", "Val"], ["Jeremy", "Charles"], [
-            "Devin", "Susan"], ["Kari", "Dan"], ["Devin", "Susan"]]
+        pairs = [["Dan", "Kari"], ["Jeremy", "Val"], ["Jayce", "Charles"], [
+            "Devin", "Susan"], ["Kari", "Dan"], ["Char", "Susan"]]
 
         self.assertEqual(get_symmetric_pairs(pairs), [["Dan", "Kari"]])
 
