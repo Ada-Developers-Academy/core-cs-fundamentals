@@ -66,7 +66,7 @@ Breadth first search is a solution in a variety of problems including:
 
 ##### !question
 
-Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict` starting at `start_node`.
+Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict`.
 
 Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
@@ -83,7 +83,7 @@ class Graph:
     def __init__(self, adjacency_dict = {}):
         self.adjacency_dict = adjacency_dict
 
-    def bfs(self, start_node):
+    def bfs(self):
         pass
 ```
 
@@ -106,18 +106,18 @@ class TestPython1(unittest.TestCase):
         g = Graph(adjacency_dict)
 
         answer = ["Seattle", "Portland", "Chicago", "Hawaii"]
-        self.assertEqual(answer, g.bfs("Seattle"))
+        self.assertEqual(answer, g.bfs())
 
     def test_bfs_empty_graph(self):
         g = Graph()
-        self.assertEqual([], g.bfs("Seattle"))
+        self.assertEqual([], g.bfs())
 
     def test_bfs_one_item(self):
         adjacency_dict = {
             "Seattle": []
         }
         g = Graph(adjacency_dict)
-        self.assertEqual(["Seattle"], g.bfs("Seattle"))
+        self.assertEqual(["Seattle"], g.bfs())
 ```
 
 ##### !end-tests
@@ -142,8 +142,9 @@ def bfs(self):
     if len(graph) == 0:
         return []
         
-    queue = [start_node]
-    visited = [start_node]
+    first_item = list(graph.keys())[0]
+    queue = [first_item]
+    visited = [first_item]
         
     while queue:
         current = queue.pop(0)
