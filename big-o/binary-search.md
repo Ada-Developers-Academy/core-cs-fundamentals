@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-* Explain the steps in an binary search algorithm
+* Explain the steps in a binary search algorithm
 * Understand the iterative implementation of binary search
 * Apply time and space complexity analysis to binary search
 
@@ -39,8 +39,8 @@ def binary_search(array, value):
         else:
             return mid
 
-        if array[low] == value:
-            return low
+    if array[low] == value:
+        return low
 
     return None
 ```
@@ -76,7 +76,7 @@ Recall that time complexity is the measurement of how the amount of time an algo
 
 The relationship between the number of operations and the input size for `binary_search` described above is a logarithmic relationship. In Big O notation, this is `O(log n)`.
 
-#### Logorithms
+#### Logarithms
 
 **What is a log?**?
 
