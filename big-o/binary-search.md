@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-* Explain the steps in an binary search algorithm
+* Explain the steps in a binary search algorithm
 * Understand the iterative implementation of binary search
 * Apply time and space complexity analysis to binary search
 
@@ -29,20 +29,18 @@ The steps described above are implemented in code in the `binary_search` functio
 ```py
 def binary_search(array, value):
     low = 0
-    high = len(array) - 1
-    while low <= high:
+    high = len(array)
+
+    while low < high:
         mid = (low + high)//2
         if array[mid] > value:
-            high = mid - 1
+            high = mid
         elif array[mid] < value:
             low = mid + 1
         else:
             return mid
 
-        if array[low] == value:
-            return low
-
-    return None
+    return None    
 ```
 
 Let's analyze this algorithm by using a loop table with a concrete example of searching for a `value` in an `array` of integers. Imagine a `array` of eight elements `[1, 2, 3, 4, 5, 6, 7, 8]`. The `value` we are searching for is `2`:
@@ -76,7 +74,7 @@ Recall that time complexity is the measurement of how the amount of time an algo
 
 The relationship between the number of operations and the input size for `binary_search` described above is a logarithmic relationship. In Big O notation, this is `O(log n)`.
 
-#### Logorithms
+#### Logarithms
 
 **What is a log?**?
 
@@ -115,20 +113,18 @@ What is the time complexity of the following piece of code? Assume that `input_l
 ```python
 def binary_search(input_list, value):
     low = 0
-    high = len(input_list) - 1
-    while low <= high:
-        mid = int((low + high) / 2)
+    high = len(input_list)
+
+    while low < high:
+        mid = (low + high)//2
         if input_list[mid] > value:
-            high = mid - 1
+            high = mid
         elif input_list[mid] < value:
             low = mid + 1
         else:
             return mid
 
-    if input_list[low] == value:
-        return low
-
-    return None
+    return None    
 ```
 
 ##### !end-question

@@ -46,7 +46,7 @@ In python, if we make a variable like:
 sales_tax = 0.09
 ```
 
-Python connects with the operating system (macOS in our case) and allocates an unused block of memory to store the information.  Then the variable is given a _reference_ to where that variable is stored in memory.
+Python connects with the operating system (macOS in our case) and allocates an unused block of memory to store the information.  Then the variable is given a _reference_ to where that value is stored in memory.
 
 ![Variable sales_tax referring to its value in memory](../assets/lists-and-memory/lists-and-memory_lists-and-memory_reference-example.png)
 
@@ -115,7 +115,7 @@ Like many general rules, this is an oversimplification.  Things can get more com
 
 ## Summary
 
-In memory Python variables contain references to where the actual data is stored.  A list variable refers to a memory location that contains metadata and a collection of references to where the actual data is stored, like a link to an addressbook.  This collection of references are contiguous in memory and that makes it very quick for Python to look up an element by its index number, with some arithmetic.
+In memory Python variables contain references to where the actual data is stored.  A list variable refers to a memory location that contains metadata and a collection of references to where the actual data is stored, like a link to an address book.  This collection of references are contiguous in memory and that makes it very quick for Python to look up an element by its index number, with some arithmetic.
 
 ## Check for Understanding
 
