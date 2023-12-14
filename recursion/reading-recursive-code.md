@@ -240,12 +240,12 @@ The exact structure and content of the stack frame varies from language to langu
 - return value
 - return location (where the function was called from)
 
-![A box representing the collection of data stored with a stack frame. Contains four smaller boxes labelled arguments, locals, return value, and return location](../assets/recursion_reading-recursion_stack-frame.png)  
+![A box representing the collection of data stored with a stack frame. Contains four smaller boxes labeled arguments, locals, return value, and return location](../assets/recursion_reading-recursion_stack-frame.png)  
 _Fig. Basic structure of a stack frame_
 
 A stack frame is _pushed_ onto the call stack each time we call a function, and it is _popped_ off the call stack when the function completes.
 
-![A pink region labelled Call Stack contains two stack frame boxes. An ellipsis is below the bottom stack frame to indicate there may be additional frames below these.](../assets/recursion_reading-recursion_frames.png)  
+![A pink region labeled Call Stack contains two stack frame boxes. An ellipsis is below the bottom stack frame to indicate there may be additional frames below these.](../assets/recursion_reading-recursion_frames.png)  
 _Fig. The top of a call stack with two visible stack frames. Additional frames exist below these, indicated by the ellipsis._
 
 The top of the call stack represents where the program is currently running. The frames below the current frame provide the sequence of nested function calls that led to the program being in the current function.
@@ -256,7 +256,7 @@ The top of the call stack represents where the program is currently running. The
 
 There are two main ways we use the call stack while debugging.
 
-1. We can view the call stack directly in the debugger. When we stop at a breakpoint, the debugging panel labelled `Call Stack` shows the sequence of function calls that led to the program arriving at that breakpoint.
+1. We can view the call stack directly in the debugger. When we stop at a breakpoint, the debugging panel labeled `Call Stack` shows the sequence of function calls that led to the program arriving at that breakpoint.
 2. When our programs crash, we see the call stack printed to the terminal. It shows the sequence of nested function calls that led to the program crashing.
 
 ### !end-callout
