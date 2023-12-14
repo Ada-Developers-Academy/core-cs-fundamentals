@@ -77,7 +77,7 @@ Merge sort is a stable sorting algorithm, though we have to be a little careful 
 
 Recall that for a sorting algorithm to be stable, the sorted array must preserve the relative ordering between equivalent values that existed in the unsorted array. To ensure this, we need to guarantee that if there are two items with the same value, that the instance that started on the left, stays on the left.
 
-For the stable _O(n<sup>2</sup>)_ algorithms, we did this bys ensuring that we never swapped "through" an equivalent value. But with all our dividing and merging, how can we ensure this remains true in merge sort?
+For the stable _O(n<sup>2</sup>)_ algorithms, we did this by ensuring that we never swapped "through" an equivalent value. But with all our dividing and merging, how can we ensure this remains true in merge sort?
 
 Notice that when we divide a sub-array, there is always a left side and a right side. Anything that goes into the left array will originally have preceded anything in the right array. This is true all the way down during the divide phase. So if we encounter two equivalent values during the merge phase, one from the left and one from the right, we need only prefer the value from the left. As long as we do this all the way up through the merging, we will preserve the relative ordering required for a stable sort.
 
