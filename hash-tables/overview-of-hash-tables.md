@@ -127,7 +127,7 @@ The hypothetical hash function presented in this example is _not_ a good hash fu
 
 ## Collisions
 
-There is practically no limit to the number of possible keys would could use in our hash table. By contrast, it stores our pair data in a limited-size array. At some point, any hash function will result in some keys being mapped to the same index. When this occurs, it is called a _collision_.
+There is practically no limit to the number of possible keys we could use in our hash table. By contrast, it stores our pair data in a limited-size array. At some point, any hash function will result in some keys being mapped to the same index. When this occurs, it is called a _collision_.
 
 ### !callout-info
 
