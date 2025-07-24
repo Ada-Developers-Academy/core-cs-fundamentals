@@ -100,7 +100,7 @@ Standards:
         Path: /sorting-algorithms/selection-sort.md
   -
     Title: Hash Tables
-    Description: "Overview of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
+    Description: "(Optional) Implementation of Hash Tables, Using Hash Tables, Problem Set: Hash Tables"
     UID: fac6e79e15b06e536f52e19c118bfff2
     SuccessCriteria:
       - success criteria
@@ -112,7 +112,7 @@ Standards:
       -
         Type: Lesson
         UID: 98bd2c57dd4d374c50f82260abf950bc
-        Path: /hash-tables/overview-of-hash-tables.md
+        Path: /hash-tables/implementation-of-hash-tables.md
       -
         Type: Lesson
         UID: 423176ceb4ba129653c93c83452643f4
