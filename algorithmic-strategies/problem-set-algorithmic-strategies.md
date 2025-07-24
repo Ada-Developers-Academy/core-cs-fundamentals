@@ -1,4 +1,4 @@
-# [Optional] Dynamic Programming Problems
+# (Optional) Dynamic Programming Problems
 
 ## Directions
 
