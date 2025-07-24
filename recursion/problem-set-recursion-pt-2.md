@@ -1,4 +1,4 @@
-# Problem Set: Recursion Pt. 2
+# \[Optional\] Problem Set: Recursion Pt. 2
 
 ## Directions
 

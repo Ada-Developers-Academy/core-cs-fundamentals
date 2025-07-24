@@ -123,7 +123,7 @@ Standards:
         Path: /hash-tables/problem-set-hash-tables.md    
   -
     Title: Recursion
-    Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, Problem Set: Recursion Pt. 2"
+    Description: "Intro to Recursion, Reading Recursive Code, Writing Recursive Code, Problem Set: Recursion Pt. 1, [Optional] Problem Set: Recursion Pt. 2"
     UID: 12fa464a36f8e5a187f5acfde99b7029
     SuccessCriteria:
       - success criteria
