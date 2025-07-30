@@ -210,6 +210,7 @@ Write a function `is_nested_parens` that accepts a string `parens` of only paren
 | `"((()))"`      | `True`          |
 | `""`            | `True`          |
 | `"(())))"`      | `False`         |
+| `"(()())"`      | `False`         |
 
 Here are the tests:
 
