@@ -210,6 +210,9 @@ Write a function `is_nested_parens` that accepts a string `parens` of only paren
 | `"((()))"`      | `True`          |
 | `""`            | `True`          |
 | `"(())))"`      | `False`         |
+| `"(()())"`      | `False`         |
+
+**Note**: Parentheses are considered nested if and only if you can divide the string in two equal halves where the right side only consists of opening parentheses and the left side only consists of closing parentheses. As a result, the final example here fails.
 
 Here are the tests:
 
