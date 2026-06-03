@@ -45,7 +45,7 @@ def binary_search(array, value):
 
 Let's analyze this algorithm by using a loop table with a concrete example of searching for a `value` in an `array` of integers. Imagine a `array` of eight elements `[1, 2, 3, 4, 5, 6, 7, 8]`. The `value` we are searching for is `2`:
 
-| Iteration | `low` | `high` |`low <= high`| `mid` | 
+| Iteration | `low` | `high` | `low <= high` | `mid` | 
 |--|--|--|--|--|
 |1| `0` | `8` | `True` | `4` | 
 |2| `0` | `4` | `True` | `2` |
