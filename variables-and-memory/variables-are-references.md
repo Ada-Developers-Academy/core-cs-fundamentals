@@ -48,7 +48,16 @@ We can see an object's ID by using the `id()` function.
 print('The ID of the string object "Hello, World!" is', id("Hello, World!"))
 ```
 
-The `is` operator compares object IDs. **_An object's identity never changes within its lifetime_**.
+The `is` operator compares object IDs:  
+
+```python
+greeting = "Hello, World!"
+second_greeting = greeting
+if greeting is second_greeting:
+    print("'greeting' and 'second_greeting' are the same object with the same id.")
+```
+
+**_An object's identity never changes within its lifetime_**.
 
 ## Variables Are References
 
