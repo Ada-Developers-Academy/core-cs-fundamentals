@@ -1,6 +1,23 @@
 # Big O Analysis
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=551bc8d2-271a-48ab-8c8b-acd301548fbd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=ZwuivPvDU6KvNs97&list=PLWc4W2C8bhHE"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/z9d9mNTIPuo?list=PLWc4W2C8bhHE&index=1">Intro to Big O Analysis</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/zjZPo5DwPhM?list=PLWc4W2C8bhHE&index=2">Space Complexity</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=z9d9mNTIPuo&list=PLWc4W2C8bhHE&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 
