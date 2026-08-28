@@ -1,6 +1,25 @@
 # Divide and Conquer
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=04387545-7ced-4c84-9ce4-ad44002bde36&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=cfJNKlOM30o-s3oH&list=PLMaTHSDNdpzg"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/YWamqBLmgCs?list=PLMaTHSDNdpzg&index=1">U3CSF0101-1 Divide and Conquer</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/6OJa_jedF2I?list=PLMaTHSDNdpzg&index=2">U3CSF0101-2 Binary Search</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/0YqYBl7etEg?list=PLMaTHSDNdpzg&index=3">U3CSF0101-3 Quick Sort</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/DTGvO3Nf6VA?list=PLMaTHSDNdpzg&index=4">U3CSF0101-4 Merge Sort</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=YWamqBLmgCs&list=PLMaTHSDNdpzg&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Goals
 
