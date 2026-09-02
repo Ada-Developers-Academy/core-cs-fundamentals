@@ -1,6 +1,25 @@
 # Variables Are References
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=cc8cb0a2-187a-49f2-9257-ace700539dcf&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=Vwaex62gWRNUSgaY&list=PLbonpA2Ul1u4"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/7sGAoM1W5AI?list=PLbonpA2Ul1u4&index=1" ">U1CSF0102-1 Goals</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/a1t4uUTGA80?list=PLbonpA2Ul1u4&index=2">U1CSF0102-2 Analogies and Immutable Data</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/gOwmjZtWNsI?list=PLbonpA2Ul1u4&index=3">U1CSF0102-3 Mutable Objects</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/DCidfxdUlIs?list=PLbonpA2Ul1u4&index=4">U1CSF0102-4 Applied in Function Arguments</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=7sGAoM1W5AI&list=PLbonpA2Ul1u4&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Our Goal
 
