@@ -15,7 +15,7 @@
   <ol>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/0lyCS9hhvt4?list=PLfkPr96wtgSw&index=1">Intro to Reading Recursive Code</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/e9ZmzU7cL-g?list=PLfkPr96wtgSw&index=2">Example of Reading Recursive Code</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/IMt3dU82aGQ?list=PLfkPr96wtgSw&index=2">Stack Overflow</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/IMt3dU82aGQ?list=PLfkPr96wtgSw&index=3">Stack Overflow</a></li>
   </ol>
   <p><a href="https://www.youtube.com/watch?v=0lyCS9hhvt4&list=PLfkPr96wtgSw&index=1" target="_blank">View in external player</a></p>
 </details>
