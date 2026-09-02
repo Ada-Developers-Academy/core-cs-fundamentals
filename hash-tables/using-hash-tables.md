@@ -17,7 +17,7 @@
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/otfNq9RukBA?list=PLdFW7mBTG1G4&index=2">Problem</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/zQqc7QpYvEo?list=PLdFW7mBTG1G4&index=3">Iterative Solution</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/gq0P0udax-c?list=PLdFW7mBTG1G4&index=4">With Dictionary</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/xm4rhG0eNxc?list=PLdFW7mBTG1G4&index=45">Symmetric Pairs</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/xm4rhG0eNxc?list=PLdFW7mBTG1G4&index=5">Symmetric Pairs</a></li>
   </ol>
   <p><a href="https://www.youtube.com/watch?v=rxQxsge5H8s&list=PLdFW7mBTG1G4&index=1" target="_blank">View in external player</a></p>
 </details>
