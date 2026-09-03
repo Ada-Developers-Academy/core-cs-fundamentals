@@ -1,6 +1,25 @@
 # Variable Scope
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a8ff3e9b-5531-4daf-8ff8-acd1013f88d2&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=yChg1OR5OQUynL3L&list=PLN8GrDr5uqOY"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/eQmk9XyJpz8?list=PLN8GrDr5uqOY&index=1" ">U1CSF0101-1 Variable Scope Intro</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/cm3KQeXPRW0?list=PLN8GrDr5uqOY&index=2">U1CSF0101-2 Local Variables</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/5QpGAvqJqPE?list=PLN8GrDr5uqOY&index=3">U1CSF0101-3 Global Variables</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/YcAWAS6R168?list=PLN8GrDr5uqOY&index=4">U1CSF0101-4 Exercise and Summary</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=eQmk9XyJpz8&list=PLN8GrDr5uqOY&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 
